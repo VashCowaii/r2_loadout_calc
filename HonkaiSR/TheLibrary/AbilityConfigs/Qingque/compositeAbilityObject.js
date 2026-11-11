@@ -911,7 +911,7 @@ const compositeAbilityObject = {
                   "name": "Remove Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "{{All Team Members(Exclude Self)}}"
+                    "target": "{{All Team Members with Unselectable Team Members(Exclude Self)}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1998273394\">QingQue_PassiveCount_Teammate</a>"
                 }
