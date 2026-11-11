@@ -36,6 +36,18 @@ const configAbility = {
         "compareType": ">=",
         "value2": 5
       }
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Monster Rank",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
+        "compareType": ">=",
+        "value2": 5
+      }
     }
   ],
   "references": [],
