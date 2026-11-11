@@ -1,5 +1,5 @@
 // let currentWarning = "NOTE:<br>The missing hp amounts AFTER phase 1, on 4.0 enemies, should be resolved soonTM.";
-let currentWarning = `NOTE: 4.6 is in progress but due to complications some enemies will be missing phase data or event-readers.`;
+let currentWarning = `NOTE: 4.7 is in progress, and <b><i>the library as a whole is being rewritten code-wise</i></b>.<br>I will post info in changelog as I go.`;
 
 if (currentWarning) {
     readSelection("vashCustomWarningNote").style.color = "lightcoral";//"lightblue"
