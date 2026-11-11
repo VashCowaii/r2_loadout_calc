@@ -632,8 +632,7 @@ const configAbility = {
                       "overrideDamageOwner": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "attackType": "Additional DMG"
+                      }
                     }
                   ]
                 }

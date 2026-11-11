@@ -435,8 +435,7 @@ const compositeAbilityObject = {
                               "overrideDamageOwner": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
-                              },
-                              "attackType": "Additional DMG"
+                              }
                             }
                           ],
                           "failed": [
@@ -461,8 +460,7 @@ const compositeAbilityObject = {
                               "overrideDamageOwner": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
-                              },
-                              "attackType": "Additional DMG"
+                              }
                             }
                           ]
                         }
@@ -1011,8 +1009,7 @@ const compositeAbilityObject = {
                           "overrideDamageOwner": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ]
                     }
