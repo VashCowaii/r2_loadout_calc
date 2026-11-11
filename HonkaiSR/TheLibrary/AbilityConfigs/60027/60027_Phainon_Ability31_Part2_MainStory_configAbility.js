@@ -54,8 +54,7 @@ const configAbility = {
             "Tags": null,
             "behaviorTag": "DirectlyLoseHpHit",
             "attackType": "Ultimate"
-          },
-          "attackType": "Ultimate"
+          }
         }
       ]
     },

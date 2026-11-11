@@ -27,10 +27,14 @@ const compositeAbilityObject = {
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Fuyan_Camera",
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Camera",
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Insert2",
+    "-1097634517_BattleEventAbility_SummonMonsterInfinite_RandomDelay_Insert",
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Insert",
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Fuyan_Insert",
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Fuyan",
     "-1097634517_BattleEventAbility_SummonMonsterInfinite2",
+    "-1097634517_BattleEventAbility_RealityShow_Boss",
+    "-1097634517_BattleEventAbility_RealityShow_Minion",
+    "-1097634517_BattleEventAbility_SummonMonsterInfinite_RandomDelay",
     "-1097634517_BattleEventAbility_SummonMonsterInfinite",
     "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent02_Insert",
     "-1097634517_BattleEventAbility_RogueDLCSummonMonsterEvent02",
@@ -209,6 +213,272 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1166335492\">Challenge_Camera_AllTeam_Temp_1</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-592924316\">MRealityShow_BossHPBar</a>",
+          "execute": [
+            {
+              "eventTrigger": "HP Change [Owner]",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "variableName": "_HPBarHPRatio",
+                  "readTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "variableName": "_HPBarDirtyRatio",
+                  "readTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "variableName": "_HPBarDirtyDelta",
+                  "readTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlockFlat</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable with Stat",
+                  "variableName": "_HPBarMaxHP",
+                  "readTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "value": {
+                    "displayLines": "(9999 - &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(9999, &nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(((_HPBarHPRatio * 9999) / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((1 - &nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_FUNCTION</span>((_HPBarDirtyRatio + (_HPBarDirtyDelta / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, _HPBarMaxHP))))), 0.01)))))"
+                  },
+                  "variableName": "_HPBarBreakNew"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": {
+                      "displayLines": "_HPBarBreakNew"
+                    },
+                    "compareType": "NOT=",
+                    "value2": {
+                      "displayLines": "_HPBarBreakLast"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": {
+                        "displayLines": "_HPBarBreakNew"
+                      },
+                      "variableName": "_HPBarBreakLast"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "abilityValueChange": [
+            {
+              "name": "Ability Value Changes",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "onChange": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "variableName": "_HPBarHPRatio",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "variableName": "_HPBarDirtyRatio",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "variableName": "_HPBarDirtyDelta",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlockFlat</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "variableName": "_HPBarMaxHP",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": {
+                        "displayLines": "(9999 - &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(9999, &nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(((_HPBarHPRatio * 9999) / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((1 - &nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_FUNCTION</span>((_HPBarDirtyRatio + (_HPBarDirtyDelta / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, _HPBarMaxHP))))), 0.01)))))"
+                      },
+                      "variableName": "_HPBarBreakNew"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": {
+                          "displayLines": "_HPBarBreakNew"
+                        },
+                        "compareType": "NOT=",
+                        "value2": {
+                          "displayLines": "_HPBarBreakLast"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "value": {
+                            "displayLines": "_HPBarBreakNew"
+                          },
+                          "variableName": "_HPBarBreakLast"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Ability Value Changes",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPBlockFlat</span>&nbsp;",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "onChange": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "variableName": "_HPBarHPRatio",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "variableName": "_HPBarDirtyRatio",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "variableName": "_HPBarDirtyDelta",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlockFlat</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable with Stat",
+                      "variableName": "_HPBarMaxHP",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "value": {
+                        "displayLines": "(9999 - &nbsp;<span class=\"descriptionFunctionColor\">MIN</span>(9999, &nbsp;<span class=\"descriptionFunctionColor\">CEIL</span>(((_HPBarHPRatio * 9999) / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((1 - &nbsp;<span class=\"descriptionFunctionColor\">UNKNOWN_FUNCTION</span>((_HPBarDirtyRatio + (_HPBarDirtyDelta / &nbsp;<span class=\"descriptionFunctionColor\">MAX</span>(1, _HPBarMaxHP))))), 0.01)))))"
+                      },
+                      "variableName": "_HPBarBreakNew"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": {
+                          "displayLines": "_HPBarBreakNew"
+                        },
+                        "compareType": "NOT=",
+                        "value2": {
+                          "displayLines": "_HPBarBreakLast"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "value": {
+                            "displayLines": "_HPBarBreakNew"
+                          },
+                          "variableName": "_HPBarBreakLast"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -2410,6 +2680,123 @@ const compositeAbilityObject = {
         "primaryTarget": "{{Caster}}"
       }
     },
+    "-1097634517_BattleEventAbility_SummonMonsterInfinite_RandomDelay_Insert": {
+      "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite_RandomDelay_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": "In Aha-Instant",
+          "passed": [
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Dying Enemies}}"
+              },
+              "dieNow": true
+            }
+          ],
+          "failed": [
+            "Deleted bullshit"
+          ]
+        },
+        {
+          "name": "WAIT FOR",
+          "conditions": {
+            "name": "Death Animation Completed",
+            "team": "Enemy Team",
+            "entityType": "Team Characters"
+          }
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "variableName": "Insert_Flag",
+          "scope": "TargetEntity"
+        },
+        {
+          "name": "Looped Event",
+          "conditions": {
+            "name": "AND",
+            "conditionList": [
+              "Infinite Enemy Waves Remain"
+            ]
+          },
+          "execute": [
+            {
+              "name": "Update Next Wave Enemy",
+              "context": "ContextAbility",
+              "enemyID": "Value_NextMonsterId",
+              "activityGroupScaling": "Value_NextMonsterEliteGroup",
+              "slot": "Value_MonsterSlotKey"
+            },
+            {
+              "name": "Define Variable with Random Value",
+              "scope": "ContextAbility",
+              "variableName": "_RandomADF",
+              "min": {
+                "displayLines": "#BattleEvent_P1_ADF"
+              },
+              "max": {
+                "displayLines": "#BattleEvent_P2_ADF"
+              }
+            },
+            {
+              "name": "Create Enemies",
+              "delayPercent": {
+                "displayLines": "_RandomADF"
+              },
+              "enemyList": [
+                {
+                  "name": "Enemy Entry",
+                  "enemyID": {
+                    "displayLines": "Value_NextMonsterId"
+                  },
+                  "locationType": "FormationRecord",
+                  "overrideActivityGroup": {
+                    "displayLines": "Value_NextMonsterEliteGroup"
+                  },
+                  "slot": {
+                    "displayLines": "Value_MonsterSlotKey"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "UI Display Event (On Entity)",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Recently Summoned Enemies}}"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Trigger Modifier Event",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Every Battle Entity}}"
+          },
+          "variableName": null,
+          "eventType": "InfiniteRefresh",
+          "value": null
+        },
+        {
+          "name": "IF",
+          "conditions": "In Aha-Instant"
+        }
+      ],
+      "references": [],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
     "-1097634517_BattleEventAbility_SummonMonsterInfinite_Insert": {
       "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite_Insert",
       "abilityType": null,
@@ -2829,6 +3216,476 @@ const compositeAbilityObject = {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"1491565886\">InfiniteWave_SummonMonster2</a>",
                   "isGlobal": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      }
+    },
+    "-1097634517_BattleEventAbility_RealityShow_Boss": {
+      "fileName": "-1097634517_BattleEventAbility_RealityShow_Boss",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1130428441\">BattleEventAbility_RealityShow_Boss_Modifier</a>"
+        }
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__805445188\">BattleEventAbility_RealityShow_Boss_ReportLeftDelay</a>",
+          "parse": [
+            {
+              "name": "Define Custom Variable with Varying Data",
+              "target": null,
+              "variableName": "_LeftDelay"
+            },
+            {
+              "name": "Set Warning Countdown",
+              "countdownTime": {
+                "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">MAX</span>((_LeftDelay - 1), 0)"
+              }
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1130428441\">BattleEventAbility_RealityShow_Boss_Modifier</a>",
+          "modifierFlags": [
+            "STAT_TurnCountAccumulator"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -12,
+              "execute": [
+                "Increment Cycles Counter",
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"805445188\">BattleEventAbility_RealityShow_Boss_ReportLeftDelay</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "CyclesRemaining[?]",
+                    "compareType": "<="
+                  },
+                  "passed": [
+                    {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "set": 0
+                    },
+                    {
+                      "name": "Lock Target AV",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": "Has Specific Result",
+                  "passed": [
+                    {
+                      "name": "Lock Target AV",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
+              "execute": [
+                {
+                  "name": "Action Advance/Delay",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "advanceType": "Delay",
+                  "multiAdd": 0.5
+                },
+                {
+                  "name": "Set Warning Countdown",
+                  "countdownTime": {
+                    "displayLines": "(#BattleEvent_P1_ADF - 1)"
+                  }
+                },
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"805445188\">BattleEventAbility_RealityShow_Boss_ReportLeftDelay</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "-1097634517_BattleEventAbility_RealityShow_Minion": {
+      "fileName": "-1097634517_BattleEventAbility_RealityShow_Minion",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1479241382\">BattleEventAbility_RealityShow_Minion_Modifier</a>"
+        }
+      ],
+      "functions": [
+        {
+          "name": "CharacterFunctions",
+          "functionName": "<a class=\"gTempYellow\" id=\"fun__-1468583066\">RealityShow_TryWinByAllShieldBreak</a>",
+          "parse": [
+            {
+              "name": "Define Custom Variable with Infinite Waves Info",
+              "variableName": "_RS_InfiniteSummonProgress",
+              "scope": "ContextAbility"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "compareWithMax": true
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_RS_InfiniteSummonProgress",
+                    "compareType": ">=",
+                    "value2": 1,
+                    "contextScope": "ContextAbility"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-942439146\">StageAbility_RealityShow_Monster01_DamageShield</a>[<span class=\"descriptionNumberColor\">Melt-Cast</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1507418663\">StageAbility_RealityShow_Monster02_DamageShield</a>[<span class=\"descriptionNumberColor\">Psychic Energy</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"398227992\">StageAbility_RealityShow_Monster03_DamageShield</a>[<span class=\"descriptionNumberColor\">Refraction</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1911123757\">StageAbility_RealityShow_Monster04_DamageShield</a>[<span class=\"descriptionNumberColor\">Impediment</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-55058230\">StageAbility_RealityShow_Monster05_DamageShield</a>[<span class=\"descriptionNumberColor\">Desolation</span>]"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "noTargetFound": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1538147578\">RealityShow_WinPending</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1623146454\">RealityShow_WinSkipAction</a>",
+          "modifierFlags": [
+            "DisableAction"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1538147578\">RealityShow_WinPending</a>",
+          "latentQueue": [
+            "_RS_InfiniteSummonProgress"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "Action Phase Start [Anyone][?]",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1623146454\">RealityShow_WinSkipAction</a>"
+                },
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Action Choice Window [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Action End [Anyone]",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Anyone]: End",
+              "execute": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1479241382\">BattleEventAbility_RealityShow_Minion_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1468583066\">RealityShow_TryWinByAllShieldBreak</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Left Battle [Anyone]",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"-1468583066\">RealityShow_TryWinByAllShieldBreak</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "priorityLevel": -90
+            }
+          ]
+        }
+      ]
+    },
+    "-1097634517_BattleEventAbility_SummonMonsterInfinite_RandomDelay": {
+      "fileName": "-1097634517_BattleEventAbility_SummonMonsterInfinite_RandomDelay",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"2035793596\">BattleEventAbility_SummonMonsterInfinite_RandomDelay_Modifier</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1528480436\">Modifier_Infinite_Summon_Level</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1528480436\">Modifier_Infinite_Summon_Level</a>",
+          "execute": [
+            {
+              "eventTrigger": "Batch: Enemy Arrival",
+              "execute": [
+                {
+                  "name": "UI Display Event (On Entity)",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2035793596\">BattleEventAbility_SummonMonsterInfinite_RandomDelay_Modifier</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "Insert_Flag",
+                  "scope": "TargetEntity"
+                },
+                {
+                  "name": "Add Ability",
+                  "abilityName": "BattleEventAbility_SummonMonsterInfinite_RandomDelay_Insert"
+                },
+                {
+                  "name": "Add Ability",
+                  "abilityName": "BattleEventAbility_SummonMonsterInfinite_Camera"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"723446133\">InfiniteWave_SummonMonster_RandomDelay</a>",
+                  "isGlobal": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Left Battle [Anyone]",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"723446133\">InfiniteWave_SummonMonster_RandomDelay</a>",
+                  "isGlobal": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Variable with Random Value",
+                      "scope": "ContextAbility",
+                      "variableName": "_RandomADF",
+                      "min": {
+                        "displayLines": "#BattleEvent_P1_ADF"
+                      },
+                      "max": {
+                        "displayLines": "#BattleEvent_P2_ADF"
+                      }
+                    },
+                    {
+                      "name": "Action Advance/Delay",
+                      "advanceType": "Set",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "multiBase": {
+                        "displayLines": "_RandomADF"
+                      }
+                    }
+                  ]
                 }
               ]
             }

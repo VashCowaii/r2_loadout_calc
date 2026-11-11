@@ -241,33 +241,79 @@ const configAbility = {
       "state": false
     },
     {
-      "name": "Preload Battle Event(s)",
-      "beID": [
-        20052
-      ]
-    },
-    {
-      "name": "Add Battle Event",
-      "teamName": "Enemy Team",
-      "eventID": 20052,
-      "variables": null,
-      "whenCreated": [
+      "name": "IF",
+      "conditions": {
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Asat Pramad: 0}}"
+        },
+        "variableName": "PeakBattle"
+      },
+      "passed": [
         {
-          "name": "Action Advance/Delay",
-          "advanceType": "Set",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Parameter Target}}"
-          },
-          "multiBase": 1
+          "name": "Preload Battle Event(s)",
+          "beID": [
+            20065
+          ]
         },
         {
-          "name": "Assign Unique Name",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Parameter Target}}"
-          },
-          "identifier": "BossAfterBE"
+          "name": "Add Battle Event",
+          "teamName": "Enemy Team",
+          "eventID": 20065,
+          "variables": null,
+          "whenCreated": [
+            {
+              "name": "Action Advance/Delay",
+              "advanceType": "Set",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "multiBase": 1
+            },
+            {
+              "name": "Assign Unique Name",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "identifier": "BossAfterBE"
+            }
+          ]
+        }
+      ],
+      "failed": [
+        {
+          "name": "Preload Battle Event(s)",
+          "beID": [
+            20052
+          ]
+        },
+        {
+          "name": "Add Battle Event",
+          "teamName": "Enemy Team",
+          "eventID": 20052,
+          "variables": null,
+          "whenCreated": [
+            {
+              "name": "Action Advance/Delay",
+              "advanceType": "Set",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "multiBase": 1
+            },
+            {
+              "name": "Assign Unique Name",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "identifier": "BossAfterBE"
+            }
+          ]
         }
       ]
     },

@@ -301,8 +301,7 @@ const compositeAbilityObject = {
                 "Tags": null,
                 "behaviorTag": "DirectlyLoseHpHit",
                 "attackType": "Ultimate"
-              },
-              "attackType": "Ultimate"
+              }
             }
           ]
         },

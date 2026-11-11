@@ -54,10 +54,122 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1490350994\">MissionBattleEvent60044_AutoUseUltraAbility</a>"
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-1085497932\">MissionBattleEvent60044_PeakBattleBreakLock</a>"
     }
   ],
   "whenAdded": [],
   "references": [
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1709949086\">MissionBattleEvent60044_PeakBattleDisableUltra</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Disable Abilities",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "abilityTypes": [
+                "Ultimate"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1085497932\">MissionBattleEvent60044_PeakBattleBreakLock</a>",
+      "execute": [
+        {
+          "eventTrigger": "Ability Use [Owner]: End",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Skill Type",
+                    "skillType": "Ultimate"
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Asat Pramad: 0}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1161208794\">Enemy_W5_AsatPramad_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Knockdown</span>]"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1709949086\">MissionBattleEvent60044_PeakBattleDisableUltra</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "eventTrigger": "End Broken State [Anyone]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Asat Pramad: 0}}"
+                    }
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1709949086\">MissionBattleEvent60044_PeakBattleDisableUltra</a>"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1709949086\">MissionBattleEvent60044_PeakBattleDisableUltra</a>"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-602725128\">MissionBattleEvent60044_UltraReady</a>",

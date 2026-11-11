@@ -66,10 +66,122 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1490350994\">MissionBattleEvent60044_AutoUseUltraAbility</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1085497932\">MissionBattleEvent60044_PeakBattleBreakLock</a>"
         }
       ],
       "whenAdded": [],
       "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1709949086\">MissionBattleEvent60044_PeakBattleDisableUltra</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Disable Abilities",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "abilityTypes": [
+                    "Ultimate"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1085497932\">MissionBattleEvent60044_PeakBattleBreakLock</a>",
+          "execute": [
+            {
+              "eventTrigger": "Ability Use [Owner]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Asat Pramad: 0}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1161208794\">Enemy_W5_AsatPramad_AllDamageTypeTakenRatio</a>[<span class=\"descriptionNumberColor\">Knockdown</span>]"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1709949086\">MissionBattleEvent60044_PeakBattleDisableUltra</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "End Broken State [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Asat Pramad: 0}}"
+                        }
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1709949086\">MissionBattleEvent60044_PeakBattleDisableUltra</a>"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1709949086\">MissionBattleEvent60044_PeakBattleDisableUltra</a>"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-602725128\">MissionBattleEvent60044_UltraReady</a>",
@@ -536,33 +648,79 @@ const compositeAbilityObject = {
           "state": false
         },
         {
-          "name": "Preload Battle Event(s)",
-          "beID": [
-            20052
-          ]
-        },
-        {
-          "name": "Add Battle Event",
-          "teamName": "Enemy Team",
-          "eventID": 20052,
-          "variables": null,
-          "whenCreated": [
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Asat Pramad: 0}}"
+            },
+            "variableName": "PeakBattle"
+          },
+          "passed": [
             {
-              "name": "Action Advance/Delay",
-              "advanceType": "Set",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "multiBase": 1
+              "name": "Preload Battle Event(s)",
+              "beID": [
+                20065
+              ]
             },
             {
-              "name": "Assign Unique Name",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "identifier": "BossAfterBE"
+              "name": "Add Battle Event",
+              "teamName": "Enemy Team",
+              "eventID": 20065,
+              "variables": null,
+              "whenCreated": [
+                {
+                  "name": "Action Advance/Delay",
+                  "advanceType": "Set",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "multiBase": 1
+                },
+                {
+                  "name": "Assign Unique Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "identifier": "BossAfterBE"
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Preload Battle Event(s)",
+              "beID": [
+                20052
+              ]
+            },
+            {
+              "name": "Add Battle Event",
+              "teamName": "Enemy Team",
+              "eventID": 20052,
+              "variables": null,
+              "whenCreated": [
+                {
+                  "name": "Action Advance/Delay",
+                  "advanceType": "Set",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "multiBase": 1
+                },
+                {
+                  "name": "Assign Unique Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "identifier": "BossAfterBE"
+                }
+              ]
             }
           ]
         },
@@ -733,6 +891,31 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Battle Event Construction",
+          "beID": 20065,
+          "team": "Enemy Team",
+          "eventType": "Assist",
+          "icon": "Monster_8015050.png",
+          "abilityList": [
+            "BattleEventAbility_Monster_W5_AsatPramad_RestartAfterBE"
+          ],
+          "statOverrides": [
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+              "value": 90
+            },
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+              "value": 100
+            },
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+              "value": 140
+            }
+          ],
+          "hardLevel": true
+        },
         {
           "name": "Battle Event Construction",
           "beID": 20052,
