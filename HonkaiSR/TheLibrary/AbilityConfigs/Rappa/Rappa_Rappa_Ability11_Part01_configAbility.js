@@ -21,8 +21,20 @@ const configAbility = {
         "team": "Enemy Team",
         "value1": "Team_Width_Count",
         "compareType": ">=",
-        "value2": 10
-      }
+        "value2": 12
+      },
+      "failed": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "team": "Enemy Team",
+            "value1": "Team_Width_Count",
+            "compareType": ">=",
+            "value2": 10
+          }
+        }
+      ]
     },
     "Deleted bullshit",
     {

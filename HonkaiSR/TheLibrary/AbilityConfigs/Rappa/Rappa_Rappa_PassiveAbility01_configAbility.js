@@ -59,7 +59,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "(UnusedUnderThisBase_6495 + 5)"
+            "displayLines": "(UnusedUnderThisBase_7368 + 5)"
           },
           "variableName": "_PassiveBreakCountBase"
         },
@@ -75,7 +75,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_6495"
+            "displayLines": "UnusedUnderThisBase_7368"
           },
           "variableName": "_PassiveBreakCountBase"
         },

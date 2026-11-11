@@ -2134,7 +2134,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "displayLines": "(UnusedUnderThisBase_6495 + 5)"
+                "displayLines": "(UnusedUnderThisBase_7368 + 5)"
               },
               "variableName": "_PassiveBreakCountBase"
             },
@@ -2150,7 +2150,7 @@ const compositeAbilityObject = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "displayLines": "UnusedUnderThisBase_6495"
+                "displayLines": "UnusedUnderThisBase_7368"
               },
               "variableName": "_PassiveBreakCountBase"
             },
@@ -2491,8 +2491,20 @@ const compositeAbilityObject = {
             "team": "Enemy Team",
             "value1": "Team_Width_Count",
             "compareType": ">=",
-            "value2": 10
-          }
+            "value2": 12
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "team": "Enemy Team",
+                "value1": "Team_Width_Count",
+                "compareType": ">=",
+                "value2": 10
+              }
+            }
+          ]
         }
       ],
       "references": [],
@@ -2647,8 +2659,20 @@ const compositeAbilityObject = {
             "team": "Enemy Team",
             "value1": "Team_Width_Count",
             "compareType": ">=",
-            "value2": 10
-          }
+            "value2": 12
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "team": "Enemy Team",
+                "value1": "Team_Width_Count",
+                "compareType": ">=",
+                "value2": 10
+              }
+            }
+          ]
         },
         "Deleted bullshit",
         {
@@ -3066,8 +3090,20 @@ const compositeAbilityObject = {
             "team": "Enemy Team",
             "value1": "Team_Width_Count",
             "compareType": ">=",
-            "value2": 10
-          }
+            "value2": 12
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "team": "Enemy Team",
+                "value1": "Team_Width_Count",
+                "compareType": ">=",
+                "value2": 10
+              }
+            }
+          ]
         },
         "Deleted bullshit",
         {
@@ -3429,8 +3465,20 @@ const compositeAbilityObject = {
             "team": "Enemy Team",
             "value1": "Team_Width_Count",
             "compareType": ">=",
-            "value2": 10
-          }
+            "value2": 12
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "team": "Enemy Team",
+                "value1": "Team_Width_Count",
+                "compareType": ">=",
+                "value2": 10
+              }
+            }
+          ]
         },
         "Deleted bullshit",
         {
@@ -3760,8 +3808,20 @@ const compositeAbilityObject = {
             "team": "Enemy Team",
             "value1": "Team_Width_Count",
             "compareType": ">=",
-            "value2": 10
-          }
+            "value2": 12
+          },
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "team": "Enemy Team",
+                "value1": "Team_Width_Count",
+                "compareType": ">=",
+                "value2": 10
+              }
+            }
+          ]
         },
         "Deleted bullshit",
         {
