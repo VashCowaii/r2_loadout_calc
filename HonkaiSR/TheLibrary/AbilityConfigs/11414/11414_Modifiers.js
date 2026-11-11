@@ -292,7 +292,7 @@ const configAbility = {
                 "displayLines": "MDF_DanHengPT_InitShieldValue"
               },
               "stackLimit": {
-                "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5081) + UnusedUnderThisBase_5071) * MDF_MaxShieldRatio)"
+                "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5954) + UnusedUnderThisBase_5944) * MDF_MaxShieldRatio)"
               }
             },
             {

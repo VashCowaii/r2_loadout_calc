@@ -1495,19 +1495,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1842038910\">Enemy_W3_DollElite_Commnon_BreakController</a>",
                       "valuePerStack": {
                         "MDF_BreakDelayRatio": {
-                          "displayLines": "UnusedUnderThisBase_10531"
+                          "displayLines": "UnusedUnderThisBase_11404"
                         },
                         "MDF_ChosenOneSpeedUp": {
-                          "displayLines": "UnusedUnderThisBase_10532"
+                          "displayLines": "UnusedUnderThisBase_11405"
                         },
                         "MDF_ExploreDamagePercentage": {
-                          "displayLines": "UnusedUnderThisBase_10525"
+                          "displayLines": "UnusedUnderThisBase_11398"
                         },
                         "MDF_ExploreDelayRatio": {
-                          "displayLines": "UnusedUnderThisBase_10533"
+                          "displayLines": "UnusedUnderThisBase_11406"
                         },
                         "MDF_ExploreDamageUpRatio": {
-                          "displayLines": "UnusedUnderThisBase_10526"
+                          "displayLines": "UnusedUnderThisBase_11399"
                         }
                       }
                     }
@@ -1615,19 +1615,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1842038910\">Enemy_W3_DollElite_Commnon_BreakController</a>",
                       "valuePerStack": {
                         "MDF_BreakDelayRatio": {
-                          "displayLines": "UnusedUnderThisBase_10531"
+                          "displayLines": "UnusedUnderThisBase_11404"
                         },
                         "MDF_ChosenOneSpeedUp": {
-                          "displayLines": "UnusedUnderThisBase_10532"
+                          "displayLines": "UnusedUnderThisBase_11405"
                         },
                         "MDF_ExploreDamagePercentage": {
-                          "displayLines": "UnusedUnderThisBase_10525"
+                          "displayLines": "UnusedUnderThisBase_11398"
                         },
                         "MDF_ExploreDelayRatio": {
-                          "displayLines": "UnusedUnderThisBase_10533"
+                          "displayLines": "UnusedUnderThisBase_11406"
                         },
                         "MDF_ExploreDamageUpRatio": {
-                          "displayLines": "UnusedUnderThisBase_10526"
+                          "displayLines": "UnusedUnderThisBase_11399"
                         }
                       }
                     }
@@ -1720,19 +1720,19 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "valuePerStack": {
                     "P1_BreakDelayRatio": {
-                      "displayLines": "UnusedUnderThisBase_10531"
+                      "displayLines": "UnusedUnderThisBase_11404"
                     },
                     "P2_ChosenOneSpeedUp": {
-                      "displayLines": "UnusedUnderThisBase_10532"
+                      "displayLines": "UnusedUnderThisBase_11405"
                     },
                     "P3_ExploreDamagePercentage": {
-                      "displayLines": "UnusedUnderThisBase_10525"
+                      "displayLines": "UnusedUnderThisBase_11398"
                     },
                     "P4_ExploreDelayRatio": {
-                      "displayLines": "UnusedUnderThisBase_10533"
+                      "displayLines": "UnusedUnderThisBase_11406"
                     },
                     "P5_ExploreDamageUpRatio": {
-                      "displayLines": "UnusedUnderThisBase_10526"
+                      "displayLines": "UnusedUnderThisBase_11399"
                     }
                   },
                   "allowAbilityTriggers": false

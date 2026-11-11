@@ -382,7 +382,7 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "UnusedUnderThisBase_6823"
+                    "displayLines": "UnusedUnderThisBase_7696"
                   }
                 },
                 {
@@ -400,7 +400,7 @@ const compositeAbilityObject = {
                       },
                       "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;",
                       "statValue": {
-                        "displayLines": "UnusedUnderThisBase_6818"
+                        "displayLines": "UnusedUnderThisBase_7691"
                       }
                     }
                   ]

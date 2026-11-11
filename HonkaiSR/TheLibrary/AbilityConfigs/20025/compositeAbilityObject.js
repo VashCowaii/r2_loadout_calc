@@ -1456,7 +1456,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Physical",
                 "Damage": {
-                  "displayLines": "UnusedUnderThisBase_14438"
+                  "displayLines": "UnusedUnderThisBase_15311"
                 },
                 "notAHit": true,
                 "dmgFormula": "Max HP Scaling",
@@ -1473,14 +1473,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_11018"
+                "displayLines": "UnusedUnderThisBase_11891"
               },
               "baseChance": {
-                "displayLines": "UnusedUnderThisBase_11014"
+                "displayLines": "UnusedUnderThisBase_11887"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "UnusedUnderThisBase_11016"
+                  "displayLines": "UnusedUnderThisBase_11889"
                 }
               }
             },

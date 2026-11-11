@@ -780,7 +780,7 @@ const configAbility = {
               "referenceModifier": "<a class=\"gModGreen\" id=\"1020254741\">MReference_SpeedRatioUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "UnusedUnderThisBase_6078"
+                  "displayLines": "UnusedUnderThisBase_6951"
                 }
               }
             }
@@ -1100,10 +1100,10 @@ const configAbility = {
                 "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
               },
               "activeCount": {
-                "displayLines": "UnusedUnderThisBase_6109"
+                "displayLines": "UnusedUnderThisBase_6982"
               },
               "maximum": {
-                "displayLines": "UnusedUnderThisBase_6109"
+                "displayLines": "UnusedUnderThisBase_6982"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -1116,7 +1116,7 @@ const configAbility = {
                 "value1": "CurSpecialSP",
                 "compareType": ">=",
                 "value2": {
-                  "displayLines": "UnusedUnderThisBase_6109"
+                  "displayLines": "UnusedUnderThisBase_6982"
                 }
               },
               "passed": [
@@ -1228,7 +1228,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "value": {
-                "displayLines": "UnusedUnderThisBase_6110"
+                "displayLines": "UnusedUnderThisBase_6983"
               }
             },
             {
@@ -1258,7 +1258,7 @@ const configAbility = {
             {
               "name": "Set Phainon Action Count",
               "count": {
-                "displayLines": "(UnusedUnderThisBase_6080 - 1)"
+                "displayLines": "(UnusedUnderThisBase_6953 - 1)"
               }
             },
             {
@@ -1455,7 +1455,7 @@ const configAbility = {
                 "value1": "Skill22_Energy",
                 "compareType": ">=",
                 "value2": {
-                  "displayLines": "UnusedUnderThisBase_6105"
+                  "displayLines": "UnusedUnderThisBase_6978"
                 }
               },
               "passed": [
@@ -1610,7 +1610,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyRatio": {
-              "displayLines": "UnusedUnderThisBase_6122"
+              "displayLines": "UnusedUnderThisBase_6995"
             }
           }
         },
@@ -1684,7 +1684,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                   "variables": {
                     "parameter[0]_AddValue": {
-                      "displayLines": "UnusedUnderThisBase_6082"
+                      "displayLines": "UnusedUnderThisBase_6955"
                     }
                   }
                 }
@@ -1705,11 +1705,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                   "stackLimit": {
-                    "displayLines": "UnusedUnderThisBase_6783"
+                    "displayLines": "UnusedUnderThisBase_7656"
                   },
                   "valuePerStack": {
                     "MDF_PropertyRatio": {
-                      "displayLines": "UnusedUnderThisBase_6713"
+                      "displayLines": "UnusedUnderThisBase_7586"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -1910,7 +1910,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "healPercent": {
-                "displayLines": "UnusedUnderThisBase_6113"
+                "displayLines": "UnusedUnderThisBase_6986"
               },
               "formula": "Heal from Target MaxHP"
             }

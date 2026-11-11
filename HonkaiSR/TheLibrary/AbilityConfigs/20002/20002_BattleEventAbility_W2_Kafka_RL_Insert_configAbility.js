@@ -61,20 +61,20 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1307984397\">Standard_MindControl</a>[<span class=\"descriptionNumberColor\">Dominated</span>]",
           "duration": {
-            "displayLines": "(UnusedUnderThisBase_9509 + 1)"
+            "displayLines": "(UnusedUnderThisBase_10382 + 1)"
           },
           "baseChance": {
-            "displayLines": "UnusedUnderThisBase_9503"
+            "displayLines": "UnusedUnderThisBase_10376"
           },
           "valuePerStack": {
             "MDF_MindControlDamagePercentage": {
-              "displayLines": "UnusedUnderThisBase_12801"
+              "displayLines": "UnusedUnderThisBase_13674"
             },
             "MDF_MaxDamageRatio": {
-              "displayLines": "UnusedUnderThisBase_9518"
+              "displayLines": "UnusedUnderThisBase_10391"
             },
             "MDF_MinDamageRatio": {
-              "displayLines": "UnusedUnderThisBase_9507"
+              "displayLines": "UnusedUnderThisBase_10380"
             }
           },
           "success": [

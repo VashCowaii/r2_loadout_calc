@@ -750,7 +750,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "displayLines": "UnusedUnderThisBase_9280"
+                  "displayLines": "UnusedUnderThisBase_10153"
                 }
               }
             },
@@ -780,7 +780,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"221422164\">Monster_W2_Feixiao_ModifyActionDelay</a>",
               "valuePerStack": {
                 "MDF_BreakActionDelay": {
-                  "displayLines": "UnusedUnderThisBase_9271"
+                  "displayLines": "UnusedUnderThisBase_10144"
                 }
               }
             },
@@ -793,7 +793,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeTakenRatio": {
-                  "displayLines": "UnusedUnderThisBase_9259"
+                  "displayLines": "UnusedUnderThisBase_10132"
                 }
               }
             }
@@ -819,7 +819,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "displayLines": "UnusedUnderThisBase_9280"
+                  "displayLines": "UnusedUnderThisBase_10153"
                 }
               }
             },
@@ -1205,7 +1205,7 @@ const configAbility = {
                     "target": "{{Player Team All}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "(0 - UnusedUnderThisBase_9256)"
+                  "multiAdd": "(0 - UnusedUnderThisBase_10129)"
                 },
                 {
                   "name": "Remove Events/Bonuses",

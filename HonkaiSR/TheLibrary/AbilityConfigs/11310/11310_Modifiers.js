@@ -265,7 +265,7 @@ const configAbility = {
               },
               "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessReductionForced%</span>&nbsp;",
               "statValue": {
-                "displayLines": "UnusedUnderThisBase_2766"
+                "displayLines": "UnusedUnderThisBase_2910"
               }
             }
           ]
@@ -322,7 +322,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "displayLines": "UnusedUnderThisBase_6552"
+                  "displayLines": "UnusedUnderThisBase_7425"
                 }
               },
               "passed": [
@@ -335,7 +335,7 @@ const configAbility = {
                   },
                   "variables": {
                     "DamagePercentage": {
-                      "displayLines": "UnusedUnderThisBase_6583"
+                      "displayLines": "UnusedUnderThisBase_7456"
                     }
                   }
                 }
@@ -352,7 +352,7 @@ const configAbility = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "displayLines": "UnusedUnderThisBase_6581"
+                      "displayLines": "UnusedUnderThisBase_7454"
                     }
                   },
                   "passed": [
@@ -365,7 +365,7 @@ const configAbility = {
                       },
                       "variables": {
                         "DamagePercentage": {
-                          "displayLines": "UnusedUnderThisBase_6582"
+                          "displayLines": "UnusedUnderThisBase_7455"
                         }
                       }
                     }
@@ -481,7 +481,7 @@ const configAbility = {
                 "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                 "compareType": ">=",
                 "value2": {
-                  "displayLines": "UnusedUnderThisBase_6581"
+                  "displayLines": "UnusedUnderThisBase_7454"
                 }
               }
             ]
@@ -613,7 +613,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6578)) + _RedModeResRatio)"
+                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_7451)) + _RedModeResRatio)"
                   },
                   "variableName": "_PassiveResRatio"
                 },
@@ -626,7 +626,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "(UnusedUnderThisBase_6558 * _PassiveResRatio)"
+                      "displayLines": "(UnusedUnderThisBase_7431 * _PassiveResRatio)"
                     }
                   }
                 }
@@ -711,7 +711,7 @@ const configAbility = {
                     {
                       "on": "Attacker",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-                      "value": "(UnusedUnderThisBase_6548 + Rank06_StanceBreakAddedRatio)"
+                      "value": "(UnusedUnderThisBase_7421 + Rank06_StanceBreakAddedRatio)"
                     }
                   ]
                 }
@@ -799,7 +799,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6578)) + _RedModeResRatio)"
+                "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_7451)) + _RedModeResRatio)"
               },
               "variableName": "_PassiveResRatio"
             },
@@ -812,7 +812,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1021523829\">Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "(UnusedUnderThisBase_6558 * _PassiveResRatio)"
+                  "displayLines": "(UnusedUnderThisBase_7431 * _PassiveResRatio)"
                 }
               }
             },
@@ -835,7 +835,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "(UnusedUnderThisBase_6548 + UnusedUnderThisBase_6546)"
+                    "displayLines": "(UnusedUnderThisBase_7421 + UnusedUnderThisBase_7419)"
                   },
                   "variableName": "MDF_FinalDamageUP"
                 }
@@ -844,7 +844,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_6548"
+                    "displayLines": "UnusedUnderThisBase_7421"
                   },
                   "variableName": "MDF_FinalDamageUP"
                 }
@@ -871,7 +871,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "(MDF_StatusResistance + UnusedUnderThisBase_6562)"
+                    "displayLines": "(MDF_StatusResistance + UnusedUnderThisBase_7435)"
                   },
                   "variableName": "MDF_StatusResistance"
                 },
@@ -917,7 +917,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"154726309\">Sam_Eidolon6_UltraDamageTypeAddRatio</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_2796"
+                      "displayLines": "UnusedUnderThisBase_2940"
                     }
                   }
                 }
@@ -960,7 +960,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2795) + 1)"
+                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2939) + 1)"
                   },
                   "variableName": "Rank02_CD"
                 },
@@ -978,7 +978,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2795) - 1)"
+                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2939) - 1)"
                       },
                       "variableName": "Rank02_CD"
                     },
@@ -1028,7 +1028,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2795) + 1)"
+                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2939) + 1)"
                   },
                   "variableName": "Rank02_CD"
                 },
@@ -1046,7 +1046,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2795) - 1)"
+                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2939) - 1)"
                       },
                       "variableName": "Rank02_CD"
                     },
@@ -1096,7 +1096,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2795) + 1)"
+                    "displayLines": "((Rank02_CD + UnusedUnderThisBase_2939) + 1)"
                   },
                   "variableName": "Rank02_CD"
                 },
@@ -1114,7 +1114,7 @@ const configAbility = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2795) - 1)"
+                        "displayLines": "((Rank02_CD - UnusedUnderThisBase_2939) - 1)"
                       },
                       "variableName": "Rank02_CD"
                     },
@@ -1241,7 +1241,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": {
-                "displayLines": "UnusedUnderThisBase_6581"
+                "displayLines": "UnusedUnderThisBase_7454"
               },
               "enteringRange": [
                 {

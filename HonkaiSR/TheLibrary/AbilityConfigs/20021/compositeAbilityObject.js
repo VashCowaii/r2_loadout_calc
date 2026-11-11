@@ -343,7 +343,7 @@ const compositeAbilityObject = {
                         "target": "{{Player Team All}}"
                       },
                       "advanceType": "Set",
-                      "multiAdd": "(0 - UnusedUnderThisBase_9256)"
+                      "multiAdd": "(0 - UnusedUnderThisBase_10129)"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1131,7 +1131,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "displayLines": "(UnusedUnderThisBase_9217 * 3)"
+                        "displayLines": "(UnusedUnderThisBase_10090 * 3)"
                       },
                       "attacker": {
                         "name": "Target Name",
@@ -1220,7 +1220,7 @@ const compositeAbilityObject = {
                         "target": "{{Level Entity}}"
                       },
                       "baseToughnessDMG": {
-                        "displayLines": "(UnusedUnderThisBase_9217 * 3)"
+                        "displayLines": "(UnusedUnderThisBase_10090 * 3)"
                       },
                       "toughnessForcedReductionPreview": 1,
                       "isForcedReduction": true,

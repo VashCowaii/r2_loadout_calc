@@ -49,7 +49,7 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "UnusedUnderThisBase_5768"
+              "displayLines": "UnusedUnderThisBase_6641"
             }
           }
         }

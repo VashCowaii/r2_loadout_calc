@@ -305,7 +305,7 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "displayLines": "UnusedUnderThisBase_6552"
+                      "displayLines": "UnusedUnderThisBase_7425"
                     }
                   },
                   "passed": [
@@ -318,7 +318,7 @@ const compositeAbilityObject = {
                       },
                       "variables": {
                         "DamagePercentage": {
-                          "displayLines": "UnusedUnderThisBase_6583"
+                          "displayLines": "UnusedUnderThisBase_7456"
                         }
                       }
                     }
@@ -335,7 +335,7 @@ const compositeAbilityObject = {
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
-                          "displayLines": "UnusedUnderThisBase_6581"
+                          "displayLines": "UnusedUnderThisBase_7454"
                         }
                       },
                       "passed": [
@@ -348,7 +348,7 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "DamagePercentage": {
-                              "displayLines": "UnusedUnderThisBase_6582"
+                              "displayLines": "UnusedUnderThisBase_7455"
                             }
                           }
                         }
@@ -490,7 +490,7 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "displayLines": "UnusedUnderThisBase_6581"
+                      "displayLines": "UnusedUnderThisBase_7454"
                     }
                   }
                 ]
@@ -630,7 +630,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6578)) + _RedModeResRatio)"
+                        "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_7451)) + _RedModeResRatio)"
                       },
                       "variableName": "_PassiveResRatio"
                     },
@@ -643,7 +643,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"468515060\">Advanced_Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "(UnusedUnderThisBase_6558 * _PassiveResRatio)"
+                          "displayLines": "(UnusedUnderThisBase_7431 * _PassiveResRatio)"
                         }
                       }
                     }
@@ -728,7 +728,7 @@ const compositeAbilityObject = {
                         {
                           "on": "Attacker",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-                          "value": "(UnusedUnderThisBase_6548 + Rank06_StanceBreakAddedRatio)"
+                          "value": "(UnusedUnderThisBase_7421 + Rank06_StanceBreakAddedRatio)"
                         }
                       ]
                     }
@@ -816,7 +816,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6578)) + _RedModeResRatio)"
+                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_7451)) + _RedModeResRatio)"
                   },
                   "variableName": "_PassiveResRatio"
                 },
@@ -829,7 +829,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"468515060\">Advanced_Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "(UnusedUnderThisBase_6558 * _PassiveResRatio)"
+                      "displayLines": "(UnusedUnderThisBase_7431 * _PassiveResRatio)"
                     }
                   }
                 },
@@ -852,7 +852,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "(UnusedUnderThisBase_6548 + UnusedUnderThisBase_6546)"
+                        "displayLines": "(UnusedUnderThisBase_7421 + UnusedUnderThisBase_7419)"
                       },
                       "variableName": "MDF_FinalDamageUP"
                     }
@@ -861,7 +861,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_6548"
+                        "displayLines": "UnusedUnderThisBase_7421"
                       },
                       "variableName": "MDF_FinalDamageUP"
                     }
@@ -888,7 +888,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "(MDF_StatusResistance + UnusedUnderThisBase_6562)"
+                        "displayLines": "(MDF_StatusResistance + UnusedUnderThisBase_7435)"
                       },
                       "variableName": "MDF_StatusResistance"
                     },
@@ -934,14 +934,14 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-688726584\">Advanced_Sam_PointB1_BreakDamageAddedRatioBase</a>[<span class=\"descriptionNumberColor\">Module α: Antilag Outburst</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_6579"
+                          "displayLines": "UnusedUnderThisBase_7452"
                         }
                       }
                     },
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_6556"
+                        "displayLines": "UnusedUnderThisBase_7429"
                       },
                       "variableName": "_PointB1_Times"
                     },
@@ -974,7 +974,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"770661145\">Advanced_Sam_Eidolon6_FirePenetrate</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_6566"
+                          "displayLines": "UnusedUnderThisBase_7439"
                         }
                       }
                     }
@@ -1187,7 +1187,7 @@ const compositeAbilityObject = {
                         ]
                       },
                       "advanceType": "Set",
-                      "multiAdd": "UnusedUnderThisBase_6580"
+                      "multiAdd": "UnusedUnderThisBase_7453"
                     }
                   ]
                 },
@@ -1368,7 +1368,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "displayLines": "UnusedUnderThisBase_6581"
+                    "displayLines": "UnusedUnderThisBase_7454"
                   },
                   "enteringRange": [
                     {

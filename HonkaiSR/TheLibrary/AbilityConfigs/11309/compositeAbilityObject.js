@@ -46,7 +46,7 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "UnusedUnderThisBase_14268"
+                    "displayLines": "UnusedUnderThisBase_15141"
                   }
                 }
               ]
@@ -151,13 +151,13 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "UnusedUnderThisBase_6437"
+                    "displayLines": "UnusedUnderThisBase_7310"
                   }
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_6437"
+                    "displayLines": "UnusedUnderThisBase_7310"
                   },
                   "variableName": "Skill02_P1_DmgUpForShow"
                 }
@@ -344,7 +344,7 @@ const compositeAbilityObject = {
                   "eventID": 11309,
                   "variables": {
                     "BattleEvent_Geji_BaseSpeed": {
-                      "displayLines": "UnusedUnderThisBase_6433"
+                      "displayLines": "UnusedUnderThisBase_7306"
                     }
                   }
                 },
@@ -426,7 +426,7 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "UnusedUnderThisBase_7503"
+                    "displayLines": "UnusedUnderThisBase_8376"
                   }
                 }
               ]
@@ -517,7 +517,7 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "UnusedUnderThisBase_6425"
+                    "displayLines": "UnusedUnderThisBase_7298"
                   }
                 }
               ]
@@ -545,7 +545,7 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "UnusedUnderThisBase_7498"
+                    "displayLines": "UnusedUnderThisBase_8371"
                   }
                 }
               ]
@@ -595,7 +595,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "Ability03_DmgRatio": {
-                  "displayLines": "UnusedUnderThisBase_6764"
+                  "displayLines": "UnusedUnderThisBase_7637"
                 }
               }
             },
@@ -613,7 +613,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "Trace_PointB2_P1_Ratio": {
-                  "displayLines": "UnusedUnderThisBase_7317"
+                  "displayLines": "UnusedUnderThisBase_8190"
                 }
               }
             },
@@ -670,7 +670,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "AbilityRank_Eidolon6_P2_ExtraRatio": {
-                  "displayLines": "UnusedUnderThisBase_6434"
+                  "displayLines": "UnusedUnderThisBase_7307"
                 }
               }
             }
@@ -749,12 +749,12 @@ const compositeAbilityObject = {
                             {
                               "on": "Attacker",
                               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
-                              "value": "UnusedUnderThisBase_7586"
+                              "value": "UnusedUnderThisBase_8459"
                             },
                             {
                               "on": "Attacker",
                               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageFIXED</span>&nbsp;",
-                              "value": "(UnusedUnderThisBase_6431 + UnusedUnderThisBase_6434)"
+                              "value": "(UnusedUnderThisBase_7304 + UnusedUnderThisBase_7307)"
                             }
                           ]
                         }
@@ -766,12 +766,12 @@ const compositeAbilityObject = {
                             {
                               "on": "Attacker",
                               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
-                              "value": "UnusedUnderThisBase_7586"
+                              "value": "UnusedUnderThisBase_8459"
                             },
                             {
                               "on": "Attacker",
                               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageFIXED</span>&nbsp;",
-                              "value": "UnusedUnderThisBase_6431"
+                              "value": "UnusedUnderThisBase_7304"
                             }
                           ]
                         }
@@ -864,7 +864,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_14462"
+                        "displayLines": "UnusedUnderThisBase_15335"
                       },
                       "variableName": "_Rank06_BigDmgCount"
                     }
@@ -898,7 +898,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_6439"
+                    "displayLines": "UnusedUnderThisBase_7312"
                   },
                   "variableName": "Skill03_BaseAttack_Total_Ratio"
                 },
@@ -921,7 +921,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_6427"
+                        "displayLines": "UnusedUnderThisBase_7300"
                       },
                       "variableName": "Skill03_BaseAttack_Total"
                     }
@@ -930,7 +930,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_6427)"
+                        "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_7300)"
                       },
                       "variableName": "Skill03_BaseAttack_Total"
                     }
@@ -1026,7 +1026,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "displayLines": "(UnusedUnderThisBase_6424 + UnusedUnderThisBase_14265)"
+                        "displayLines": "(UnusedUnderThisBase_7297 + UnusedUnderThisBase_15138)"
                       },
                       "isFixed": "* ERR"
                     }
@@ -1039,7 +1039,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_6424"
+                        "displayLines": "UnusedUnderThisBase_7297"
                       },
                       "isFixed": "* ERR"
                     }
@@ -1242,7 +1242,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "displayLines": "UnusedUnderThisBase_6439"
+                            "displayLines": "UnusedUnderThisBase_7312"
                           },
                           "variableName": "Skill03_BaseAttack_Total_Ratio"
                         },
@@ -1265,7 +1265,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_6427"
+                                "displayLines": "UnusedUnderThisBase_7300"
                               },
                               "variableName": "Skill03_BaseAttack_Total"
                             }
@@ -1274,7 +1274,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_6427)"
+                                "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_7300)"
                               },
                               "variableName": "Skill03_BaseAttack_Total"
                             }
@@ -1318,7 +1318,7 @@ const compositeAbilityObject = {
                               "displayLines": "Skill03_BaseAttack_Total"
                             },
                             "Ability03_DmgRatio": {
-                              "displayLines": "UnusedUnderThisBase_6764"
+                              "displayLines": "UnusedUnderThisBase_7637"
                             }
                           }
                         }
@@ -1374,7 +1374,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "displayLines": "UnusedUnderThisBase_6439"
+                            "displayLines": "UnusedUnderThisBase_7312"
                           },
                           "variableName": "Skill03_BaseAttack_Total_Ratio"
                         },
@@ -1397,7 +1397,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_6427"
+                                "displayLines": "UnusedUnderThisBase_7300"
                               },
                               "variableName": "Skill03_BaseAttack_Total"
                             }
@@ -1406,7 +1406,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_6427)"
+                                "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_7300)"
                               },
                               "variableName": "Skill03_BaseAttack_Total"
                             }
@@ -1450,7 +1450,7 @@ const compositeAbilityObject = {
                               "displayLines": "Skill03_BaseAttack_Total"
                             },
                             "Ability03_DmgRatio": {
-                              "displayLines": "UnusedUnderThisBase_6764"
+                              "displayLines": "UnusedUnderThisBase_7637"
                             }
                           }
                         }
@@ -1689,7 +1689,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Set",
-                      "multiAdd": "(0 - UnusedUnderThisBase_6440)"
+                      "multiAdd": "(0 - UnusedUnderThisBase_7313)"
                     }
                   ]
                 },

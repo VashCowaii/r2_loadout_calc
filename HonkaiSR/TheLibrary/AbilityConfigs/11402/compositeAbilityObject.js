@@ -242,11 +242,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                       "stackLimit": {
-                        "displayLines": "UnusedUnderThisBase_4556"
+                        "displayLines": "UnusedUnderThisBase_5429"
                       },
                       "valuePerStack": {
                         "_IgnoreDefenceRatio": {
-                          "displayLines": "UnusedUnderThisBase_4533"
+                          "displayLines": "UnusedUnderThisBase_5406"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -297,11 +297,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                       "stackLimit": {
-                        "displayLines": "UnusedUnderThisBase_4556"
+                        "displayLines": "UnusedUnderThisBase_5429"
                       },
                       "valuePerStack": {
                         "_IgnoreDefenceRatio": {
-                          "displayLines": "UnusedUnderThisBase_4533"
+                          "displayLines": "UnusedUnderThisBase_5406"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -1122,7 +1122,7 @@ const compositeAbilityObject = {
                         {
                           "on": "Defender",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                          "value": "UnusedUnderThisBase_6977"
+                          "value": "UnusedUnderThisBase_7850"
                         }
                       ]
                     }
@@ -1199,7 +1199,7 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "displayLines": "UnusedUnderThisBase_4532"
+                            "displayLines": "UnusedUnderThisBase_5405"
                           },
                           "isFixed": "* ERR"
                         }
@@ -1275,7 +1275,7 @@ const compositeAbilityObject = {
                                 "target": "{{Caster}}"
                               },
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_4532"
+                                "displayLines": "UnusedUnderThisBase_5405"
                               },
                               "isFixed": "* ERR"
                             }
@@ -1358,7 +1358,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "(_Layer * UnusedUnderThisBase_13145)"
+                    "displayLines": "(_Layer * UnusedUnderThisBase_14018)"
                   },
                   "variableName": "SpeedAddTotal"
                 },
@@ -1455,7 +1455,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_14185) + (_ServantCurrentSpeed * UnusedUnderThisBase_14186))"
+                    "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_15058) + (_ServantCurrentSpeed * UnusedUnderThisBase_15059))"
                   },
                   "variableName": "_AttackConvert"
                 },
@@ -1796,7 +1796,7 @@ const compositeAbilityObject = {
                   "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                   "variableName": "MDF_PropertyValue2",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_14175"
+                    "displayLines": "UnusedUnderThisBase_15048"
                   }
                 }
               ],
@@ -1819,7 +1819,7 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_14189"
+                        "displayLines": "UnusedUnderThisBase_15062"
                       }
                     }
                   ],
@@ -1842,7 +1842,7 @@ const compositeAbilityObject = {
                           "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                           "variableName": "MDF_PropertyValue2",
                           "value": {
-                            "displayLines": "UnusedUnderThisBase_14173"
+                            "displayLines": "UnusedUnderThisBase_15046"
                           }
                         }
                       ],

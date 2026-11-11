@@ -2728,7 +2728,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_9599"
+                    "displayLines": "UnusedUnderThisBase_10472"
                   },
                   "variableName": "MDF_AllDamageTypeAddedRatio"
                 },
@@ -2757,7 +2757,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "(UnusedUnderThisBase_9594 + UnusedUnderThisBase_9619)"
+                        "displayLines": "(UnusedUnderThisBase_10467 + UnusedUnderThisBase_10492)"
                       },
                       "variableName": "MDF_DamageReduce"
                     },
@@ -2777,7 +2777,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_9619"
+                        "displayLines": "UnusedUnderThisBase_10492"
                       },
                       "variableName": "MDF_DamageReduce"
                     },
@@ -3491,7 +3491,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "displayLines": "UnusedUnderThisBase_9681"
+                            "displayLines": "UnusedUnderThisBase_10554"
                           },
                           "enemyList": [
                             {
@@ -3508,7 +3508,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "displayLines": "UnusedUnderThisBase_9681"
+                            "displayLines": "UnusedUnderThisBase_10554"
                           },
                           "enemyList": [
                             {
@@ -3537,7 +3537,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "displayLines": "UnusedUnderThisBase_9681"
+                            "displayLines": "UnusedUnderThisBase_10554"
                           },
                           "enemyList": [
                             {
@@ -3554,7 +3554,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "displayLines": "UnusedUnderThisBase_9681"
+                            "displayLines": "UnusedUnderThisBase_10554"
                           },
                           "enemyList": [
                             {
@@ -3593,7 +3593,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "displayLines": "UnusedUnderThisBase_9703"
+                            "displayLines": "UnusedUnderThisBase_10576"
                           },
                           "enemyList": [
                             {
@@ -3610,7 +3610,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "displayLines": "UnusedUnderThisBase_9703"
+                            "displayLines": "UnusedUnderThisBase_10576"
                           },
                           "enemyList": [
                             {
@@ -3639,7 +3639,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "displayLines": "UnusedUnderThisBase_9703"
+                            "displayLines": "UnusedUnderThisBase_10576"
                           },
                           "enemyList": [
                             {
@@ -3656,7 +3656,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "displayLines": "UnusedUnderThisBase_9703"
+                            "displayLines": "UnusedUnderThisBase_10576"
                           },
                           "enemyList": [
                             {
@@ -3748,7 +3748,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "displayLines": "UnusedUnderThisBase_9681"
+                                "displayLines": "UnusedUnderThisBase_10554"
                               },
                               "enemyList": [
                                 {
@@ -3765,7 +3765,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "displayLines": "UnusedUnderThisBase_9681"
+                                "displayLines": "UnusedUnderThisBase_10554"
                               },
                               "enemyList": [
                                 {
@@ -3794,7 +3794,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "displayLines": "UnusedUnderThisBase_9703"
+                                "displayLines": "UnusedUnderThisBase_10576"
                               },
                               "enemyList": [
                                 {
@@ -3811,7 +3811,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Create Enemies",
                               "delayPercent": {
-                                "displayLines": "UnusedUnderThisBase_9703"
+                                "displayLines": "UnusedUnderThisBase_10576"
                               },
                               "enemyList": [
                                 {

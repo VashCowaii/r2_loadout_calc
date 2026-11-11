@@ -701,14 +701,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"799207340\">Enemy_W4_Manta_LocalLegend_Virus_NightMare</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_12386"
+                    "displayLines": "UnusedUnderThisBase_13259"
                   },
                   "valuePerStack": {
                     "MDF_DotHPRatio": {
-                      "displayLines": "UnusedUnderThisBase_12385"
+                      "displayLines": "UnusedUnderThisBase_13258"
                     },
                     "MDF_DotDamageRatio": {
-                      "displayLines": "UnusedUnderThisBase_12373"
+                      "displayLines": "UnusedUnderThisBase_13246"
                     }
                   }
                 }
@@ -722,14 +722,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1965379982\">Enemy_W4_Manta_LocalLegend_Virus_Avatar</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_12386"
+                    "displayLines": "UnusedUnderThisBase_13259"
                   },
                   "valuePerStack": {
                     "MDF_DotHPRatio": {
-                      "displayLines": "UnusedUnderThisBase_12385"
+                      "displayLines": "UnusedUnderThisBase_13258"
                     },
                     "MDF_DotDamageRatio": {
-                      "displayLines": "UnusedUnderThisBase_12373"
+                      "displayLines": "UnusedUnderThisBase_13246"
                     }
                   }
                 }

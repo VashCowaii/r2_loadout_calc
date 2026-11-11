@@ -464,7 +464,7 @@ const compositeAbilityObject = {
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1020254741\">MReference_SpeedRatioUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_6078"
+                      "displayLines": "UnusedUnderThisBase_6951"
                     }
                   }
                 }
@@ -784,10 +784,10 @@ const compositeAbilityObject = {
                     "displayLines": "(CurSpecialSP + CurOverflowSpecialSP)"
                   },
                   "activeCount": {
-                    "displayLines": "UnusedUnderThisBase_6109"
+                    "displayLines": "UnusedUnderThisBase_6982"
                   },
                   "maximum": {
-                    "displayLines": "UnusedUnderThisBase_6109"
+                    "displayLines": "UnusedUnderThisBase_6982"
                   },
                   "assignState": "True",
                   "priorState": "Normal",
@@ -800,7 +800,7 @@ const compositeAbilityObject = {
                     "value1": "CurSpecialSP",
                     "compareType": ">=",
                     "value2": {
-                      "displayLines": "UnusedUnderThisBase_6109"
+                      "displayLines": "UnusedUnderThisBase_6982"
                     }
                   },
                   "passed": [
@@ -912,7 +912,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_6110"
+                    "displayLines": "UnusedUnderThisBase_6983"
                   }
                 },
                 {
@@ -942,7 +942,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Set Phainon Action Count",
                   "count": {
-                    "displayLines": "(UnusedUnderThisBase_6080 - 1)"
+                    "displayLines": "(UnusedUnderThisBase_6953 - 1)"
                   }
                 },
                 {
@@ -1139,7 +1139,7 @@ const compositeAbilityObject = {
                     "value1": "Skill22_Energy",
                     "compareType": ">=",
                     "value2": {
-                      "displayLines": "UnusedUnderThisBase_6105"
+                      "displayLines": "UnusedUnderThisBase_6978"
                     }
                   },
                   "passed": [
@@ -1294,7 +1294,7 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyRatio": {
-                  "displayLines": "UnusedUnderThisBase_6122"
+                  "displayLines": "UnusedUnderThisBase_6995"
                 }
               }
             },
@@ -1368,7 +1368,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
                       "variables": {
                         "parameter[0]_AddValue": {
-                          "displayLines": "UnusedUnderThisBase_6082"
+                          "displayLines": "UnusedUnderThisBase_6955"
                         }
                       }
                     }
@@ -1389,11 +1389,11 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-982733816\">Phainon_Tree03_Property</a>[<span class=\"descriptionNumberColor\">Shine with Valor</span>]",
                       "stackLimit": {
-                        "displayLines": "UnusedUnderThisBase_6783"
+                        "displayLines": "UnusedUnderThisBase_7656"
                       },
                       "valuePerStack": {
                         "MDF_PropertyRatio": {
-                          "displayLines": "UnusedUnderThisBase_6713"
+                          "displayLines": "UnusedUnderThisBase_7586"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -1594,7 +1594,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "healPercent": {
-                    "displayLines": "UnusedUnderThisBase_6113"
+                    "displayLines": "UnusedUnderThisBase_6986"
                   },
                   "formula": "Heal from Target MaxHP"
                 }
@@ -1916,7 +1916,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
           "variables": {
             "parameter[0]_AddValue": {
-              "displayLines": "UnusedUnderThisBase_6091"
+              "displayLines": "UnusedUnderThisBase_6964"
             }
           }
         },
@@ -1939,7 +1939,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "displayLines": "UnusedUnderThisBase_14414"
+              "displayLines": "UnusedUnderThisBase_15287"
             },
             "Toughness": {
               "displayLines": "ST Toughness Value"
@@ -1957,7 +1957,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "displayLines": "UnusedUnderThisBase_14353"
+              "displayLines": "UnusedUnderThisBase_15226"
             },
             "Toughness": {
               "displayLines": "Blast Toughness Value"
@@ -2064,12 +2064,12 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1491786902\">Phainon_Passive_Property</a>[<span class=\"descriptionNumberColor\">Pyric Corpus</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_6107"
+                    "displayLines": "UnusedUnderThisBase_6980"
                   },
                   "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_6074"
+                      "displayLines": "UnusedUnderThisBase_6947"
                     }
                   }
                 }

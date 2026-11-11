@@ -1041,7 +1041,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "displayLines": "UnusedUnderThisBase_10757"
+                "displayLines": "UnusedUnderThisBase_11630"
               },
               "variableName": "ChargeCount"
             },
@@ -1053,7 +1053,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"792733911\">Enemy_W3_Sam_01_EnhanceChargeCount</a>[<span class=\"descriptionNumberColor\">Mortal Instinct</span>]",
               "addStacksPerTrigger": {
-                "displayLines": "UnusedUnderThisBase_10757"
+                "displayLines": "UnusedUnderThisBase_11630"
               }
             },
             {
@@ -1077,7 +1077,7 @@ const configAbility = {
                   },
                   "variableName": "PassiveSkill03_MaxCharge",
                   "resetValue": {
-                    "displayLines": "UnusedUnderThisBase_10736"
+                    "displayLines": "UnusedUnderThisBase_11609"
                   },
                   "scope": "TargetEntity"
                 }
@@ -1091,7 +1091,7 @@ const configAbility = {
                   },
                   "variableName": "PassiveSkill03_MaxCharge",
                   "resetValue": {
-                    "displayLines": "UnusedUnderThisBase_10744"
+                    "displayLines": "UnusedUnderThisBase_11617"
                   },
                   "scope": "TargetEntity"
                 }
@@ -1166,7 +1166,7 @@ const configAbility = {
                       },
                       "variableName": "PassiveSkill03_MaxCharge",
                       "resetValue": {
-                        "displayLines": "UnusedUnderThisBase_10736"
+                        "displayLines": "UnusedUnderThisBase_11609"
                       },
                       "scope": "TargetEntity"
                     }
@@ -1180,7 +1180,7 @@ const configAbility = {
                       },
                       "variableName": "PassiveSkill03_MaxCharge",
                       "resetValue": {
-                        "displayLines": "UnusedUnderThisBase_10744"
+                        "displayLines": "UnusedUnderThisBase_11617"
                       },
                       "scope": "TargetEntity"
                     }
@@ -1206,7 +1206,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "displayLines": "UnusedUnderThisBase_10738"
+                          "displayLines": "UnusedUnderThisBase_11611"
                         }
                       }
                     }

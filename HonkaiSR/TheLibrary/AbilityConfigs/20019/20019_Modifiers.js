@@ -188,7 +188,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "displayLines": "UnusedUnderThisBase_10536"
+                  "displayLines": "UnusedUnderThisBase_11409"
                 }
               }
             }
@@ -214,7 +214,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeTakenRatio": {
-                  "displayLines": "UnusedUnderThisBase_10537"
+                  "displayLines": "UnusedUnderThisBase_11410"
                 }
               }
             },
@@ -248,7 +248,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "displayLines": "UnusedUnderThisBase_10536"
+                  "displayLines": "UnusedUnderThisBase_11409"
                 }
               }
             },
@@ -1623,19 +1623,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"261154727\">Monster_W3_FigureBoss_Standard_BreakController</a>",
                   "valuePerStack": {
                     "MDF_BreakDelayRatio": {
-                      "displayLines": "UnusedUnderThisBase_10531"
+                      "displayLines": "UnusedUnderThisBase_11404"
                     },
                     "MDF_ChosenOneSpeedUp": {
-                      "displayLines": "UnusedUnderThisBase_10532"
+                      "displayLines": "UnusedUnderThisBase_11405"
                     },
                     "MDF_ExploreDamagePercentage": {
-                      "displayLines": "UnusedUnderThisBase_10525"
+                      "displayLines": "UnusedUnderThisBase_11398"
                     },
                     "MDF_ExploreDelayRatio": {
-                      "displayLines": "UnusedUnderThisBase_10533"
+                      "displayLines": "UnusedUnderThisBase_11406"
                     },
                     "MDF_ExploreDamageUpRatio": {
-                      "displayLines": "UnusedUnderThisBase_10526"
+                      "displayLines": "UnusedUnderThisBase_11399"
                     }
                   }
                 }
@@ -1731,19 +1731,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"261154727\">Monster_W3_FigureBoss_Standard_BreakController</a>",
                   "valuePerStack": {
                     "MDF_BreakDelayRatio": {
-                      "displayLines": "UnusedUnderThisBase_10531"
+                      "displayLines": "UnusedUnderThisBase_11404"
                     },
                     "MDF_ChosenOneSpeedUp": {
-                      "displayLines": "UnusedUnderThisBase_10532"
+                      "displayLines": "UnusedUnderThisBase_11405"
                     },
                     "MDF_ExploreDamagePercentage": {
-                      "displayLines": "UnusedUnderThisBase_10525"
+                      "displayLines": "UnusedUnderThisBase_11398"
                     },
                     "MDF_ExploreDelayRatio": {
-                      "displayLines": "UnusedUnderThisBase_10533"
+                      "displayLines": "UnusedUnderThisBase_11406"
                     },
                     "MDF_ExploreDamageUpRatio": {
-                      "displayLines": "UnusedUnderThisBase_10526"
+                      "displayLines": "UnusedUnderThisBase_11399"
                     }
                   }
                 }
@@ -1837,19 +1837,19 @@ const configAbility = {
               "canHitNonTargets": true,
               "valuePerStack": {
                 "P1_BreakDelayRatio": {
-                  "displayLines": "UnusedUnderThisBase_10531"
+                  "displayLines": "UnusedUnderThisBase_11404"
                 },
                 "P2_ChosenOneSpeedUp": {
-                  "displayLines": "UnusedUnderThisBase_10532"
+                  "displayLines": "UnusedUnderThisBase_11405"
                 },
                 "P3_ExploreDamagePercentage": {
-                  "displayLines": "UnusedUnderThisBase_10525"
+                  "displayLines": "UnusedUnderThisBase_11398"
                 },
                 "P4_ExploreDelayRatio": {
-                  "displayLines": "UnusedUnderThisBase_10533"
+                  "displayLines": "UnusedUnderThisBase_11406"
                 },
                 "P5_ExploreDamageUpRatio": {
-                  "displayLines": "UnusedUnderThisBase_10526"
+                  "displayLines": "UnusedUnderThisBase_11399"
                 }
               },
               "allowAbilityTriggers": false

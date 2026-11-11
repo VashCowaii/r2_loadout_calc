@@ -685,7 +685,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
                       "valuePerStack": {
                         "MDF_DamageValue": {
-                          "displayLines": "(UnusedUnderThisBase_11702 * BaseAttack)"
+                          "displayLines": "(UnusedUnderThisBase_12575 * BaseAttack)"
                         }
                       }
                     }
@@ -1202,7 +1202,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_DamagePercentage": {
-                  "displayLines": "UnusedUnderThisBase_11765"
+                  "displayLines": "UnusedUnderThisBase_12638"
                 }
               }
             }
@@ -1453,7 +1453,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Set",
-                          "multiAdd": "UnusedUnderThisBase_11726"
+                          "multiAdd": "UnusedUnderThisBase_12599"
                         }
                       ]
                     },
@@ -1474,7 +1474,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "UnusedUnderThisBase_11766"
+                  "multiAdd": "UnusedUnderThisBase_12639"
                 },
                 {
                   "name": "Declare Custom Variable",

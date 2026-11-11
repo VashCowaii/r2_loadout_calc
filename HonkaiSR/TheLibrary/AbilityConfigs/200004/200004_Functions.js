@@ -42,12 +42,12 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1491786902\">Phainon_Passive_Property</a>[<span class=\"descriptionNumberColor\">Pyric Corpus</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_6107"
+                "displayLines": "UnusedUnderThisBase_6980"
               },
               "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "UnusedUnderThisBase_6074"
+                  "displayLines": "UnusedUnderThisBase_6947"
                 }
               }
             }

@@ -47,10 +47,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "displayLines": "UnusedUnderThisBase_8512"
+                          "displayLines": "UnusedUnderThisBase_9385"
                         },
                         "MDF_AttackUpPerLayer": {
-                          "displayLines": "UnusedUnderThisBase_8531"
+                          "displayLines": "UnusedUnderThisBase_9404"
                         }
                       }
                     },
@@ -471,10 +471,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "displayLines": "UnusedUnderThisBase_8516"
+                          "displayLines": "UnusedUnderThisBase_9389"
                         },
                         "MDF_AttackUpPerLayer": {
-                          "displayLines": "UnusedUnderThisBase_8515"
+                          "displayLines": "UnusedUnderThisBase_9388"
                         }
                       }
                     }
@@ -489,10 +489,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                       "valuePerStack": {
                         "MDF_SpeedUpPerLayer": {
-                          "displayLines": "UnusedUnderThisBase_8512"
+                          "displayLines": "UnusedUnderThisBase_9385"
                         },
                         "MDF_AttackUpPerLayer": {
-                          "displayLines": "UnusedUnderThisBase_8531"
+                          "displayLines": "UnusedUnderThisBase_9404"
                         }
                       }
                     }

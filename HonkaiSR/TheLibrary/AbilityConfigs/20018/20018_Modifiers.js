@@ -2717,7 +2717,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "displayLines": "UnusedUnderThisBase_9599"
+                "displayLines": "UnusedUnderThisBase_10472"
               },
               "variableName": "MDF_AllDamageTypeAddedRatio"
             },
@@ -2746,7 +2746,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "(UnusedUnderThisBase_9594 + UnusedUnderThisBase_9619)"
+                    "displayLines": "(UnusedUnderThisBase_10467 + UnusedUnderThisBase_10492)"
                   },
                   "variableName": "MDF_DamageReduce"
                 },
@@ -2766,7 +2766,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_9619"
+                    "displayLines": "UnusedUnderThisBase_10492"
                   },
                   "variableName": "MDF_DamageReduce"
                 },

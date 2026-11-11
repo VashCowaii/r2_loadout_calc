@@ -305,7 +305,7 @@ const compositeAbilityObject = {
                     "displayLines": "MDF_DanHengPT_InitShieldValue"
                   },
                   "stackLimit": {
-                    "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5081) + UnusedUnderThisBase_5071) * MDF_MaxShieldRatio)"
+                    "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5954) + UnusedUnderThisBase_5944) * MDF_MaxShieldRatio)"
                   }
                 },
                 {
@@ -1049,14 +1049,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_14241"
+                "displayLines": "UnusedUnderThisBase_15114"
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_5081) + UnusedUnderThisBase_5071)"
+                  "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_5954) + UnusedUnderThisBase_5944)"
                 },
                 "MDF_MaxShieldRatio": {
-                  "displayLines": "UnusedUnderThisBase_5083"
+                  "displayLines": "UnusedUnderThisBase_5956"
                 },
                 "MDF_MainTarget": 1
               }
@@ -1084,14 +1084,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_6022"
+                "displayLines": "UnusedUnderThisBase_6895"
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_5086) + UnusedUnderThisBase_5087)"
+                  "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_5959) + UnusedUnderThisBase_5960)"
                 },
                 "MDF_MaxShieldRatio": {
-                  "displayLines": "UnusedUnderThisBase_5083"
+                  "displayLines": "UnusedUnderThisBase_5956"
                 },
                 "MDF_MainTarget": 1
               }
@@ -1180,14 +1180,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_6532"
+                    "displayLines": "UnusedUnderThisBase_7405"
                   },
                   "valuePerStack": {
                     "MDF_DanHengPT_InitShieldValue": {
-                      "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_5067) + UnusedUnderThisBase_5063) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_5846)"
+                      "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_5940) + UnusedUnderThisBase_5936) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_6719)"
                     },
                     "MDF_MaxShieldRatio": {
-                      "displayLines": "UnusedUnderThisBase_5083"
+                      "displayLines": "UnusedUnderThisBase_5956"
                     },
                     "MDF_MainTarget": 1
                   }
@@ -1229,14 +1229,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
-                            "displayLines": "UnusedUnderThisBase_6532"
+                            "displayLines": "UnusedUnderThisBase_7405"
                           },
                           "valuePerStack": {
                             "MDF_DanHengPT_InitShieldValue": {
-                              "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_5065) + UnusedUnderThisBase_5093) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_5846)"
+                              "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_5938) + UnusedUnderThisBase_5966) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_6719)"
                             },
                             "MDF_MaxShieldRatio": {
-                              "displayLines": "UnusedUnderThisBase_5083"
+                              "displayLines": "UnusedUnderThisBase_5956"
                             },
                             "MDF_MainTarget": 1
                           }
@@ -1255,14 +1255,14 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_6532"
+                    "displayLines": "UnusedUnderThisBase_7405"
                   },
                   "valuePerStack": {
                     "MDF_DanHengPT_InitShieldValue": {
-                      "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5067) + UnusedUnderThisBase_5063) * DanHengPT_ExtraShieldUPRatio)"
+                      "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5940) + UnusedUnderThisBase_5936) * DanHengPT_ExtraShieldUPRatio)"
                     },
                     "MDF_MaxShieldRatio": {
-                      "displayLines": "UnusedUnderThisBase_5083"
+                      "displayLines": "UnusedUnderThisBase_5956"
                     },
                     "MDF_MainTarget": 1
                   }
@@ -1304,14 +1304,14 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                           "duration": {
-                            "displayLines": "UnusedUnderThisBase_6532"
+                            "displayLines": "UnusedUnderThisBase_7405"
                           },
                           "valuePerStack": {
                             "MDF_DanHengPT_InitShieldValue": {
-                              "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5065) + UnusedUnderThisBase_5093) * DanHengPT_ExtraShieldUPRatio)"
+                              "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_5938) + UnusedUnderThisBase_5966) * DanHengPT_ExtraShieldUPRatio)"
                             },
                             "MDF_MaxShieldRatio": {
-                              "displayLines": "UnusedUnderThisBase_5083"
+                              "displayLines": "UnusedUnderThisBase_5956"
                             },
                             "MDF_MainTarget": 1
                           }

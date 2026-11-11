@@ -9,7 +9,7 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"463303523\">Phainon_Passive_ChargeEnergyToGainSP</a>",
       "variables": {
         "parameter[0]_AddValue": {
-          "displayLines": "UnusedUnderThisBase_6091"
+          "displayLines": "UnusedUnderThisBase_6964"
         }
       }
     },
@@ -32,7 +32,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "displayLines": "UnusedUnderThisBase_14414"
+          "displayLines": "UnusedUnderThisBase_15287"
         },
         "Toughness": {
           "displayLines": "ST Toughness Value"
@@ -50,7 +50,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "displayLines": "UnusedUnderThisBase_14353"
+          "displayLines": "UnusedUnderThisBase_15226"
         },
         "Toughness": {
           "displayLines": "Blast Toughness Value"

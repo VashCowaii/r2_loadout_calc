@@ -60,7 +60,7 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "UnusedUnderThisBase_5768"
+                  "displayLines": "UnusedUnderThisBase_6641"
                 }
               }
             }
@@ -920,7 +920,7 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "displayLines": "UnusedUnderThisBase_5758"
+                      "displayLines": "UnusedUnderThisBase_6631"
                     },
                     "Toughness": {
                       "displayLines": "AOE Toughness Value"
@@ -975,7 +975,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "displayLines": "UnusedUnderThisBase_5758"
+                          "displayLines": "UnusedUnderThisBase_6631"
                         },
                         "Toughness": {
                           "displayLines": "AOE Toughness Value"
@@ -1017,7 +1017,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_5758"
+                              "displayLines": "UnusedUnderThisBase_6631"
                             },
                             "Toughness": {
                               "displayLines": "AOE Toughness Value"
@@ -1049,7 +1049,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "displayLines": "UnusedUnderThisBase_5758"
+                                  "displayLines": "UnusedUnderThisBase_6631"
                                 },
                                 "Toughness": {
                                   "displayLines": "AOE Toughness Value"
@@ -1077,7 +1077,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "displayLines": "UnusedUnderThisBase_5761"
+                "displayLines": "UnusedUnderThisBase_6634"
               },
               "execute": [
                 {
@@ -1132,7 +1132,7 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "displayLines": "UnusedUnderThisBase_5773"
+                          "displayLines": "UnusedUnderThisBase_6646"
                         },
                         "Toughness": {
                           "displayLines": "Lingsha_Rank06_StanceDamage"
@@ -1187,7 +1187,7 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_5773"
+                              "displayLines": "UnusedUnderThisBase_6646"
                             },
                             "Toughness": {
                               "displayLines": "Lingsha_Rank06_StanceDamage"
@@ -1229,7 +1229,7 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "displayLines": "UnusedUnderThisBase_5773"
+                                  "displayLines": "UnusedUnderThisBase_6646"
                                 },
                                 "Toughness": {
                                   "displayLines": "Lingsha_Rank06_StanceDamage"
@@ -1261,7 +1261,7 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Fire",
                                     "Damage": {
-                                      "displayLines": "UnusedUnderThisBase_5773"
+                                      "displayLines": "UnusedUnderThisBase_6646"
                                     },
                                     "Toughness": {
                                       "displayLines": "Lingsha_Rank06_StanceDamage"

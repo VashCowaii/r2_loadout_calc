@@ -310,7 +310,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1432687016\">Enemy_W5_Shell_LightTeam_Shield_Stack</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage_Add": {
-                      "displayLines": "UnusedUnderThisBase_13718"
+                      "displayLines": "UnusedUnderThisBase_14591"
                     }
                   }
                 }
@@ -325,7 +325,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"234920767\">Enemy_W5_Shell_LightTeam_Shield</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
-                      "displayLines": "UnusedUnderThisBase_13718"
+                      "displayLines": "UnusedUnderThisBase_14591"
                     }
                   }
                 }
