@@ -47,6 +47,16 @@ const configAbility = {
           "max": 4
         },
         {
+          "name": "Define Custom Variable",
+          "target": {
+            "name": "Add Target by Unique Identifier",
+            "identifier": "W3_Aventurine_00"
+          },
+          "scope": "TargetEntity",
+          "value": 0,
+          "variableName": "DiceDeathRattleInsertCheck"
+        },
+        {
           "name": "Animation Event",
           "target": {
             "name": "Target Name",
@@ -74,16 +84,6 @@ const configAbility = {
             "Deleted bullshit",
             "Deleted bullshit"
           ]
-        },
-        {
-          "name": "Define Custom Variable",
-          "target": {
-            "name": "Add Target by Unique Identifier",
-            "identifier": "W3_Aventurine_00"
-          },
-          "scope": "TargetEntity",
-          "value": 0,
-          "variableName": "DiceDeathRattleInsertCheck"
         }
       ]
     },

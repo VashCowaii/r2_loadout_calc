@@ -152,12 +152,25 @@ const compositeAbilityObject = {
                     "name": "AND",
                     "conditionList": [
                       {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-505266167\">Monster_W3_Aventurine_Gambling_Servant</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                          }
+                        ]
                       },
                       {
                         "name": "Compare: Variable",
@@ -187,15 +200,41 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Inject Ability Use",
-                      "abilityName": "Monster_W3_AventurinePart_Ability02_Part01_RL",
-                      "abilityTarget": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Entity Type",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "entityType": "Memosprite"
                       },
-                      "priorityTag": "EnemyPhaseChange",
-                      "canHitNonTargets": true,
-                      "allowAbilityTriggers": false
+                      "passed": [
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W3_AventurinePart_Ability02_Part01_RL",
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}.[[getSummoner]]"
+                          },
+                          "priorityTag": "EnemyPhaseChange",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W3_AventurinePart_Ability02_Part01_RL",
+                          "abilityTarget": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "priorityTag": "EnemyPhaseChange",
+                          "canHitNonTargets": true,
+                          "allowAbilityTriggers": false
+                        }
+                      ]
                     },
                     {
                       "name": "Define Custom Variable",
@@ -459,12 +498,25 @@ const compositeAbilityObject = {
                     "name": "AND",
                     "conditionList": [
                       {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-505266167\">Monster_W3_Aventurine_Gambling_Servant</a>[<span class=\"descriptionNumberColor\">Gamble</span>]"
+                          }
+                        ]
                       },
                       {
                         "name": "Compare: Variable",
@@ -521,20 +573,51 @@ const compositeAbilityObject = {
                       },
                       "passed": [
                         {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W3_AventurinePart_Ability02_Part01",
-                          "abilitySource": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Is Entity Type",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "entityType": "Memosprite"
                           },
-                          "abilityTarget": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "priorityTag": "EnemyPhaseChange",
-                          "canHitNonTargets": true,
-                          "showInActionOrder": true,
-                          "allowAbilityTriggers": false
+                          "passed": [
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Monster_W3_AventurinePart_Ability02_Part01",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}.[[getSummoner]]"
+                              },
+                              "priorityTag": "EnemyPhaseChange",
+                              "canHitNonTargets": true,
+                              "showInActionOrder": true,
+                              "allowAbilityTriggers": false
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Monster_W3_AventurinePart_Ability02_Part01",
+                              "abilitySource": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "abilityTarget": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "priorityTag": "EnemyPhaseChange",
+                              "canHitNonTargets": true,
+                              "showInActionOrder": true,
+                              "allowAbilityTriggers": false
+                            }
+                          ]
                         },
                         {
                           "name": "Define Custom Variable",
@@ -2292,7 +2375,7 @@ const compositeAbilityObject = {
                           "name": "Add Events/Bonuses",
                           "to": {
                             "name": "Target Name",
-                            "target": "{{Player Team All}}"
+                            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-699513905\">Monster_W3_AventurinePart_ResultCount</a>",
                           "addStacksPerTrigger": {
@@ -3625,6 +3708,16 @@ const compositeAbilityObject = {
               "max": 4
             },
             {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Add Target by Unique Identifier",
+                "identifier": "W3_Aventurine_00"
+              },
+              "scope": "TargetEntity",
+              "value": 0,
+              "variableName": "DiceDeathRattleInsertCheck"
+            },
+            {
               "name": "Animation Event",
               "target": {
                 "name": "Target Name",
@@ -3652,16 +3745,6 @@ const compositeAbilityObject = {
                 "Deleted bullshit",
                 "Deleted bullshit"
               ]
-            },
-            {
-              "name": "Define Custom Variable",
-              "target": {
-                "name": "Add Target by Unique Identifier",
-                "identifier": "W3_Aventurine_00"
-              },
-              "scope": "TargetEntity",
-              "value": 0,
-              "variableName": "DiceDeathRattleInsertCheck"
             }
           ]
         },
@@ -4243,12 +4326,33 @@ const compositeAbilityObject = {
                       },
                       "searchRandom": true,
                       "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"126188110\">Monster_W3_AventurinePart_SpeedZero</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-1321309283\">Monster_W3_AventurinePart_SpeedZero_RL</a>[<span class=\"descriptionNumberColor\">Forever Concealed</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"889329301\">Monster_W3_AventurinePart_01_SpeedZero</a>"
+                          }
+                        ]
                       },
                       "ifTargetFound": [
                         {
