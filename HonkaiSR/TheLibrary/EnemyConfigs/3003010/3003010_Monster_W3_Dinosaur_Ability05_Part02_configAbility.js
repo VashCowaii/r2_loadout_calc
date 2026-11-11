@@ -138,7 +138,7 @@ const configAbility = {
         {
           "name": "Assign Advance/Delay to Current Ability Use",
           "adjustmentValue": {
-            "displayLines": "UnusedUnderThisBase_10320"
+            "displayLines": "UnusedUnderThisBase_11193"
           },
           "adjustmentType": "="
         }

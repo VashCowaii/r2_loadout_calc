@@ -90,7 +90,7 @@ const configAbility = {
             "value1": "CurrentBounsIndex",
             "compareType": "<",
             "value2": {
-              "displayLines": "UnusedUnderThisBase_12038"
+              "displayLines": "UnusedUnderThisBase_12911"
             }
           },
           "passed": [

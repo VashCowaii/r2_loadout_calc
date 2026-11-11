@@ -45,12 +45,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1511,
-        1512,
-        1513,
-        1514,
-        1515,
-        1516
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -105,12 +105,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1511,
-        1512,
-        1513,
-        1514,
-        1515,
-        1516
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -165,12 +165,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1511,
-        1512,
-        1513,
-        1514,
-        1515,
-        1516
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -225,12 +225,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1511,
-        1512,
-        1513,
-        1514,
-        1515,
-        1516
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -285,12 +285,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1511,
-        1512,
-        1513,
-        1514,
-        1515,
-        1516
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -345,12 +345,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1511,
-        1512,
-        1513,
-        1514,
-        1515,
-        1516
+        1522,
+        1523,
+        1524,
+        1525,
+        1526,
+        1527
       ],
       "enemyTag": [
         "Monster_Argenti"

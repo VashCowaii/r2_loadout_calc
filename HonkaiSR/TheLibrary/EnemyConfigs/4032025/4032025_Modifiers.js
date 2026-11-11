@@ -1135,7 +1135,7 @@ const configAbility = {
               },
               "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "statValue": {
-                "displayLines": "(0 - UnusedUnderThisBase_12037)"
+                "displayLines": "(0 - UnusedUnderThisBase_12910)"
               },
               "silent": true
             },
@@ -1147,7 +1147,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "multiBase": {
-                "displayLines": "UnusedUnderThisBase_12036"
+                "displayLines": "UnusedUnderThisBase_12909"
               }
             }
           ]
@@ -1213,7 +1213,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "displayLines": "UnusedUnderThisBase_12040"
+                    "displayLines": "UnusedUnderThisBase_12913"
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown",
@@ -1249,7 +1249,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "displayLines": "UnusedUnderThisBase_12040"
+                    "displayLines": "UnusedUnderThisBase_12913"
                   },
                   "consumeFloor": 1,
                   "attackType": "Unknown",
@@ -2677,7 +2677,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-2118081652\">Enemy_W4_FireProwler_10_Main03_TimePowerListener</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "displayLines": "UnusedUnderThisBase_12009"
+                  "displayLines": "UnusedUnderThisBase_12882"
                 }
               }
             }

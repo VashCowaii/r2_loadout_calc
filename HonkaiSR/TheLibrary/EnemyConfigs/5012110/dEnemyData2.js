@@ -41,11 +41,11 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2668,
-        2669
+        2709,
+        2710
       ],
       "abilityOrder": [
-        2668
+        2709
       ]
     },
     "501211001": {
@@ -72,11 +72,11 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2668,
-        2669
+        2709,
+        2710
       ],
       "abilityOrder": [
-        2668
+        2709
       ]
     },
     "501211002": {
@@ -103,14 +103,14 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2668,
-        2669
+        2709,
+        2710
       ],
       "abilityOrder": [
-        2668
+        2709
       ],
       "overrideParams": {
-        "2669": [
+        "2710": [
           [
             "-",
             0.3,
@@ -152,11 +152,11 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2668,
-        2669
+        2709,
+        2710
       ],
       "abilityOrder": [
-        2668
+        2709
       ]
     }
   }

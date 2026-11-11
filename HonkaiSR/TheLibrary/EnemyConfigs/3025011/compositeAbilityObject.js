@@ -2468,7 +2468,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                    "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
                   },
                   "assignState": "False"
                 }
@@ -2515,7 +2515,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                    "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
                   }
                 },
                 {
@@ -2537,7 +2537,7 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "UnusedUnderThisBase_10891"
+                    "displayLines": "UnusedUnderThisBase_11764"
                   }
                 },
                 {
@@ -2560,11 +2560,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                    "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                    "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
                   },
                   "assignState": "True"
                 }
@@ -2589,7 +2589,7 @@ const compositeAbilityObject = {
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                    "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
                   },
                   "assignState": "True"
                 },
@@ -3515,7 +3515,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1121563146\">Enemy_W3_SundayPart_AssistAbilityAttach</a>",
                   "valuePerStack": {
                     "MDF_Assist_DamagePercentage": {
-                      "displayLines": "UnusedUnderThisBase_10889"
+                      "displayLines": "UnusedUnderThisBase_11762"
                     }
                   }
                 },
@@ -3751,7 +3751,7 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "UnusedUnderThisBase_12007"
+                    "displayLines": "UnusedUnderThisBase_12880"
                   }
                 },
                 {
@@ -4862,7 +4862,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "displayLines": "UnusedUnderThisBase_10877"
+                "displayLines": "UnusedUnderThisBase_11750"
               }
             }
           }
@@ -4943,7 +4943,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "advanceType": "Set",
-                      "multiAdd": "UnusedUnderThisBase_10877"
+                      "multiAdd": "UnusedUnderThisBase_11750"
                     }
                   ],
                   "failed": [

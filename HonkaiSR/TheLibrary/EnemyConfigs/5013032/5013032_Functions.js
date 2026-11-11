@@ -449,7 +449,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -472,7 +472,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -495,7 +495,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -518,7 +518,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -541,7 +541,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -564,7 +564,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -587,7 +587,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -629,7 +629,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -652,7 +652,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -675,7 +675,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -698,7 +698,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -721,7 +721,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -744,7 +744,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -767,7 +767,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -809,7 +809,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -832,7 +832,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -855,7 +855,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -878,7 +878,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -901,7 +901,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -924,7 +924,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -947,7 +947,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -989,7 +989,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1012,7 +1012,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1035,7 +1035,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1058,7 +1058,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1081,7 +1081,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1104,7 +1104,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1127,7 +1127,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1169,7 +1169,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1192,7 +1192,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1215,7 +1215,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1238,7 +1238,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1261,7 +1261,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1284,7 +1284,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1307,7 +1307,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1349,7 +1349,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1372,7 +1372,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1395,7 +1395,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1418,7 +1418,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1441,7 +1441,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1464,7 +1464,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1487,7 +1487,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1553,7 +1553,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1576,7 +1576,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1599,7 +1599,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1622,7 +1622,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1645,7 +1645,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1668,7 +1668,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1691,7 +1691,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1733,7 +1733,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1756,7 +1756,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1779,7 +1779,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1802,7 +1802,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1825,7 +1825,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1848,7 +1848,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1871,7 +1871,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1913,7 +1913,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1936,7 +1936,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1959,7 +1959,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -1982,7 +1982,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2005,7 +2005,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2028,7 +2028,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2051,7 +2051,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2093,7 +2093,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2116,7 +2116,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2139,7 +2139,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2162,7 +2162,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2185,7 +2185,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2208,7 +2208,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2231,7 +2231,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2273,7 +2273,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2296,7 +2296,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2319,7 +2319,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2342,7 +2342,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2365,7 +2365,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2388,7 +2388,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2411,7 +2411,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2453,7 +2453,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2476,7 +2476,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2499,7 +2499,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2522,7 +2522,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2545,7 +2545,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2568,7 +2568,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2591,7 +2591,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13525"
+                              "displayLines": "UnusedUnderThisBase_14398"
                             },
                             "Toughness": null,
                             "instanceTag": "Peacock_UseColor",
@@ -2767,7 +2767,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2783,7 +2783,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2817,7 +2817,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2833,7 +2833,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2867,7 +2867,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2883,7 +2883,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2917,7 +2917,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2933,7 +2933,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2967,7 +2967,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -2983,7 +2983,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3017,7 +3017,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3033,7 +3033,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3067,7 +3067,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3083,7 +3083,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3131,7 +3131,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3147,7 +3147,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3181,7 +3181,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3197,7 +3197,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3231,7 +3231,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3247,7 +3247,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3281,7 +3281,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3297,7 +3297,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3331,7 +3331,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3347,7 +3347,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3381,7 +3381,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3397,7 +3397,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3431,7 +3431,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3447,7 +3447,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3495,7 +3495,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3511,7 +3511,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3545,7 +3545,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3561,7 +3561,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3595,7 +3595,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3611,7 +3611,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3645,7 +3645,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3661,7 +3661,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3695,7 +3695,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3711,7 +3711,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3745,7 +3745,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3761,7 +3761,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3795,7 +3795,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3811,7 +3811,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3859,7 +3859,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3875,7 +3875,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3909,7 +3909,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3925,7 +3925,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3959,7 +3959,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -3975,7 +3975,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4009,7 +4009,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4025,7 +4025,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4059,7 +4059,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4075,7 +4075,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4109,7 +4109,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4125,7 +4125,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4159,7 +4159,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4175,7 +4175,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4223,7 +4223,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4239,7 +4239,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4273,7 +4273,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4289,7 +4289,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4323,7 +4323,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4339,7 +4339,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4373,7 +4373,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4389,7 +4389,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4423,7 +4423,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4439,7 +4439,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4473,7 +4473,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4489,7 +4489,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4523,7 +4523,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4539,7 +4539,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4587,7 +4587,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4603,7 +4603,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4637,7 +4637,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4653,7 +4653,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4687,7 +4687,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4703,7 +4703,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4737,7 +4737,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4753,7 +4753,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4787,7 +4787,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4803,7 +4803,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4837,7 +4837,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4853,7 +4853,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4887,7 +4887,7 @@ const configAbility = {
                               "stackLimit": 10,
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4903,7 +4903,7 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "UnusedUnderThisBase_13535"
+                                  "displayLines": "UnusedUnderThisBase_14408"
                                 }
                               },
                               "addStacksPerTrigger": 1
@@ -4955,7 +4955,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -4971,7 +4971,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5005,7 +5005,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5021,7 +5021,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5055,7 +5055,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5071,7 +5071,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5105,7 +5105,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5121,7 +5121,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5155,7 +5155,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5171,7 +5171,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5205,7 +5205,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5221,7 +5221,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5255,7 +5255,7 @@ const configAbility = {
                       "stackLimit": 10,
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5271,7 +5271,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_13535"
+                          "displayLines": "UnusedUnderThisBase_14408"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -5321,7 +5321,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5345,7 +5345,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5369,7 +5369,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5393,7 +5393,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5417,7 +5417,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5441,7 +5441,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5465,7 +5465,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5507,7 +5507,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5531,7 +5531,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5555,7 +5555,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5579,7 +5579,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5603,7 +5603,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5627,7 +5627,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5651,7 +5651,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5693,7 +5693,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5717,7 +5717,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5741,7 +5741,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5765,7 +5765,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5789,7 +5789,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5813,7 +5813,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5837,7 +5837,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5879,7 +5879,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5903,7 +5903,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5927,7 +5927,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5951,7 +5951,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5975,7 +5975,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -5999,7 +5999,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6023,7 +6023,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6065,7 +6065,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6089,7 +6089,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6113,7 +6113,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6137,7 +6137,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6161,7 +6161,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6185,7 +6185,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6209,7 +6209,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6251,7 +6251,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6275,7 +6275,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Ice",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6299,7 +6299,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Imaginary",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6323,7 +6323,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Physical",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6347,7 +6347,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Quantum",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6371,7 +6371,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Thunder",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",
@@ -6395,7 +6395,7 @@ const configAbility = {
                           "AttackScaling": {
                             "DamageType": "Wind",
                             "Damage": {
-                              "displayLines": "UnusedUnderThisBase_13536"
+                              "displayLines": "UnusedUnderThisBase_14409"
                             },
                             "dmgFormula": "Max HP Scaling",
                             "dmgFormulaFinal": "Converted DMG Base",

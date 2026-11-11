@@ -1134,7 +1134,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1209794480\">Enemy_W4_FireProwler_01_IF_Bonus_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_12030"
+                          "displayLines": "UnusedUnderThisBase_12903"
                         }
                       },
                       "addStacksPerTrigger": 1
@@ -1179,7 +1179,7 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "(0 - UnusedUnderThisBase_12037)"
+                    "displayLines": "(0 - UnusedUnderThisBase_12910)"
                   },
                   "silent": true
                 },
@@ -1191,7 +1191,7 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "multiBase": {
-                    "displayLines": "UnusedUnderThisBase_12036"
+                    "displayLines": "UnusedUnderThisBase_12909"
                   }
                 }
               ]
@@ -1248,7 +1248,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "consumePercent": {
-                        "displayLines": "UnusedUnderThisBase_12040"
+                        "displayLines": "UnusedUnderThisBase_12913"
                       },
                       "consumeFloor": 1,
                       "attackType": "Unknown",
@@ -2672,7 +2672,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1049811080\">Enemy_W4_FireProwler_IF_TimePowerListener</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "displayLines": "UnusedUnderThisBase_12009"
+                      "displayLines": "UnusedUnderThisBase_12882"
                     }
                   }
                 }
@@ -3980,7 +3980,7 @@ const compositeAbilityObject = {
                 "value1": "CurrentBounsIndex",
                 "compareType": "<",
                 "value2": {
-                  "displayLines": "UnusedUnderThisBase_12038"
+                  "displayLines": "UnusedUnderThisBase_12911"
                 }
               },
               "passed": [

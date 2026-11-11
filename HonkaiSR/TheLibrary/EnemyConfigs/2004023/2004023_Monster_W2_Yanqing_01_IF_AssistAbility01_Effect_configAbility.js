@@ -60,14 +60,14 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
           "duration": {
-            "displayLines": "UnusedUnderThisBase_10062"
+            "displayLines": "UnusedUnderThisBase_10935"
           },
           "baseChance": {
-            "displayLines": "UnusedUnderThisBase_10065"
+            "displayLines": "UnusedUnderThisBase_10938"
           },
           "valuePerStack": {
             "Modifier_Frozen_DamagePercentage": {
-              "displayLines": "UnusedUnderThisBase_10063"
+              "displayLines": "UnusedUnderThisBase_10936"
             }
           }
         }

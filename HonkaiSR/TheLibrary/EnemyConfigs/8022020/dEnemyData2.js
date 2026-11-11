@@ -45,10 +45,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3383,
-        3384,
-        3385,
-        3386
+        3549,
+        3550,
+        3551,
+        3552
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -82,10 +82,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3383,
-        3384,
-        3385,
-        3386
+        3549,
+        3550,
+        3551,
+        3552
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -116,10 +116,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3383,
-        3384,
-        3385,
-        3386
+        3549,
+        3550,
+        3551,
+        3552
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -153,10 +153,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3383,
-        3384,
-        3385,
-        3386
+        3549,
+        3550,
+        3551,
+        3552
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -190,10 +190,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3383,
-        3384,
-        3385,
-        3386
+        3549,
+        3550,
+        3551,
+        3552
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -227,10 +227,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3383,
-        3384,
-        3385,
-        3386
+        3549,
+        3550,
+        3551,
+        3552
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -264,17 +264,17 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3383,
-        3384,
-        3385,
-        3386
+        3549,
+        3550,
+        3551,
+        3552
       ],
       "enemyTag": [
         "SW_Minion01",
         "SW_Minion"
       ],
       "overrideParams": {
-        "3386": [
+        "3552": [
           [
             0.15,
             "-",
@@ -317,17 +317,17 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3383,
-        3384,
-        3385,
-        3386
+        3549,
+        3550,
+        3551,
+        3552
       ],
       "enemyTag": [
         "SW_Minion01",
         "SW_Minion"
       ],
       "overrideParams": {
-        "3386": [
+        "3552": [
           [
             0.2,
             "-",

@@ -2997,7 +2997,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_11057"
+                                "displayLines": "UnusedUnderThisBase_11930"
                               },
                               "variableName": "MDF_Negative_Count_Max"
                             }
@@ -3019,7 +3019,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "displayLines": "UnusedUnderThisBase_11049"
+                                    "displayLines": "UnusedUnderThisBase_11922"
                                   },
                                   "variableName": "MDF_Negative_Count_Max"
                                 }

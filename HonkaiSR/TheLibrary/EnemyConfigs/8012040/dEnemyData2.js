@@ -41,12 +41,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3152,
-        3153,
-        3154
+        3314,
+        3315,
+        3316
       ],
       "abilityOrder": [
-        3152
+        3314
       ],
       "enemyTag": [
         "W5_Shell"
@@ -76,12 +76,96 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3152,
-        3153,
-        3154
+        3314,
+        3315,
+        3316
       ],
       "abilityOrder": [
-        3152
+        3314
+      ],
+      "enemyTag": [
+        "W5_Shell"
+      ]
+    },
+    "801204002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.833333,
+        1,
+        null,
+        1,
+        30
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Imaginary"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        3314,
+        3315,
+        3316
+      ],
+      "abilityOrder": [
+        3314
+      ],
+      "enemyTag": [
+        "W5_Shell"
+      ],
+      "overrideParams": {
+        "3315": [
+          [
+            1.2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "801204003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.833333,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Imaginary"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        3314,
+        3315,
+        3316
+      ],
+      "abilityOrder": [
+        3314
       ],
       "enemyTag": [
         "W5_Shell"

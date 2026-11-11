@@ -877,7 +877,7 @@ const compositeAbilityObject = {
                           "displayLines": "0.65"
                         },
                         "Ability02_P2_DamageResistance": {
-                          "displayLines": "UnusedUnderThisBase_5275"
+                          "displayLines": "UnusedUnderThisBase_6148"
                         },
                         "AddSP": {
                           "displayLines": "5"
@@ -1977,7 +1977,7 @@ const compositeAbilityObject = {
                       },
                       "valuePerStack": {
                         "Ability02_P2_DamageResistance": {
-                          "displayLines": "UnusedUnderThisBase_5275"
+                          "displayLines": "UnusedUnderThisBase_6148"
                         }
                       }
                     },
@@ -1993,7 +1993,7 @@ const compositeAbilityObject = {
                           "displayLines": "0.65"
                         },
                         "Ability02_P2_DamageResistance": {
-                          "displayLines": "UnusedUnderThisBase_5275"
+                          "displayLines": "UnusedUnderThisBase_6148"
                         },
                         "AddSP": {
                           "displayLines": "5"
@@ -2642,7 +2642,7 @@ const compositeAbilityObject = {
           },
           "valuePerStack": {
             "Ability02_P2_DamageResistance": {
-              "displayLines": "UnusedUnderThisBase_5275"
+              "displayLines": "UnusedUnderThisBase_6148"
             }
           }
         },
@@ -2658,7 +2658,7 @@ const compositeAbilityObject = {
               "displayLines": "0.65"
             },
             "Ability02_P2_DamageResistance": {
-              "displayLines": "UnusedUnderThisBase_5275"
+              "displayLines": "UnusedUnderThisBase_6148"
             },
             "AddSP": {
               "displayLines": "5"

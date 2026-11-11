@@ -1085,7 +1085,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_14172"
+                    "displayLines": "UnusedUnderThisBase_15045"
                   },
                   "entityClass": "Enemy",
                   "maximum": 20,

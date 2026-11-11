@@ -130,7 +130,7 @@ const configAbility = {
         "delayAdvancePreview": {
           "name": "Delay/Advance Preview",
           "previewValue": {
-            "displayLines": "UnusedUnderThisBase_10877"
+            "displayLines": "UnusedUnderThisBase_11750"
           }
         }
       }
@@ -211,7 +211,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "UnusedUnderThisBase_10877"
+                  "multiAdd": "UnusedUnderThisBase_11750"
                 }
               ],
               "failed": [

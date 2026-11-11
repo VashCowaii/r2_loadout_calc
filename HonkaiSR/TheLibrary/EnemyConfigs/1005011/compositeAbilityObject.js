@@ -1971,14 +1971,14 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_8492"
+                "displayLines": "UnusedUnderThisBase_9365"
               },
               "baseChance": {
-                "displayLines": "UnusedUnderThisBase_8488"
+                "displayLines": "UnusedUnderThisBase_9361"
               },
               "valuePerStack": {
                 "Modifier_Frozen_DamagePercentage": {
-                  "displayLines": "UnusedUnderThisBase_8498"
+                  "displayLines": "UnusedUnderThisBase_9371"
                 }
               }
             }

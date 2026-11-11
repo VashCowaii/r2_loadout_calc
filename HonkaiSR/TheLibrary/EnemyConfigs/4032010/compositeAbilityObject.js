@@ -39,7 +39,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1287044096\">AML_Minion02_01_Rage</a>",
                   "valuePerStack": {
                     "PassiveAbilityInitiate_P1_AttackAddedRatio": {
-                      "displayLines": "UnusedUnderThisBase_8024"
+                      "displayLines": "UnusedUnderThisBase_8897"
                     },
                     "PassiveAbilityInitiate_P2_DefenceAddedRatio": {
                       "displayLines": "ENEMIES_OBJECT_UNUSED__187"

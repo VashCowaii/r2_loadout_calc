@@ -1077,7 +1077,7 @@ const configAbility = {
                   },
                   "variableName": "PassiveSkill03_MaxCharge",
                   "resetValue": {
-                    "displayLines": "UnusedUnderThisBase_10736"
+                    "displayLines": "UnusedUnderThisBase_11609"
                   },
                   "scope": "TargetEntity"
                 }
@@ -1166,7 +1166,7 @@ const configAbility = {
                       },
                       "variableName": "PassiveSkill03_MaxCharge",
                       "resetValue": {
-                        "displayLines": "UnusedUnderThisBase_10736"
+                        "displayLines": "UnusedUnderThisBase_11609"
                       },
                       "scope": "TargetEntity"
                     }
@@ -1206,7 +1206,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "displayLines": "UnusedUnderThisBase_10738"
+                          "displayLines": "UnusedUnderThisBase_11611"
                         }
                       }
                     }

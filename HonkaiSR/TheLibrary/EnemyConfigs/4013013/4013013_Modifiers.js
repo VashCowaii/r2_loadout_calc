@@ -1581,8 +1581,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ],
                       "failed": [
@@ -1603,8 +1602,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ]
                     }
@@ -1681,8 +1679,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ],
                       "failed": [
@@ -1703,8 +1700,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ]
                     }

@@ -991,11 +991,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_11446"
+                "displayLines": "UnusedUnderThisBase_12319"
               },
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "displayLines": "UnusedUnderThisBase_11454"
+                  "displayLines": "UnusedUnderThisBase_12327"
                 }
               }
             }

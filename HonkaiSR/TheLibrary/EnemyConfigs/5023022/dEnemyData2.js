@@ -42,11 +42,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2884,
-        2885,
-        2886,
-        2887,
-        2888
+        2974,
+        2975,
+        2976,
+        2977,
+        2978
       ],
       "enemyTag": [
         "RLElite"
@@ -76,11 +76,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2884,
-        2885,
-        2886,
-        2887,
-        2888
+        2974,
+        2975,
+        2976,
+        2977,
+        2978
       ],
       "enemyTag": [
         "RLElite"

@@ -42,12 +42,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1316,
-        1317
+        1326,
+        1327
       ],
       "abilityOrder": [
-        1316,
-        1317
+        1326,
+        1327
       ],
       "enemyTag": [
         "W3_Figure_01"
@@ -77,12 +77,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1316,
-        1317
+        1326,
+        1327
       ],
       "abilityOrder": [
-        1316,
-        1317
+        1326,
+        1327
       ],
       "enemyTag": [
         "W3_Figure_01"

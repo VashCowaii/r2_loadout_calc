@@ -43,10 +43,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1221,
-        1222,
-        1223,
-        1224
+        1231,
+        1232,
+        1233,
+        1234
       ],
       "abilityOrder": [
         745,
@@ -87,10 +87,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1221,
-        1222,
-        1223,
-        1224
+        1231,
+        1232,
+        1233,
+        1234
       ],
       "abilityOrder": [
         745,
@@ -131,10 +131,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1221,
-        1222,
-        1223,
-        1224
+        1231,
+        1232,
+        1233,
+        1234
       ],
       "abilityOrder": [
         745,
@@ -175,10 +175,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1221,
-        1222,
-        1223,
-        1224
+        1231,
+        1232,
+        1233,
+        1234
       ],
       "abilityOrder": [
         745,

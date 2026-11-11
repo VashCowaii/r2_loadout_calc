@@ -42,10 +42,10 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2653
+        2694
       ],
       "abilityOrder": [
-        2653
+        2694
       ]
     }
   }

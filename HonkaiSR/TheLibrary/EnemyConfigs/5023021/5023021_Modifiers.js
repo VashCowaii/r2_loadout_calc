@@ -139,21 +139,21 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1281011999\">Enemy_W5_Eater_Ability02_Attack</a>",
               "valuePerStack": {
                 "MDF_Attack": {
-                  "displayLines": "UnusedUnderThisBase_13376"
+                  "displayLines": "UnusedUnderThisBase_14249"
                 }
               }
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "displayLines": "UnusedUnderThisBase_13375"
+                "displayLines": "UnusedUnderThisBase_14248"
               },
               "variableName": "MDF_CurrentCount"
             },
             {
               "name": "Define Custom Variable",
               "value": {
-                "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13375) * UnusedUnderThisBase_13373)"
+                "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_14248) * UnusedUnderThisBase_14246)"
               },
               "variableName": "MDF_ShowCount"
             }
@@ -346,14 +346,14 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13375) * UnusedUnderThisBase_13373)"
+                    "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_14248) * UnusedUnderThisBase_14246)"
                   },
                   "variableName": "MDF_ShowCount"
                 },
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13375) * MDF_LoseAttack)"
+                    "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_14248) * MDF_LoseAttack)"
                   },
                   "variableName": "MDF_Attack"
                 },
@@ -433,7 +433,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "healPercent": {
-                        "displayLines": "(UnusedUnderThisBase_13373 / UnusedUnderThisBase_13375)"
+                        "displayLines": "(UnusedUnderThisBase_14246 / UnusedUnderThisBase_14248)"
                       },
                       "formula": "Heal from Target MaxHP"
                     },
@@ -459,7 +459,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1281011999\">Enemy_W5_Eater_Ability02_Attack</a>",
                       "valuePerStack": {
                         "MDF_Attack": {
-                          "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13375) * UnusedUnderThisBase_13376)"
+                          "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_14248) * UnusedUnderThisBase_14249)"
                         }
                       }
                     }
@@ -746,7 +746,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"201524254\">Enemy_W5_Eater_Ability02_BlackBlood</a>",
               "valuePerStack": {
                 "MDF_DirtyHPRatio": {
-                  "displayLines": "((UnusedUnderThisBase_13373 / MDF_MaxLayer) * MDF_Layer)"
+                  "displayLines": "((UnusedUnderThisBase_14246 / MDF_MaxLayer) * MDF_Layer)"
                 }
               }
             },

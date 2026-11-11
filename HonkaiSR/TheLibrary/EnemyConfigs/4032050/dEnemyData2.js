@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2232,
-        2233
+        2253,
+        2254
       ],
       "abilityOrder": [
-        2232
+        2253
       ]
     },
     "403205001": {
@@ -73,11 +73,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2232,
-        2233
+        2253,
+        2254
       ],
       "abilityOrder": [
-        2232
+        2253
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -107,11 +107,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2232,
-        2233
+        2253,
+        2254
       ],
       "abilityOrder": [
-        2232
+        2253
       ]
     },
     "403205003": {
@@ -138,11 +138,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2232,
-        2233
+        2253,
+        2254
       ],
       "abilityOrder": [
-        2232
+        2253
       ]
     }
   }

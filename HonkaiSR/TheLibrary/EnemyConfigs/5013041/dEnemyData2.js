@@ -42,9 +42,9 @@ let enemyData = {
         "Quantum": 0.5
       },
       "abilities": [
-        2720,
-        2721,
-        2722
+        2761,
+        2762,
+        2763
       ],
       "enemyTag": [
         "W5_Ranger"

@@ -42,10 +42,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3485,
-        3486,
-        3487,
-        3488
+        3651,
+        3652,
+        3653,
+        3654
       ]
     },
     "803204001": {
@@ -72,10 +72,40 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3485,
-        3486,
-        3487,
-        3488
+        3651,
+        3652,
+        3653,
+        3654
+      ]
+    },
+    "803204002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.666667,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Wind",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        3651,
+        3652,
+        3653,
+        3654
       ]
     }
   }

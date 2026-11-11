@@ -344,7 +344,7 @@ const compositeAbilityObject = {
                         "displayLines": "0.25"
                       },
                       "healFlat": {
-                        "displayLines": "UnusedUnderThisBase_14456"
+                        "displayLines": "UnusedUnderThisBase_15329"
                       },
                       "formula": "Heal from Target MaxHP"
                     }

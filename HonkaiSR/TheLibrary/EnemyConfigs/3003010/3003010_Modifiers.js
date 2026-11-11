@@ -2027,7 +2027,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1193792195\">MModifier_Monster_W3_Dinosaur_RLElite_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_10344"
+                      "displayLines": "UnusedUnderThisBase_11217"
                     }
                   }
                 }

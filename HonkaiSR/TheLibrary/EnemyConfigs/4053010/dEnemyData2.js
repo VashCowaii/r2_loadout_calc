@@ -42,13 +42,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2518,
-        2519,
-        2520,
-        2521,
-        2522,
-        2523,
-        2524
+        2559,
+        2560,
+        2561,
+        2562,
+        2563,
+        2564,
+        2565
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -85,13 +85,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2518,
-        2519,
-        2520,
-        2521,
-        2522,
-        2523,
-        2524
+        2559,
+        2560,
+        2561,
+        2562,
+        2563,
+        2564,
+        2565
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -128,13 +128,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2518,
-        2519,
-        2520,
-        2521,
-        2522,
-        2523,
-        2524
+        2559,
+        2560,
+        2561,
+        2562,
+        2563,
+        2564,
+        2565
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -171,13 +171,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2518,
-        2519,
-        2520,
-        2521,
-        2522,
-        2523,
-        2524
+        2559,
+        2560,
+        2561,
+        2562,
+        2563,
+        2564,
+        2565
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -214,13 +214,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2518,
-        2519,
-        2520,
-        2521,
-        2522,
-        2523,
-        2524
+        2559,
+        2560,
+        2561,
+        2562,
+        2563,
+        2564,
+        2565
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -250,13 +250,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2518,
-        2519,
-        2520,
-        2521,
-        2522,
-        2523,
-        2524
+        2559,
+        2560,
+        2561,
+        2562,
+        2563,
+        2564,
+        2565
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -293,13 +293,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2518,
-        2519,
-        2520,
-        2521,
-        2522,
-        2523,
-        2524
+        2559,
+        2560,
+        2561,
+        2562,
+        2563,
+        2564,
+        2565
       ],
       "enemyTag": [
         "BattleScore_Manta"

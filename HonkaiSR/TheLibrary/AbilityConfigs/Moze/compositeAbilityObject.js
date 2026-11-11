@@ -1329,6 +1329,20 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>"
         },
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "target1": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+            }
+          }
+        },
+        {
           "name": "UI Display Event",
           "popUpText": "Cascading Featherblade"
         },
@@ -1600,6 +1614,20 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "target1": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+            }
+          }
         },
         {
           "name": "UI Display Event",
@@ -3566,6 +3594,20 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable",
           "value": 1,
           "variableName": "OnInsertAbort_Flg"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "target1": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+            }
+          }
         },
         "Deleted bullshit",
         {

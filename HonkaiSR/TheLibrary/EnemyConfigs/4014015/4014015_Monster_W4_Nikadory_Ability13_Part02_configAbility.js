@@ -48,7 +48,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "displayLines": "UnusedUnderThisBase_13505"
+              "displayLines": "UnusedUnderThisBase_14378"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -65,7 +65,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "displayLines": "UnusedUnderThisBase_13505"
+              "displayLines": "UnusedUnderThisBase_14378"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -82,7 +82,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "displayLines": "UnusedUnderThisBase_13505"
+              "displayLines": "UnusedUnderThisBase_14378"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -99,7 +99,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "displayLines": "UnusedUnderThisBase_13505"
+              "displayLines": "UnusedUnderThisBase_14378"
             },
             "HitSplit": 0.2,
             "Toughness": null,
@@ -116,7 +116,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "displayLines": "UnusedUnderThisBase_13505"
+              "displayLines": "UnusedUnderThisBase_14378"
             },
             "HitSplit": 0.2,
             "Toughness": null,

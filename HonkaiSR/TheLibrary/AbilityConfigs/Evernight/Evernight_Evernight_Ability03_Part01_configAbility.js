@@ -32,7 +32,7 @@ const configAbility = {
         },
         "target2": {
           "name": "Target Name",
-          "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+          "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}} + {{Voracity: 1}} + {{Voracity: 2}}"
         }
       }
     },

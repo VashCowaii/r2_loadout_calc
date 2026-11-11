@@ -44,15 +44,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        3523,
-        3524,
-        3525,
-        3526,
-        3527,
-        3528,
-        3529,
-        3530,
-        3531
+        3689,
+        3690,
+        3691,
+        3692,
+        3693,
+        3694,
+        3695,
+        3696,
+        3697
       ],
       "summons": [
         {
@@ -88,15 +88,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        3523,
-        3524,
-        3525,
-        3526,
-        3527,
-        3528,
-        3529,
-        3530,
-        3531
+        3689,
+        3690,
+        3691,
+        3692,
+        3693,
+        3694,
+        3695,
+        3696,
+        3697
       ],
       "summons": [
         {
@@ -132,15 +132,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        3523,
-        3524,
-        3525,
-        3526,
-        3527,
-        3528,
-        3529,
-        3530,
-        3531
+        3689,
+        3690,
+        3691,
+        3692,
+        3693,
+        3694,
+        3695,
+        3696,
+        3697
       ],
       "summons": [
         {
@@ -176,15 +176,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        3523,
-        3524,
-        3525,
-        3526,
-        3527,
-        3528,
-        3529,
-        3530,
-        3531
+        3689,
+        3690,
+        3691,
+        3692,
+        3693,
+        3694,
+        3695,
+        3696,
+        3697
       ],
       "summons": [
         {
@@ -220,15 +220,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        3523,
-        3524,
-        3525,
-        3526,
-        3527,
-        3528,
-        3529,
-        3530,
-        3531
+        3689,
+        3690,
+        3691,
+        3692,
+        3693,
+        3694,
+        3695,
+        3696,
+        3697
       ],
       "summons": [
         {
@@ -264,15 +264,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        3523,
-        3524,
-        3525,
-        3526,
-        3527,
-        3528,
-        3529,
-        3530,
-        3531
+        3689,
+        3690,
+        3691,
+        3692,
+        3693,
+        3694,
+        3695,
+        3696,
+        3697
       ],
       "summons": [
         {
@@ -281,6 +281,77 @@ let enemyData = {
           "base": 8032030
         }
       ]
+    },
+    "803401006": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.5625,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Thunder"
+      ],
+      "res": {
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.4
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        3689,
+        3690,
+        3691,
+        3692,
+        3693,
+        3694,
+        3695,
+        3696,
+        3697
+      ],
+      "enemyTag": [
+        "GridFightBoss"
+      ],
+      "summons": [
+        {
+          "name": "\"All or Nothing\"",
+          "over": 8032030,
+          "base": 8032030
+        }
+      ],
+      "overrideParams": {
+        "3692": [
+          [],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-",
+          "Summons \"All or Nothing\" and makes one target enter the Gamble. Every time an \"All or Nothing\" is attacked by a target that is in the Gamble, the target will receive a random number between 1 and 6. After a target that is in the Gamble has finished their turn, targets with numbers lower than Aventurine of Stratagems are considered to have lost the Gamble and will be attacked. Those with a number higher than Aventurine of Stratagems are immediately considered to have won the Gamble and will have their Ultimate activated. At the same time, targets that have not entered the Gamble are afflicted with the \"Look, Don't Speak\" status, which is dispelled when the Gamble ends."
+        ],
+        "3693": [
+          [],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-",
+          "Summons \"All or Nothing\" and makes all targets enter the gamble. Every time an \"All or Nothing\" is attacked, the target that launched the attack will receive a random number between 1 and 6. The next time Aventurine of Stratagems takes a turn or after allies take action a number of times, targets with numbers lower than Aventurine of Stratagems are considered to have lost the bet and will be attacked. Targets with numbers higher than Aventurine of Stratagems are considered to have won the bet and will have their Ultimates activated."
+        ]
+      }
     }
   }
 }

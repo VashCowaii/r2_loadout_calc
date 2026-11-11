@@ -51,7 +51,7 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_2107"
+                    "displayLines": "UnusedUnderThisBase_2149"
                   },
                   "isFixed": "* ERR"
                 }
@@ -677,7 +677,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1744828077\">G_MortenaxBlade_BE_ModifyActionDelay</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_2113"
+                      "displayLines": "UnusedUnderThisBase_2155"
                     }
                   }
                 }
@@ -959,14 +959,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_2086"
+                "displayLines": "UnusedUnderThisBase_2128"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "UnusedUnderThisBase_2089"
+                  "displayLines": "UnusedUnderThisBase_2131"
                 },
                 "MDF_PropertyValue2": {
-                  "displayLines": "UnusedUnderThisBase_4082"
+                  "displayLines": "UnusedUnderThisBase_4264"
                 }
               }
             },
@@ -1180,13 +1180,13 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "UnusedUnderThisBase_6500"
+              "displayLines": "UnusedUnderThisBase_7373"
             },
             "MDF_PropertyValue2": {
-              "displayLines": "UnusedUnderThisBase_4923"
+              "displayLines": "UnusedUnderThisBase_5796"
             },
             "MDF_PropertyValue3": {
-              "displayLines": "UnusedUnderThisBase_2111"
+              "displayLines": "UnusedUnderThisBase_2153"
             }
           }
         },
@@ -1232,7 +1232,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "UnusedUnderThisBase_2093"
+              "displayLines": "UnusedUnderThisBase_2135"
             }
           }
         },
@@ -1278,7 +1278,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_2094)"
+              "displayLines": "(UnusedUnderThisBase_2135 + UnusedUnderThisBase_2136)"
             }
           }
         },
@@ -1323,10 +1323,10 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "UnusedUnderThisBase_2093"
+              "displayLines": "UnusedUnderThisBase_2135"
             },
             "MDF_PropertyValue2": {
-              "displayLines": "UnusedUnderThisBase_2091"
+              "displayLines": "UnusedUnderThisBase_2133"
             }
           }
         },
@@ -1371,7 +1371,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)"
+              "displayLines": "(UnusedUnderThisBase_2135 + UnusedUnderThisBase_8063)"
             }
           }
         },
@@ -1416,7 +1416,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "((UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190) + UnusedUnderThisBase_2094)"
+              "displayLines": "((UnusedUnderThisBase_2135 + UnusedUnderThisBase_8063) + UnusedUnderThisBase_2136)"
             }
           }
         },
@@ -1460,10 +1460,10 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)"
+              "displayLines": "(UnusedUnderThisBase_2135 + UnusedUnderThisBase_8063)"
             },
             "MDF_PropertyValue2": {
-              "displayLines": "UnusedUnderThisBase_2091"
+              "displayLines": "UnusedUnderThisBase_2133"
             }
           }
         },
@@ -1494,7 +1494,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "UnusedUnderThisBase_7186"
+              "displayLines": "UnusedUnderThisBase_8059"
             }
           }
         },
@@ -1599,7 +1599,7 @@ const configAbility = {
               "eventID": 96217,
               "variables": {
                 "BattleEvent_BaseSpeed": {
-                  "displayLines": "UnusedUnderThisBase_3687"
+                  "displayLines": "UnusedUnderThisBase_3869"
                 }
               }
             },
@@ -1612,10 +1612,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-19531616\">G_MortenaxBlade_Ability03_Bonus</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "UnusedUnderThisBase_4083"
+                  "displayLines": "UnusedUnderThisBase_4265"
                 },
                 "MDF_PropertyValue2": {
-                  "displayLines": "UnusedUnderThisBase_4090"
+                  "displayLines": "UnusedUnderThisBase_4272"
                 }
               }
             }
@@ -1692,7 +1692,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_2093"
+                      "displayLines": "UnusedUnderThisBase_2135"
                     }
                   }
                 },
@@ -1705,7 +1705,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_2094)"
+                      "displayLines": "(UnusedUnderThisBase_2135 + UnusedUnderThisBase_2136)"
                     }
                   }
                 }
@@ -1778,10 +1778,10 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_2093"
+                          "displayLines": "UnusedUnderThisBase_2135"
                         },
                         "MDF_PropertyValue2": {
-                          "displayLines": "UnusedUnderThisBase_2091"
+                          "displayLines": "UnusedUnderThisBase_2133"
                         }
                       }
                     }
@@ -1854,7 +1854,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)"
+                              "displayLines": "(UnusedUnderThisBase_2135 + UnusedUnderThisBase_8063)"
                             }
                           }
                         },
@@ -1867,7 +1867,7 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "displayLines": "((UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190) + UnusedUnderThisBase_2094)"
+                              "displayLines": "((UnusedUnderThisBase_2135 + UnusedUnderThisBase_8063) + UnusedUnderThisBase_2136)"
                             }
                           }
                         }
@@ -1939,10 +1939,10 @@ const configAbility = {
                               "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
                               "valuePerStack": {
                                 "MDF_PropertyValue": {
-                                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)"
+                                  "displayLines": "(UnusedUnderThisBase_2135 + UnusedUnderThisBase_8063)"
                                 },
                                 "MDF_PropertyValue2": {
-                                  "displayLines": "UnusedUnderThisBase_2091"
+                                  "displayLines": "UnusedUnderThisBase_2133"
                                 }
                               }
                             }
@@ -2035,14 +2035,14 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_2086"
+                    "displayLines": "UnusedUnderThisBase_2128"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_2089"
+                      "displayLines": "UnusedUnderThisBase_2131"
                     },
                     "MDF_PropertyValue2": {
-                      "displayLines": "UnusedUnderThisBase_4082"
+                      "displayLines": "UnusedUnderThisBase_4264"
                     }
                   }
                 }

@@ -4277,13 +4277,13 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
               "valuePerStack": {
                 "MDF_IF_BOSS_BreakDelay": {
-                  "displayLines": "UnusedUnderThisBase_13754"
+                  "displayLines": "UnusedUnderThisBase_14627"
                 },
                 "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                  "displayLines": "UnusedUnderThisBase_13759"
+                  "displayLines": "UnusedUnderThisBase_14632"
                 },
                 "MDF_IF_BOSS_Standard_Defence": {
-                  "displayLines": "UnusedUnderThisBase_13793"
+                  "displayLines": "UnusedUnderThisBase_14666"
                 }
               }
             },
@@ -4296,16 +4296,16 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
               "valuePerStack": {
                 "MDF_FrenzyStartDelay": {
-                  "displayLines": "UnusedUnderThisBase_13796"
+                  "displayLines": "UnusedUnderThisBase_14669"
                 },
                 "MDF_FrenzyIntervalDelay": {
-                  "displayLines": "UnusedUnderThisBase_13797"
+                  "displayLines": "UnusedUnderThisBase_14670"
                 },
                 "MDF_MaxFrenzyLayer": {
-                  "displayLines": "UnusedUnderThisBase_13798"
+                  "displayLines": "UnusedUnderThisBase_14671"
                 },
                 "MDF_TokenDMGAddRatioPerLayer": {
-                  "displayLines": "UnusedUnderThisBase_13799"
+                  "displayLines": "UnusedUnderThisBase_14672"
                 }
               }
             }

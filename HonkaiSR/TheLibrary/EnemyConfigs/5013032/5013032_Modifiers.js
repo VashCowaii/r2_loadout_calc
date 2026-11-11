@@ -1635,7 +1635,7 @@ const configAbility = {
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "displayLines": "(UnusedUnderThisBase_13527 * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))"
+                "displayLines": "(UnusedUnderThisBase_14400 * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))"
               },
               "adjustment": "Add"
             },
@@ -3614,7 +3614,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
               "valuePerStack": {
                 "MDF_ElationDamageExtraColorCount": {
-                  "displayLines": "UnusedUnderThisBase_13529"
+                  "displayLines": "UnusedUnderThisBase_14402"
                 }
               }
             },
@@ -3627,7 +3627,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "UnusedUnderThisBase_13534"
+                  "displayLines": "UnusedUnderThisBase_14407"
                 }
               }
             }
@@ -3846,7 +3846,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "UnusedUnderThisBase_13534"
+                  "displayLines": "UnusedUnderThisBase_14407"
                 }
               }
             },
@@ -3878,7 +3878,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
                   "valuePerStack": {
                     "MDF_ElationDamageExtraColorCount": {
-                      "displayLines": "UnusedUnderThisBase_13529"
+                      "displayLines": "UnusedUnderThisBase_14402"
                     }
                   }
                 }

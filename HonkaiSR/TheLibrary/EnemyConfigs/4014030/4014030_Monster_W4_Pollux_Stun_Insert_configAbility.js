@@ -36,7 +36,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "displayLines": "UnusedUnderThisBase_12835"
+            "displayLines": "UnusedUnderThisBase_13708"
           }
         }
       ],
@@ -84,7 +84,7 @@ const configAbility = {
             "target": "{{Player Team All}}"
           },
           "healPercent": {
-            "displayLines": "UnusedUnderThisBase_12845"
+            "displayLines": "UnusedUnderThisBase_13718"
           },
           "formula": "Heal from Target MaxHP"
         }

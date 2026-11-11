@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3518,
-        3520,
-        3521,
-        3522,
-        3519
+        3684,
+        3686,
+        3687,
+        3688,
+        3685
       ],
       "summons": [
         {
@@ -80,11 +80,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3518,
-        3520,
-        3521,
-        3522,
-        3519
+        3684,
+        3686,
+        3687,
+        3688,
+        3685
       ],
       "enemyTag": [
         "Monster_W4_Claymore_04_Main"
@@ -121,11 +121,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3518,
-        3520,
-        3521,
-        3522,
-        3519
+        3684,
+        3686,
+        3687,
+        3688,
+        3685
       ],
       "summons": [
         {
@@ -135,7 +135,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "3519": [
+        "3685": [
           [
             0.53,
             0.75,
@@ -150,7 +150,7 @@ let enemyData = {
           "-",
           "-"
         ],
-        "3520": [
+        "3686": [
           [
             5
           ],
@@ -162,7 +162,7 @@ let enemyData = {
           "-",
           "-"
         ],
-        "3522": [
+        "3688": [
           [
             0.05,
             "-",
@@ -179,6 +179,44 @@ let enemyData = {
           "-"
         ]
       }
+    },
+    "803302003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.714286,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Wind",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        3684,
+        3686,
+        3687,
+        3688,
+        3685
+      ],
+      "summons": [
+        {
+          "name": "Astropolis Sentinel",
+          "over": 8032040,
+          "base": 8032040
+        }
+      ]
     }
   }
 }

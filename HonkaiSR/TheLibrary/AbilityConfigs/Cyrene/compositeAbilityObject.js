@@ -9468,7 +9468,7 @@ const compositeAbilityObject = {
                   "displayLines": "2"
                 },
                 "MDF_EnergyRatio": {
-                  "displayLines": "UnusedUnderThisBase_14223"
+                  "displayLines": "UnusedUnderThisBase_15096"
                 },
                 "MDF_TargetCount": {
                   "displayLines": "2"

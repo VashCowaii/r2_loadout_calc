@@ -7179,7 +7179,7 @@ const compositeAbilityObject = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_9698"
+            "displayLines": "UnusedUnderThisBase_10571"
           },
           "variableName": "WolfBoss_BloodRageMaxCount"
         },
@@ -7303,16 +7303,16 @@ const compositeAbilityObject = {
                   "eventID": 20008,
                   "variables": {
                     "P3_Lycan01Delay": {
-                      "displayLines": "UnusedUnderThisBase_9656"
+                      "displayLines": "UnusedUnderThisBase_10529"
                     },
                     "P4_Lycan02Delay": {
-                      "displayLines": "UnusedUnderThisBase_9678"
+                      "displayLines": "UnusedUnderThisBase_10551"
                     },
                     "P5_Lycan03Delay": {
-                      "displayLines": "UnusedUnderThisBase_9653"
+                      "displayLines": "UnusedUnderThisBase_10526"
                     },
                     "P6_Lycan04Delay": {
-                      "displayLines": "UnusedUnderThisBase_9679"
+                      "displayLines": "UnusedUnderThisBase_10552"
                     }
                   }
                 },
@@ -7338,7 +7338,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "P3_Lycan01Delay",
                       "resetValue": {
-                        "displayLines": "UnusedUnderThisBase_9656"
+                        "displayLines": "UnusedUnderThisBase_10529"
                       },
                       "scope": "TargetEntity"
                     }
@@ -7366,7 +7366,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "P4_Lycan02Delay",
                       "resetValue": {
-                        "displayLines": "UnusedUnderThisBase_9678"
+                        "displayLines": "UnusedUnderThisBase_10551"
                       },
                       "scope": "TargetEntity"
                     }
@@ -7394,7 +7394,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "P5_Lycan03Delay",
                       "resetValue": {
-                        "displayLines": "UnusedUnderThisBase_9653"
+                        "displayLines": "UnusedUnderThisBase_10526"
                       },
                       "scope": "TargetEntity"
                     }
@@ -7422,7 +7422,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "P6_Lycan04Delay",
                       "resetValue": {
-                        "displayLines": "UnusedUnderThisBase_9679"
+                        "displayLines": "UnusedUnderThisBase_10552"
                       },
                       "scope": "TargetEntity"
                     }
@@ -7556,7 +7556,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_9699"
+                    "displayLines": "UnusedUnderThisBase_10572"
                   },
                   "variableName": "WolfBoss_BloodRageCount"
                 },
@@ -7999,13 +7999,13 @@ const compositeAbilityObject = {
                                   "canHitNonTargets": true,
                                   "valuePerStack": {
                                     "ResetBloodRageCount": {
-                                      "displayLines": "UnusedUnderThisBase_9683"
+                                      "displayLines": "UnusedUnderThisBase_10556"
                                     },
                                     "DelayRatio": {
-                                      "displayLines": "UnusedUnderThisBase_9701"
+                                      "displayLines": "UnusedUnderThisBase_10574"
                                     },
                                     "StanceDamage": {
-                                      "displayLines": "UnusedUnderThisBase_9700"
+                                      "displayLines": "UnusedUnderThisBase_10573"
                                     }
                                   },
                                   "allowAbilityTriggers": false

@@ -41,10 +41,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2564
+        2605
       ],
       "abilityOrder": [
-        2564
+        2605
       ]
     }
   }

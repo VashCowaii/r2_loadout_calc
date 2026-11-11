@@ -106,16 +106,16 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
               "valuePerStack": {
                 "MDF_LockHpActionDecreaseRatio": {
-                  "displayLines": "UnusedUnderThisBase_13685"
+                  "displayLines": "UnusedUnderThisBase_14558"
                 },
                 "MDF_LockHpUpLimitRatio": {
-                  "displayLines": "UnusedUnderThisBase_13653"
+                  "displayLines": "UnusedUnderThisBase_14526"
                 },
                 "MDF_DamageReduceRatio": {
-                  "displayLines": "UnusedUnderThisBase_13656"
+                  "displayLines": "UnusedUnderThisBase_14529"
                 },
                 "MDF_LastLockHpRatio": {
-                  "displayLines": "UnusedUnderThisBase_13652"
+                  "displayLines": "UnusedUnderThisBase_14525"
                 }
               }
             },

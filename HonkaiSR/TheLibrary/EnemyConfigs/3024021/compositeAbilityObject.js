@@ -2686,7 +2686,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_10710"
+                      "displayLines": "UnusedUnderThisBase_11583"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -3106,7 +3106,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_10710"
+                      "displayLines": "UnusedUnderThisBase_11583"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -3275,7 +3275,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_10710"
+                      "displayLines": "UnusedUnderThisBase_11583"
                     }
                   },
                   "addStacksPerTrigger": 1
@@ -3630,7 +3630,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "displayLines": "UnusedUnderThisBase_10710"
+                      "displayLines": "UnusedUnderThisBase_11583"
                     }
                   },
                   "addStacksPerTrigger": 1

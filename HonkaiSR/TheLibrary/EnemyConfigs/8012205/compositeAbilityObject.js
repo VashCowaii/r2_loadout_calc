@@ -2738,7 +2738,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_13263"
+                        "displayLines": "UnusedUnderThisBase_14136"
                       },
                       "variableName": "SkillUltra_DamagePercentage"
                     }
@@ -2760,7 +2760,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_9408"
+                        "displayLines": "UnusedUnderThisBase_10281"
                       },
                       "variableName": "SkillUltra_DamagePercentage"
                     }
@@ -2782,7 +2782,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_9386"
+                        "displayLines": "UnusedUnderThisBase_10259"
                       },
                       "variableName": "SkillUltra_DamagePercentage"
                     }
@@ -2804,7 +2804,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_9387"
+                        "displayLines": "UnusedUnderThisBase_10260"
                       },
                       "variableName": "SkillUltra_DamagePercentage"
                     }

@@ -594,7 +594,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "(UnusedUnderThisBase_7830 + S02_ExtraRatio)"
+                    "displayLines": "(UnusedUnderThisBase_8703 + S02_ExtraRatio)"
                   },
                   "variableName": "MDF_Conv"
                 },
@@ -807,7 +807,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_5173"
+                "displayLines": "UnusedUnderThisBase_6046"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
@@ -823,7 +823,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_5173"
+                "displayLines": "UnusedUnderThisBase_6046"
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {

@@ -212,7 +212,7 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": ">=",
                     "value2": {
-                      "displayLines": "UnusedUnderThisBase_7472"
+                      "displayLines": "UnusedUnderThisBase_8345"
                     }
                   }
                 ]
@@ -423,7 +423,7 @@ const configAbility = {
                     {
                       "on": "Attacker",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                      "value": "(MDF_GoldenRule * UnusedUnderThisBase_7475)"
+                      "value": "(MDF_GoldenRule * UnusedUnderThisBase_8348)"
                     }
                   ]
                 }
@@ -448,7 +448,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable",
               "value": {
-                "displayLines": "(Gilgamesh_00_Rank06_GoldenRule * UnusedUnderThisBase_7475)"
+                "displayLines": "(Gilgamesh_00_Rank06_GoldenRule * UnusedUnderThisBase_8348)"
               },
               "variableName": "MDF_Propertyvalue"
             }
@@ -650,19 +650,19 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_BaseAttackAdded": {
-              "displayLines": "UnusedUnderThisBase_7476"
+              "displayLines": "UnusedUnderThisBase_8349"
             },
             "MDF_BaseCriticalDamageBaseAdd": {
-              "displayLines": "UnusedUnderThisBase_7497"
+              "displayLines": "UnusedUnderThisBase_8370"
             },
             "MDF_MaxSPThreshold": {
-              "displayLines": "UnusedUnderThisBase_7482"
+              "displayLines": "UnusedUnderThisBase_8355"
             },
             "MDF_ExtraRatioPerMaxSP": {
-              "displayLines": "UnusedUnderThisBase_7462"
+              "displayLines": "UnusedUnderThisBase_8335"
             },
             "MDF_MaxExtraRatio": {
-              "displayLines": "UnusedUnderThisBase_7473"
+              "displayLines": "UnusedUnderThisBase_8346"
             }
           }
         }
@@ -739,11 +739,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"481485752\">Gilgamesh_TreeBonus2</a>[<span class=\"descriptionNumberColor\">Hero's Hauteur</span>]",
                       "stackLimit": {
-                        "displayLines": "UnusedUnderThisBase_7474"
+                        "displayLines": "UnusedUnderThisBase_8347"
                       },
                       "valuePerStack": {
                         "MDF_DamageBaseAdd": {
-                          "displayLines": "UnusedUnderThisBase_7496"
+                          "displayLines": "UnusedUnderThisBase_8369"
                         }
                       },
                       "addStacksPerTrigger": {
@@ -948,7 +948,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "displayLines": "UnusedUnderThisBase_7493"
+                      "displayLines": "UnusedUnderThisBase_8366"
                     },
                     "Toughness": null,
                     "Tags": null,
@@ -961,7 +961,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "displayLines": "UnusedUnderThisBase_7481"
+                      "displayLines": "UnusedUnderThisBase_8354"
                     }
                   }
                 }
@@ -992,7 +992,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "displayLines": "UnusedUnderThisBase_7472"
+                "displayLines": "UnusedUnderThisBase_8345"
               },
               "includeMaxValueInRange": true,
               "onChange": [
@@ -1003,7 +1003,7 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": ">=",
                     "value2": {
-                      "displayLines": "UnusedUnderThisBase_7472"
+                      "displayLines": "UnusedUnderThisBase_8345"
                     }
                   }
                 }
@@ -1156,7 +1156,7 @@ const configAbility = {
                 "displayLines": "Avatar_Gilgamesh_00_KingCount"
               },
               "maximum": {
-                "displayLines": "UnusedUnderThisBase_7489"
+                "displayLines": "UnusedUnderThisBase_8362"
               },
               "assignState": "True",
               "priorState": "Normal",
@@ -1254,7 +1254,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "displayLines": "UnusedUnderThisBase_7500"
+                      "displayLines": "UnusedUnderThisBase_8373"
                     }
                   }
                 }
@@ -1417,7 +1417,7 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": "<",
                     "value2": {
-                      "displayLines": "UnusedUnderThisBase_7472"
+                      "displayLines": "UnusedUnderThisBase_8345"
                     }
                   },
                   {
@@ -1490,7 +1490,7 @@ const configAbility = {
                     "value1": "Gilgamesh_00_Rank06_GoldenRule",
                     "compareType": "<",
                     "value2": {
-                      "displayLines": "UnusedUnderThisBase_7506"
+                      "displayLines": "UnusedUnderThisBase_8379"
                     }
                   }
                 ]
@@ -1555,11 +1555,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-791691611\">Gilgamesh_Overcharge</a>[<span class=\"descriptionNumberColor\">King's Burden</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_7465"
+                    "displayLines": "UnusedUnderThisBase_8338"
                   },
                   "valuePerStack": {
                     "MDF_DamageAddedRatio": {
-                      "displayLines": "UnusedUnderThisBase_7468"
+                      "displayLines": "UnusedUnderThisBase_8341"
                     }
                   }
                 }
@@ -1610,7 +1610,7 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "displayLines": "(Avatar_Gilgamesh_00_TeamSPChangeAmount * UnusedUnderThisBase_7480)"
+                    "displayLines": "(Avatar_Gilgamesh_00_TeamSPChangeAmount * UnusedUnderThisBase_8353)"
                   },
                   "isFixed": "(Fixed)",
                   "tag": "ActiveSkillAdd"
@@ -1620,7 +1620,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "displayLines": "UnusedUnderThisBase_7494"
+                      "displayLines": "UnusedUnderThisBase_8367"
                     }
                   }
                 }
@@ -1658,7 +1658,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "displayLines": "UnusedUnderThisBase_7495"
+                      "displayLines": "UnusedUnderThisBase_8368"
                     }
                   }
                 }
@@ -2004,7 +2004,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "displayLines": "(Avatar_Gilgamesh_00_KingCount * UnusedUnderThisBase_7477)"
+                "displayLines": "(Avatar_Gilgamesh_00_KingCount * UnusedUnderThisBase_8350)"
               },
               "variableName": "MDF_PropertyValue"
             },

@@ -52,49 +52,49 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_11163"
+            "displayLines": "UnusedUnderThisBase_12036"
           },
           "variableName": "_Strongman_LifeCount"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_11164"
+            "displayLines": "UnusedUnderThisBase_12037"
           },
           "variableName": "_Scholar_LifeCount"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_11120"
+            "displayLines": "UnusedUnderThisBase_11993"
           },
           "variableName": "_Minion03_LifeCount"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_11165"
+            "displayLines": "UnusedUnderThisBase_12038"
           },
           "variableName": "_SelfP1_LifeCount"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_11130"
+            "displayLines": "UnusedUnderThisBase_12003"
           },
           "variableName": "_SelfP2_LifeCount"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_11166"
+            "displayLines": "UnusedUnderThisBase_12039"
           },
           "variableName": "_Shooter_LifeCount"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_11125"
+            "displayLines": "UnusedUnderThisBase_11998"
           },
           "variableName": "_Avatar_LifeCount"
         }

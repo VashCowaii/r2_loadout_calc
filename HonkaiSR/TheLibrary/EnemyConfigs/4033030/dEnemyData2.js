@@ -43,10 +43,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2311,
-        2312,
-        2313,
-        2314
+        2341,
+        2342,
+        2343,
+        2344
       ],
       "summons": [
         {
@@ -83,10 +83,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2311,
-        2312,
-        2313,
-        2314
+        2341,
+        2342,
+        2343,
+        2344
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -126,10 +126,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2311,
-        2312,
-        2313,
-        2314
+        2341,
+        2342,
+        2343,
+        2344
       ],
       "summons": [
         {
@@ -166,10 +166,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2311,
-        2312,
-        2313,
-        2314
+        2341,
+        2342,
+        2343,
+        2344
       ],
       "summons": [
         {
@@ -206,10 +206,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2311,
-        2312,
-        2313,
-        2314
+        2341,
+        2342,
+        2343,
+        2344
       ],
       "summons": [
         {
@@ -246,10 +246,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2311,
-        2312,
-        2313,
-        2314
+        2341,
+        2342,
+        2343,
+        2344
       ],
       "summons": [
         {
@@ -286,14 +286,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2311,
-        2312,
-        2313,
-        2314
+        2341,
+        2342,
+        2343,
+        2344
       ],
       "abilityOrder": [
-        2313,
-        2314
+        2343,
+        2344
       ],
       "summons": [
         {
@@ -303,7 +303,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "2311": [
+        "2341": [
           [
             3
           ],

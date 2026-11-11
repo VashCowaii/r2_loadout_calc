@@ -3319,7 +3319,7 @@ const compositeAbilityObject = {
             },
             "target2": {
               "name": "Target Name",
-              "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+              "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}} + {{Voracity: 1}} + {{Voracity: 2}}"
             }
           }
         },
@@ -5176,7 +5176,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "(UnusedUnderThisBase_7830 + S02_ExtraRatio)"
+                        "displayLines": "(UnusedUnderThisBase_8703 + S02_ExtraRatio)"
                       },
                       "variableName": "MDF_Conv"
                     },
@@ -5389,7 +5389,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_5173"
+                    "displayLines": "UnusedUnderThisBase_6046"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -5405,7 +5405,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_5173"
+                    "displayLines": "UnusedUnderThisBase_6046"
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
@@ -8459,7 +8459,7 @@ const compositeAbilityObject = {
                 },
                 "target2": {
                   "name": "Target Name",
-                  "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+                  "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}} + {{Voracity: 1}} + {{Voracity: 2}}"
                 }
               }
             },
@@ -8538,7 +8538,7 @@ const compositeAbilityObject = {
                     },
                     "target2": {
                       "name": "Target Name",
-                      "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+                      "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}} + {{Voracity: 1}} + {{Voracity: 2}}"
                     }
                   }
                 }
@@ -8554,7 +8554,7 @@ const compositeAbilityObject = {
                     },
                     "target2": {
                       "name": "Target Name",
-                      "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+                      "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}} + {{Voracity: 1}} + {{Voracity: 2}}"
                     }
                   }
                 }
@@ -9328,13 +9328,13 @@ const compositeAbilityObject = {
                       "displayLines": "DV_Delay"
                     },
                     "AbilityP01_P1_AddCount": {
-                      "displayLines": "UnusedUnderThisBase_5176"
+                      "displayLines": "UnusedUnderThisBase_6049"
                     },
                     "_Evernight_Extra_Energy": {
-                      "displayLines": "UnusedUnderThisBase_5162"
+                      "displayLines": "UnusedUnderThisBase_6035"
                     },
                     "AbilityRank_Eidolon6_P1_Ratio": {
-                      "displayLines": "UnusedUnderThisBase_7614"
+                      "displayLines": "UnusedUnderThisBase_8487"
                     }
                   },
                   "afterSummoning": [
@@ -9363,7 +9363,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "displayLines": "UnusedUnderThisBase_14362"
+                              "displayLines": "UnusedUnderThisBase_15235"
                             }
                           }
                         }
@@ -9389,7 +9389,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "displayLines": "UnusedUnderThisBase_14370"
+                              "displayLines": "UnusedUnderThisBase_15243"
                             }
                           }
                         }
@@ -9404,7 +9404,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_5176"
+                          "displayLines": "UnusedUnderThisBase_6049"
                         }
                       }
                     },

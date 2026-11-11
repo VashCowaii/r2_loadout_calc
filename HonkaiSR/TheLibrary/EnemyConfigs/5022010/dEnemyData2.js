@@ -42,11 +42,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2837,
-        2838
+        2927,
+        2928
       ],
       "abilityOrder": [
-        2837
+        2927
       ]
     },
     "502201001": {
@@ -73,11 +73,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2837,
-        2838
+        2927,
+        2928
       ],
       "abilityOrder": [
-        2837
+        2927
       ]
     }
   }

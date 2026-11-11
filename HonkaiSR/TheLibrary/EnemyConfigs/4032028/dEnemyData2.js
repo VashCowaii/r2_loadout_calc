@@ -45,13 +45,50 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2210,
-        2211,
-        2212,
-        2213
+        2231,
+        2232,
+        2233,
+        2234
       ],
       "abilityOrder": [
-        2211
+        2232
+      ],
+      "itNeverEnds": {}
+    },
+    "403202801": {
+      "name": "Squad Life Assassin",
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        -40,
+        1,
+        null
+      ],
+      "weak": [
+        "Ice",
+        "Thunder",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 1
+      },
+      "abilities": [
+        2231,
+        2232,
+        2233,
+        2234
+      ],
+      "abilityOrder": [
+        2232
       ],
       "itNeverEnds": {}
     }

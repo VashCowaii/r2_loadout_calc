@@ -92,26 +92,26 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        3356,
-        3357,
-        3358,
-        3359,
-        3360,
-        3361,
-        3362,
-        3363,
-        3364,
-        3365,
-        3366,
-        3367,
-        3368,
-        3369
+        3518,
+        3519,
+        3520,
+        3521,
+        3522,
+        3523,
+        3524,
+        3525,
+        3526,
+        3527,
+        3528,
+        3529,
+        3530,
+        3531
       ],
       "abilityOrder": [
-        3360,
-        3361,
-        3358,
-        3359
+        3522,
+        3523,
+        3520,
+        3521
       ],
       "enemyTag": [
         "W5_AsatPramad",
@@ -124,6 +124,117 @@ let enemyData = {
           "base": 8012040
         }
       ]
+    },
+    "801505001": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.375,
+        1,
+        null,
+        1,
+        null
+      ],
+      "phhp": [
+        1,
+        1,
+        1.9
+      ],
+      "phs": [
+        1,
+        1.1,
+        1.7
+      ],
+      "weak": [
+        "Fire",
+        "Wind",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 1
+      },
+      "abilities": [
+        3518,
+        3519,
+        3520,
+        3521,
+        3522,
+        3523,
+        3524,
+        3525,
+        3526,
+        3527,
+        3528,
+        3529,
+        3530,
+        3531
+      ],
+      "abilityOrder": [
+        3522,
+        3523,
+        3520,
+        3521
+      ],
+      "enemyTag": [
+        "W5_AsatPramad",
+        "W5_AsatPramad_02",
+        "PeakBattle"
+      ],
+      "summons": [
+        {
+          "name": "Comediologist",
+          "over": 801204002,
+          "base": 8012040
+        }
+      ],
+      "overrideParams": {
+        "3520": [
+          [
+            3.3
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "3521": [
+          [
+            6.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "3524": [
+          [
+            1.2,
+            1.1,
+            1.65
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     }
   }
 }

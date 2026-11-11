@@ -392,7 +392,7 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Fire",
                 "Damage": {
-                  "displayLines": "UnusedUnderThisBase_12135"
+                  "displayLines": "UnusedUnderThisBase_13008"
                 },
                 "Toughness": null,
                 "Tags": null

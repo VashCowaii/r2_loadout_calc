@@ -44,11 +44,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2649,
-        2650
+        2690,
+        2691
       ],
       "abilityOrder": [
-        2649
+        2690
       ],
       "enemyTag": [
         "ThunderResistance"
@@ -80,11 +80,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2649,
-        2650
+        2690,
+        2691
       ],
       "abilityOrder": [
-        2649
+        2690
       ],
       "enemyTag": [
         "ThunderResistance"

@@ -588,7 +588,7 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_11461"
+                    "displayLines": "UnusedUnderThisBase_12334"
                   },
                   "adjustment": "Add"
                 },

@@ -618,6 +618,12 @@ const configAbility = {
       "statusName": "Cipher",
       "execute": [
         {
+          "eventTrigger": "When Constructing Modifier"
+        },
+        {
+          "eventTrigger": "When Modifier Destroyed/Removed"
+        },
+        {
           "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
@@ -652,9 +658,6 @@ const configAbility = {
               ]
             }
           ]
-        },
-        {
-          "eventTrigger": "Ability Use [Anyone]: End"
         }
       ]
     }

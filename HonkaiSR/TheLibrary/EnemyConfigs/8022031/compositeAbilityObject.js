@@ -136,7 +136,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
                           "valuePerStack": {
                             "MDF_AttackAddedRatio": {
-                              "displayLines": "UnusedUnderThisBase_13865"
+                              "displayLines": "UnusedUnderThisBase_14738"
                             }
                           }
                         },

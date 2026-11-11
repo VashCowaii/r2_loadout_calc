@@ -480,10 +480,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
           "valuePerStack": {
             "_HpLimitRatio": {
-              "displayLines": "UnusedUnderThisBase_12838"
+              "displayLines": "UnusedUnderThisBase_13711"
             },
             "_FatigueRatio": {
-              "displayLines": "UnusedUnderThisBase_12871"
+              "displayLines": "UnusedUnderThisBase_13744"
             }
           }
         }
@@ -539,10 +539,10 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "displayLines": "UnusedUnderThisBase_12837"
+              "displayLines": "UnusedUnderThisBase_13710"
             },
             "MDF_SpeedUpRatio": {
-              "displayLines": "UnusedUnderThisBase_12837"
+              "displayLines": "UnusedUnderThisBase_13710"
             }
           }
         }

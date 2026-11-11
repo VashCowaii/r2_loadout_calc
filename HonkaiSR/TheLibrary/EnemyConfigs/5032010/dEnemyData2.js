@@ -41,8 +41,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2924,
-        2925
+        3014,
+        3015
       ]
     },
     "503201001": {
@@ -69,14 +69,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2924,
-        2925
+        3014,
+        3015
       ],
       "enemyTag": [
         "Main"
       ],
       "overrideParams": {
-        "2924": [
+        "3014": [
           [
             "-",
             "-",
@@ -119,11 +119,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2924,
-        2925
+        3014,
+        3015
       ],
       "overrideParams": {
-        "2924": [
+        "3014": [
           [
             2
           ],
@@ -161,8 +161,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2924,
-        2925
+        3014,
+        3015
       ]
     },
     "503201004": {
@@ -189,8 +189,36 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2924,
-        2925
+        3014,
+        3015
+      ]
+    },
+    "503201005": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.666667,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Wind",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        3014,
+        3015
       ]
     }
   }

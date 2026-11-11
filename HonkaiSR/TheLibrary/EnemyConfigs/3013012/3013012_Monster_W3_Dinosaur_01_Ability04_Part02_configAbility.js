@@ -21,7 +21,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "displayLines": "UnusedUnderThisBase_10372"
+            "displayLines": "UnusedUnderThisBase_11245"
           },
           "execute": [
             {
@@ -32,11 +32,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
               "stackLimit": {
-                "displayLines": "UnusedUnderThisBase_10370"
+                "displayLines": "UnusedUnderThisBase_11243"
               },
               "valuePerStack": {
                 "MDF_MaxLayer": {
-                  "displayLines": "UnusedUnderThisBase_10370"
+                  "displayLines": "UnusedUnderThisBase_11243"
                 }
               },
               "addStacksPerTrigger": 1
@@ -54,7 +54,7 @@ const configAbility = {
             "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
             "compareType": "<",
             "value2": {
-              "displayLines": "UnusedUnderThisBase_10370"
+              "displayLines": "UnusedUnderThisBase_11243"
             },
             "valueType": "Layer"
           }

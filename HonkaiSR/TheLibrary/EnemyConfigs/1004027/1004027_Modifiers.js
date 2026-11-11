@@ -244,7 +244,7 @@ const configAbility = {
                     "displayLines": "0"
                   },
                   "valuePercent": {
-                    "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_8552)"
+                    "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_9425)"
                   },
                   "formula": "HP Scaling (Shield)"
                 }

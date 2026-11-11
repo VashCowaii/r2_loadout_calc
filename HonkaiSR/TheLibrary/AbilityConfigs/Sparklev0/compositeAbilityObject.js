@@ -640,6 +640,12 @@ const compositeAbilityObject = {
           "statusName": "Cipher",
           "execute": [
             {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
@@ -674,9 +680,6 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
-            },
-            {
-              "eventTrigger": "Ability Use [Anyone]: End"
             }
           ]
         }

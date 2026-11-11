@@ -716,7 +716,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
               "valuePerStack": {
                 "MDF_ReflexDamageValue": {
-                  "displayLines": "UnusedUnderThisBase_12807"
+                  "displayLines": "UnusedUnderThisBase_13680"
                 }
               }
             },
@@ -1335,10 +1335,10 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1512844653\">Enemy_W4_Pollux_IF_Strengthen_Shield</a>",
               "valuePerStack": {
                 "MDF_ShieldPercentage": {
-                  "displayLines": "UnusedUnderThisBase_12821"
+                  "displayLines": "UnusedUnderThisBase_13694"
                 },
                 "MDF_ShieldAttack_HealRatio": {
-                  "displayLines": "UnusedUnderThisBase_12804"
+                  "displayLines": "UnusedUnderThisBase_13677"
                 }
               }
             },
@@ -2698,7 +2698,7 @@ const configAbility = {
                   },
                   "variableName": "_EnergyValue",
                   "value": {
-                    "displayLines": "(_HPChangeRatio * UnusedUnderThisBase_12820)"
+                    "displayLines": "(_HPChangeRatio * UnusedUnderThisBase_13693)"
                   },
                   "max": 1
                 },

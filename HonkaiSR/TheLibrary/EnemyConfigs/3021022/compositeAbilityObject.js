@@ -1308,15 +1308,15 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_8956"
+                "displayLines": "UnusedUnderThisBase_9829"
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "displayLines": "UnusedUnderThisBase_8962"
+                  "displayLines": "UnusedUnderThisBase_9835"
                 }
               },
               "addStacksPerTrigger": {
-                "displayLines": "(UnusedUnderThisBase_8957 - 1)"
+                "displayLines": "(UnusedUnderThisBase_9830 - 1)"
               }
             },
             {
@@ -1327,11 +1327,11 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_8956"
+                "displayLines": "UnusedUnderThisBase_9829"
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "displayLines": "UnusedUnderThisBase_8962"
+                  "displayLines": "UnusedUnderThisBase_9835"
                 }
               },
               "addStacksPerTrigger": 1
@@ -1346,15 +1346,15 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_8956"
+                "displayLines": "UnusedUnderThisBase_9829"
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "displayLines": "UnusedUnderThisBase_8962"
+                  "displayLines": "UnusedUnderThisBase_9835"
                 }
               },
               "addStacksPerTrigger": {
-                "displayLines": "UnusedUnderThisBase_8963"
+                "displayLines": "UnusedUnderThisBase_9836"
               }
             }
           ]

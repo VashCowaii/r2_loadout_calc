@@ -736,16 +736,16 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                   "valuePerStack": {
                     "MDF_LockHpActionDecreaseRatio": {
-                      "displayLines": "UnusedUnderThisBase_13685"
+                      "displayLines": "UnusedUnderThisBase_14558"
                     },
                     "MDF_LockHpUpLimitRatio": {
-                      "displayLines": "UnusedUnderThisBase_13653"
+                      "displayLines": "UnusedUnderThisBase_14526"
                     },
                     "MDF_DamageReduceRatio": {
-                      "displayLines": "UnusedUnderThisBase_13656"
+                      "displayLines": "UnusedUnderThisBase_14529"
                     },
                     "MDF_LastLockHpRatio": {
-                      "displayLines": "UnusedUnderThisBase_13652"
+                      "displayLines": "UnusedUnderThisBase_14525"
                     }
                   }
                 },
@@ -1588,7 +1588,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_13694"
+                                "displayLines": "UnusedUnderThisBase_14567"
                               },
                               "variableName": "MDF_DelayRatio"
                             }
@@ -1597,7 +1597,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_13692"
+                                "displayLines": "UnusedUnderThisBase_14565"
                               },
                               "variableName": "MDF_DelayRatio"
                             }
@@ -1630,7 +1630,7 @@ const configAbility = {
                             "target": "{{Recently Summoned Enemies}}"
                           },
                           "value": {
-                            "displayLines": "UnusedUnderThisBase_13713"
+                            "displayLines": "UnusedUnderThisBase_14586"
                           },
                           "variableName": "Buff_DamageUpRatio"
                         },
@@ -1641,7 +1641,7 @@ const configAbility = {
                             "target": "{{Recently Summoned Enemies}}"
                           },
                           "value": {
-                            "displayLines": "UnusedUnderThisBase_13690"
+                            "displayLines": "UnusedUnderThisBase_14563"
                           },
                           "variableName": "Buff_MaxLayer"
                         },
@@ -1787,7 +1787,7 @@ const configAbility = {
               },
               "variableName": "FleshLifeTime",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13699"
+                "displayLines": "UnusedUnderThisBase_14572"
               },
               "scope": "TargetEntity"
             },
@@ -1799,7 +1799,7 @@ const configAbility = {
               },
               "variableName": "Buff_DamageUpRatio",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13713"
+                "displayLines": "UnusedUnderThisBase_14586"
               },
               "scope": "TargetEntity"
             },
@@ -1811,7 +1811,7 @@ const configAbility = {
               },
               "variableName": "Buff_MaxLayer",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13690"
+                "displayLines": "UnusedUnderThisBase_14563"
               },
               "scope": "TargetEntity"
             },
@@ -1823,7 +1823,7 @@ const configAbility = {
               },
               "variableName": "MDF_FleshElationPoint",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13689"
+                "displayLines": "UnusedUnderThisBase_14562"
               },
               "scope": "TargetEntity"
             },
@@ -1835,7 +1835,7 @@ const configAbility = {
               },
               "variableName": "MDF_FleshExtraChance",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13697"
+                "displayLines": "UnusedUnderThisBase_14570"
               },
               "scope": "TargetEntity"
             },
@@ -1847,7 +1847,7 @@ const configAbility = {
               },
               "variableName": "MDF_FleshExtraElationPoint",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13711"
+                "displayLines": "UnusedUnderThisBase_14584"
               },
               "scope": "TargetEntity"
             },
@@ -1859,7 +1859,7 @@ const configAbility = {
               },
               "variableName": "MDF_AttackEnemyChance",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13695"
+                "displayLines": "UnusedUnderThisBase_14568"
               },
               "scope": "TargetEntity"
             },
@@ -1871,7 +1871,7 @@ const configAbility = {
               },
               "variableName": "MDF_DamagePercentage",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13691"
+                "displayLines": "UnusedUnderThisBase_14564"
               },
               "scope": "TargetEntity"
             },
@@ -1883,7 +1883,7 @@ const configAbility = {
               },
               "variableName": "MDF_MaxDamageRatio",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13693"
+                "displayLines": "UnusedUnderThisBase_14566"
               },
               "scope": "TargetEntity"
             },
@@ -1895,7 +1895,7 @@ const configAbility = {
               },
               "variableName": "MDF_MinDamageRatio",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13715"
+                "displayLines": "UnusedUnderThisBase_14588"
               },
               "scope": "TargetEntity"
             },
@@ -1907,7 +1907,7 @@ const configAbility = {
               },
               "variableName": "MDF_ExtraDamageMultiple",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13716"
+                "displayLines": "UnusedUnderThisBase_14589"
               },
               "scope": "TargetEntity"
             },
@@ -1919,7 +1919,7 @@ const configAbility = {
               },
               "variableName": "MDF_EnemyExtraDamageMultiple",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13717"
+                "displayLines": "UnusedUnderThisBase_14590"
               },
               "scope": "TargetEntity"
             }
@@ -2171,11 +2171,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_13708"
+                    "displayLines": "UnusedUnderThisBase_14581"
                   },
                   "valuePerStack": {
                     "MDF_CriticalDamageUpRatio": {
-                      "displayLines": "UnusedUnderThisBase_13707"
+                      "displayLines": "UnusedUnderThisBase_14580"
                     }
                   }
                 },
@@ -2310,7 +2310,7 @@ const configAbility = {
               },
               "variableName": "FleshLifeTime",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13699"
+                "displayLines": "UnusedUnderThisBase_14572"
               },
               "scope": "TargetEntity"
             },
@@ -2322,7 +2322,7 @@ const configAbility = {
               },
               "variableName": "Buff_DamageUpRatio",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13713"
+                "displayLines": "UnusedUnderThisBase_14586"
               },
               "scope": "TargetEntity"
             },
@@ -2334,7 +2334,7 @@ const configAbility = {
               },
               "variableName": "Buff_MaxLayer",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13690"
+                "displayLines": "UnusedUnderThisBase_14563"
               },
               "scope": "TargetEntity"
             },
@@ -2346,7 +2346,7 @@ const configAbility = {
               },
               "variableName": "MDF_FleshElationPoint",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13689"
+                "displayLines": "UnusedUnderThisBase_14562"
               },
               "scope": "TargetEntity"
             },
@@ -2358,7 +2358,7 @@ const configAbility = {
               },
               "variableName": "MDF_FleshExtraChance",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13697"
+                "displayLines": "UnusedUnderThisBase_14570"
               },
               "scope": "TargetEntity"
             },
@@ -2370,7 +2370,7 @@ const configAbility = {
               },
               "variableName": "MDF_FleshExtraElationPoint",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13711"
+                "displayLines": "UnusedUnderThisBase_14584"
               },
               "scope": "TargetEntity"
             },
@@ -2382,7 +2382,7 @@ const configAbility = {
               },
               "variableName": "MDF_AttackEnemyChance",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13695"
+                "displayLines": "UnusedUnderThisBase_14568"
               },
               "scope": "TargetEntity"
             },
@@ -2394,7 +2394,7 @@ const configAbility = {
               },
               "variableName": "MDF_DamagePercentage",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13691"
+                "displayLines": "UnusedUnderThisBase_14564"
               },
               "scope": "TargetEntity"
             },
@@ -2406,7 +2406,7 @@ const configAbility = {
               },
               "variableName": "MDF_MaxDamageRatio",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13693"
+                "displayLines": "UnusedUnderThisBase_14566"
               },
               "scope": "TargetEntity"
             },
@@ -2418,7 +2418,7 @@ const configAbility = {
               },
               "variableName": "MDF_MinDamageRatio",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13715"
+                "displayLines": "UnusedUnderThisBase_14588"
               },
               "scope": "TargetEntity"
             },
@@ -2430,7 +2430,7 @@ const configAbility = {
               },
               "variableName": "MDF_ExtraDamageMultiple",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13716"
+                "displayLines": "UnusedUnderThisBase_14589"
               },
               "scope": "TargetEntity"
             },
@@ -2442,7 +2442,7 @@ const configAbility = {
               },
               "variableName": "MDF_EnemyExtraDamageMultiple",
               "resetValue": {
-                "displayLines": "UnusedUnderThisBase_13717"
+                "displayLines": "UnusedUnderThisBase_14590"
               },
               "scope": "TargetEntity"
             }
@@ -2710,11 +2710,11 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
                   "duration": {
-                    "displayLines": "UnusedUnderThisBase_13708"
+                    "displayLines": "UnusedUnderThisBase_14581"
                   },
                   "valuePerStack": {
                     "MDF_CriticalDamageUpRatio": {
-                      "displayLines": "UnusedUnderThisBase_13707"
+                      "displayLines": "UnusedUnderThisBase_14580"
                     }
                   }
                 },
@@ -3854,7 +3854,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_13713"
+                    "displayLines": "UnusedUnderThisBase_14586"
                   },
                   "variableName": "Buff_DamageUpRatio"
                 },
@@ -3865,7 +3865,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_13690"
+                    "displayLines": "UnusedUnderThisBase_14563"
                   },
                   "variableName": "Buff_MaxLayer"
                 }
@@ -3910,7 +3910,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_13713"
+                    "displayLines": "UnusedUnderThisBase_14586"
                   },
                   "variableName": "Buff_DamageUpRatio"
                 },
@@ -3921,7 +3921,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_13690"
+                    "displayLines": "UnusedUnderThisBase_14563"
                   },
                   "variableName": "Buff_MaxLayer"
                 }

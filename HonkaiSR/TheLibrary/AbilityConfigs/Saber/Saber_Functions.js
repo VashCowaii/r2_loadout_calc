@@ -250,7 +250,7 @@ const configAbility = {
                 "value1": "Avatar_Gilgamesh_00_KingCount",
                 "compareType": ">=",
                 "value2": {
-                  "displayLines": "UnusedUnderThisBase_7489"
+                  "displayLines": "UnusedUnderThisBase_8362"
                 }
               }
             ]

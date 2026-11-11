@@ -66,7 +66,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "displayLines": "(MaxHPValue * UnusedUnderThisBase_9425)"
+          "displayLines": "(MaxHPValue * UnusedUnderThisBase_10298)"
         },
         "Toughness": null,
         "Tags": null,

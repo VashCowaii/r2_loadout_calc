@@ -42,12 +42,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1286,
-        1287
+        1296,
+        1297
       ],
       "abilityOrder": [
-        1286,
-        1287
+        1296,
+        1297
       ],
       "enemyTag": [
         "W3_Figure_00"
@@ -77,18 +77,18 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1286,
-        1287
+        1296,
+        1297
       ],
       "abilityOrder": [
-        1286,
-        1287
+        1296,
+        1297
       ],
       "enemyTag": [
         "W3_Figure_00"
       ],
       "overrideParams": {
-        "1287": [
+        "1297": [
           [
             1.9125
           ],

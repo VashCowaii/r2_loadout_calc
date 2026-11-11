@@ -20,6 +20,20 @@ const configAbility = {
       "value": 1,
       "variableName": "OnInsertAbort_Flg"
     },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Is Part Of",
+        "target1": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+        }
+      }
+    },
     "Deleted bullshit",
     {
       "name": "Trigger Ability",

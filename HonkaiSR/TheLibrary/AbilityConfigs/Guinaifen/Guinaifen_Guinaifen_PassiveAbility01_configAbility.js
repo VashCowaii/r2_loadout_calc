@@ -24,10 +24,10 @@ const configAbility = {
           "displayLines": "1"
         },
         "MDF_Damage": {
-          "displayLines": "UnusedUnderThisBase_5348"
+          "displayLines": "UnusedUnderThisBase_6221"
         },
         "MDF_LifeTime": {
-          "displayLines": "UnusedUnderThisBase_6532"
+          "displayLines": "UnusedUnderThisBase_7405"
         },
         "SpAdded2": {
           "displayLines": "2"

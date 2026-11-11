@@ -3724,7 +3724,7 @@ const configAbility = {
               },
               "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "statValue": {
-                "displayLines": "UnusedUnderThisBase_12007"
+                "displayLines": "UnusedUnderThisBase_12880"
               }
             },
             {

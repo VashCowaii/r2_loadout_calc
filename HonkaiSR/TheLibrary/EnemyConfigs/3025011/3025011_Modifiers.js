@@ -2441,7 +2441,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
               },
               "assignState": "False"
             }
@@ -2488,7 +2488,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "value": {
-                "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
               }
             },
             {
@@ -2510,7 +2510,7 @@ const configAbility = {
               },
               "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "statValue": {
-                "displayLines": "UnusedUnderThisBase_10891"
+                "displayLines": "UnusedUnderThisBase_11764"
               }
             },
             {
@@ -2533,11 +2533,11 @@ const configAbility = {
             {
               "name": "Update Displayed Energy Bar",
               "value": {
-                "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
               },
               "entityClass": "Enemy",
               "maximum": {
-                "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
               },
               "assignState": "True"
             }
@@ -2562,7 +2562,7 @@ const configAbility = {
               },
               "entityClass": "Enemy",
               "maximum": {
-                "displayLines": "(UnusedUnderThisBase_10890 * MDF_MaxHP)"
+                "displayLines": "(UnusedUnderThisBase_11763 * MDF_MaxHP)"
               },
               "assignState": "True"
             },
@@ -3488,7 +3488,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1121563146\">Enemy_W3_SundayPart_AssistAbilityAttach</a>",
               "valuePerStack": {
                 "MDF_Assist_DamagePercentage": {
-                  "displayLines": "UnusedUnderThisBase_10889"
+                  "displayLines": "UnusedUnderThisBase_11762"
                 }
               }
             },
@@ -3724,7 +3724,7 @@ const configAbility = {
               },
               "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "statValue": {
-                "displayLines": "UnusedUnderThisBase_12007"
+                "displayLines": "UnusedUnderThisBase_12880"
               }
             },
             {

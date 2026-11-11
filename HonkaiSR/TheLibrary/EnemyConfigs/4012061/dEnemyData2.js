@@ -45,11 +45,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1766,
-        1767
+        1787,
+        1788
       ],
       "abilityOrder": [
-        1766
+        1787
       ],
       "itNeverEnds": {
         "HardLevel": 1
@@ -82,11 +82,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1766,
-        1767
+        1787,
+        1788
       ],
       "abilityOrder": [
-        1766
+        1787
       ],
       "itNeverEnds": {
         "HardLevel": 1
@@ -119,11 +119,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1766,
-        1767
+        1787,
+        1788
       ],
       "abilityOrder": [
-        1766
+        1787
       ],
       "itNeverEnds": {
         "HardLevel": 2
@@ -156,11 +156,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1766,
-        1767
+        1787,
+        1788
       ],
       "abilityOrder": [
-        1766
+        1787
       ],
       "itNeverEnds": {
         "HardLevel": 3
@@ -193,11 +193,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1766,
-        1767
+        1787,
+        1788
       ],
       "abilityOrder": [
-        1766
+        1787
       ],
       "itNeverEnds": {
         "HardLevel": 4

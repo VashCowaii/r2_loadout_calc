@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1736,
-        1737
+        1757,
+        1758
       ],
       "abilityOrder": [
-        1736
+        1757
       ]
     },
     "401203001": {
@@ -73,11 +73,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1736,
-        1737
+        1757,
+        1758
       ],
       "abilityOrder": [
-        1736
+        1757
       ]
     },
     "401203002": {
@@ -104,11 +104,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1736,
-        1737
+        1757,
+        1758
       ],
       "abilityOrder": [
-        1736
+        1757
       ]
     },
     "401203003": {
@@ -135,11 +135,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1736,
-        1737
+        1757,
+        1758
       ],
       "abilityOrder": [
-        1736
+        1757
       ]
     },
     "401203004": {
@@ -166,11 +166,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1736,
-        1737
+        1757,
+        1758
       ],
       "abilityOrder": [
-        1736
+        1757
       ]
     },
     "401203005": {
@@ -197,11 +197,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1736,
-        1737
+        1757,
+        1758
       ],
       "abilityOrder": [
-        1736
+        1757
       ]
     },
     "401203006": {
@@ -228,11 +228,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1736,
-        1737
+        1757,
+        1758
       ],
       "abilityOrder": [
-        1736
+        1757
       ]
     },
     "401203007": {
@@ -259,11 +259,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1736,
-        1737
+        1757,
+        1758
       ],
       "abilityOrder": [
-        1736
+        1757
       ],
       "enemyTag": [
         "MGrid_4008"
@@ -293,11 +293,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1736,
-        1737
+        1757,
+        1758
       ],
       "abilityOrder": [
-        1736
+        1757
       ]
     }
   }

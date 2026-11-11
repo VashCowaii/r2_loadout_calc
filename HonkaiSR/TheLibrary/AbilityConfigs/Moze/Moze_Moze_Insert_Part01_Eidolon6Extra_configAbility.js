@@ -13,6 +13,20 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-59329108\">Moze_InInsert_Tag</a>"
     },
     {
+      "name": "IF",
+      "conditions": {
+        "name": "Is Part Of",
+        "target1": {
+          "name": "Target Name",
+          "target": "{{Ability Target(ST)}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+        }
+      }
+    },
+    {
       "name": "UI Display Event",
       "popUpText": "Cascading Featherblade"
     },

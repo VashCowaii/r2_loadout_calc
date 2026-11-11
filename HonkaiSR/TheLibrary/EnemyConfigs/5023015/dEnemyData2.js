@@ -43,11 +43,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2869,
-        2870,
-        2871,
-        2872,
-        2873
+        2959,
+        2960,
+        2961,
+        2962,
+        2963
       ],
       "enemyTag": [
         "XP_Elite02_03_Mark",

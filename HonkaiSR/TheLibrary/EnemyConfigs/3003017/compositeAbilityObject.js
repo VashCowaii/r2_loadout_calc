@@ -373,7 +373,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "displayLines": "UnusedUnderThisBase_10347"
+                      "displayLines": "UnusedUnderThisBase_11220"
                     },
                     "MDF_PartFlag": 0
                   }
@@ -455,7 +455,7 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)"
+                              "displayLines": "((UnusedUnderThisBase_11220 / 3) * 2)"
                             }
                           },
                           "passed": [
@@ -488,7 +488,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)"
+                                  "displayLines": "(UnusedUnderThisBase_11220 / 3)"
                                 }
                               },
                               "passed": [
@@ -567,7 +567,7 @@ const compositeAbilityObject = {
                         "value1": "Vibrate_Count",
                         "compareType": ">=",
                         "value2": {
-                          "displayLines": "(UnusedUnderThisBase_10349 - 1)"
+                          "displayLines": "(UnusedUnderThisBase_11222 - 1)"
                         }
                       },
                       {
@@ -751,7 +751,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "displayLines": "UnusedUnderThisBase_10347"
+                      "displayLines": "UnusedUnderThisBase_11220"
                     },
                     "MDF_PartFlag": 0
                   }
@@ -833,7 +833,7 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)"
+                              "displayLines": "((UnusedUnderThisBase_11220 / 3) * 2)"
                             }
                           },
                           "passed": [
@@ -866,7 +866,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)"
+                                  "displayLines": "(UnusedUnderThisBase_11220 / 3)"
                                 }
                               },
                               "passed": [
@@ -964,7 +964,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "displayLines": "UnusedUnderThisBase_10347"
+                      "displayLines": "UnusedUnderThisBase_11220"
                     },
                     "MDF_PartFlag": 0
                   }
@@ -1011,7 +1011,7 @@ const compositeAbilityObject = {
                           "context": "TargetEntity",
                           "value": 1,
                           "max": {
-                            "displayLines": "UnusedUnderThisBase_10347"
+                            "displayLines": "UnusedUnderThisBase_11220"
                           }
                         },
                         {
@@ -1022,7 +1022,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                           "stackLimit": {
-                            "displayLines": "UnusedUnderThisBase_10347"
+                            "displayLines": "UnusedUnderThisBase_11220"
                           },
                           "valuePerStack": {
                             "Modifier_AttackUp_AttackUpLayer": {
@@ -1039,7 +1039,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                           "valuePerStack": {
                             "MDF_MaxCount": {
-                              "displayLines": "UnusedUnderThisBase_10347"
+                              "displayLines": "UnusedUnderThisBase_11220"
                             },
                             "MDF_PartFlag": 0
                           }
@@ -1058,7 +1058,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)"
+                                  "displayLines": "(UnusedUnderThisBase_11220 / 3)"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1107,7 +1107,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)"
+                                  "displayLines": "((UnusedUnderThisBase_11220 / 3) * 2)"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1156,7 +1156,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "displayLines": "UnusedUnderThisBase_10347"
+                                  "displayLines": "UnusedUnderThisBase_11220"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1202,7 +1202,7 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": "=",
                             "value2": {
-                              "displayLines": "UnusedUnderThisBase_10347"
+                              "displayLines": "UnusedUnderThisBase_11220"
                             },
                             "contextScope": "TargetEntity"
                           },
@@ -1292,7 +1292,7 @@ const compositeAbilityObject = {
                               "context": "TargetEntity",
                               "value": 1,
                               "max": {
-                                "displayLines": "UnusedUnderThisBase_10349"
+                                "displayLines": "UnusedUnderThisBase_11222"
                               }
                             },
                             {
@@ -1303,7 +1303,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                               "stackLimit": {
-                                "displayLines": "UnusedUnderThisBase_10349"
+                                "displayLines": "UnusedUnderThisBase_11222"
                               },
                               "valuePerStack": {
                                 "Modifier_AttackUp_AttackUpLayer": {
@@ -1320,7 +1320,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                               "valuePerStack": {
                                 "MDF_MaxCount": {
-                                  "displayLines": "UnusedUnderThisBase_10349"
+                                  "displayLines": "UnusedUnderThisBase_11222"
                                 },
                                 "MDF_PartFlag": 1
                               }
@@ -1339,7 +1339,7 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": ">=",
                                     "value2": {
-                                      "displayLines": "UnusedUnderThisBase_10349"
+                                      "displayLines": "UnusedUnderThisBase_11222"
                                     },
                                     "contextScope": "TargetEntity"
                                   },
@@ -1375,7 +1375,7 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": "=",
                                     "value2": {
-                                      "displayLines": "UnusedUnderThisBase_10349"
+                                      "displayLines": "UnusedUnderThisBase_11222"
                                     },
                                     "contextScope": "TargetEntity"
                                   }
@@ -1496,7 +1496,7 @@ const compositeAbilityObject = {
                           "context": "TargetEntity",
                           "value": 1,
                           "max": {
-                            "displayLines": "UnusedUnderThisBase_10347"
+                            "displayLines": "UnusedUnderThisBase_11220"
                           }
                         },
                         {
@@ -1507,7 +1507,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                           "stackLimit": {
-                            "displayLines": "UnusedUnderThisBase_10347"
+                            "displayLines": "UnusedUnderThisBase_11220"
                           },
                           "valuePerStack": {
                             "Modifier_AttackUp_AttackUpLayer": {
@@ -1524,7 +1524,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                           "valuePerStack": {
                             "MDF_MaxCount": {
-                              "displayLines": "UnusedUnderThisBase_10347"
+                              "displayLines": "UnusedUnderThisBase_11220"
                             },
                             "MDF_PartFlag": 0
                           }
@@ -1543,7 +1543,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)"
+                                  "displayLines": "(UnusedUnderThisBase_11220 / 3)"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1592,7 +1592,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)"
+                                  "displayLines": "((UnusedUnderThisBase_11220 / 3) * 2)"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1641,7 +1641,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "displayLines": "UnusedUnderThisBase_10347"
+                                  "displayLines": "UnusedUnderThisBase_11220"
                                 },
                                 "contextScope": "TargetEntity"
                               },
@@ -1687,7 +1687,7 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": "=",
                             "value2": {
-                              "displayLines": "UnusedUnderThisBase_10347"
+                              "displayLines": "UnusedUnderThisBase_11220"
                             },
                             "contextScope": "TargetEntity"
                           },
@@ -1797,7 +1797,7 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": "=",
                                 "value2": {
-                                  "displayLines": "UnusedUnderThisBase_10349"
+                                  "displayLines": "UnusedUnderThisBase_11222"
                                 },
                                 "contextScope": "TargetEntity"
                               }
@@ -1814,7 +1814,7 @@ const compositeAbilityObject = {
                               "context": "TargetEntity",
                               "value": 1,
                               "max": {
-                                "displayLines": "UnusedUnderThisBase_10349"
+                                "displayLines": "UnusedUnderThisBase_11222"
                               }
                             },
                             {
@@ -1825,7 +1825,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                               "stackLimit": {
-                                "displayLines": "UnusedUnderThisBase_10349"
+                                "displayLines": "UnusedUnderThisBase_11222"
                               },
                               "valuePerStack": {
                                 "Modifier_AttackUp_AttackUpLayer": {
@@ -1842,7 +1842,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                               "valuePerStack": {
                                 "MDF_MaxCount": {
-                                  "displayLines": "UnusedUnderThisBase_10349"
+                                  "displayLines": "UnusedUnderThisBase_11222"
                                 },
                                 "MDF_PartFlag": 1
                               }
@@ -1861,7 +1861,7 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": ">=",
                                     "value2": {
-                                      "displayLines": "UnusedUnderThisBase_10349"
+                                      "displayLines": "UnusedUnderThisBase_11222"
                                     },
                                     "contextScope": "TargetEntity"
                                   },
@@ -1897,7 +1897,7 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": "=",
                                     "value2": {
-                                      "displayLines": "UnusedUnderThisBase_10349"
+                                      "displayLines": "UnusedUnderThisBase_11222"
                                     },
                                     "contextScope": "TargetEntity"
                                   }
@@ -2049,7 +2049,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1193792195\">MModifier_Monster_W3_Dinosaur_RLElite_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "displayLines": "UnusedUnderThisBase_10344"
+                          "displayLines": "UnusedUnderThisBase_11217"
                         }
                       }
                     }
@@ -4150,7 +4150,7 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1129261000\">MModifier_Monster_W3_Theater_RLBoss_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Oil to the Banabana</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "displayLines": "UnusedUnderThisBase_10475"
+                  "displayLines": "UnusedUnderThisBase_11348"
                 }
               }
             }

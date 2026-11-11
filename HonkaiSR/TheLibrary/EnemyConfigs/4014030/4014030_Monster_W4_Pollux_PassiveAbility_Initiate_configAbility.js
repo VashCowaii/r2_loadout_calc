@@ -140,7 +140,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "UnusedUnderThisBase_12873"
+              "displayLines": "UnusedUnderThisBase_13746"
             }
           }
         }
@@ -252,21 +252,21 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_12870"
+            "displayLines": "UnusedUnderThisBase_13743"
           },
           "variableName": "_Skill05_LoseHpRatio"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_12832"
+            "displayLines": "UnusedUnderThisBase_13705"
           },
           "variableName": "_Skill05_ActionDelay"
         },
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "UnusedUnderThisBase_12830"
+            "displayLines": "UnusedUnderThisBase_13703"
           },
           "variableName": "_Skill05_Part_ActionDelay"
         }

@@ -52,7 +52,7 @@ const configAbility = {
                 "value1": "DV_CurrentDelay",
                 "compareType": ">=",
                 "value2": {
-                  "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)"
+                  "displayLines": "(UnusedUnderThisBase_13543 + DV_InitDelay)"
                 }
               },
               "passed": [
@@ -115,7 +115,7 @@ const configAbility = {
                 "value1": "DV_CurrentDelay",
                 "compareType": ">=",
                 "value2": {
-                  "displayLines": "(UnusedUnderThisBase_12670 + DV_InitDelay)"
+                  "displayLines": "(UnusedUnderThisBase_13543 + DV_InitDelay)"
                 }
               },
               "passed": [
@@ -157,7 +157,7 @@ const configAbility = {
                 "value1": "DV_CurrentDelay",
                 "compareType": ">=",
                 "value2": {
-                  "displayLines": "UnusedUnderThisBase_12670"
+                  "displayLines": "UnusedUnderThisBase_13543"
                 }
               },
               "passed": [

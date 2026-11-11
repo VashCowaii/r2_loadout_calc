@@ -50,7 +50,7 @@ let enemyData = {
         904
       ],
       "abilityOrder": [
-        3141
+        3303
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"

@@ -2535,6 +2535,34 @@ const compositeAbilityObject = {
           "name": "UI Display Event",
           "popUpText": "Rancor: Enmity Reprisal"
         },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "target1": {
+              "name": "Target Name",
+              "target": "{{Ashveil: Parasite Target}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "target1": {
+              "name": "Target Name",
+              "target": "{{Ashveil: Parasite Target}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+            }
+          }
+        },
         "Deleted bullshit",
         {
           "name": "Define Custom Variable",
@@ -2807,6 +2835,34 @@ const compositeAbilityObject = {
                     "value2": 1
                   },
                   "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Part Of",
+                        "target1": {
+                          "name": "Target Name",
+                          "target": "{{Ashveil: Parasite Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+                        }
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Part Of",
+                        "target1": {
+                          "name": "Target Name",
+                          "target": "{{Ashveil: Parasite Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+                        }
+                      }
+                    },
                     "Deleted bullshit"
                   ]
                 },
@@ -3201,6 +3257,34 @@ const compositeAbilityObject = {
         {
           "name": "UI Display Event",
           "popUpText": "Rancor: Enmity Reprisal"
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "target1": {
+              "name": "Target Name",
+              "target": "{{Ashveil: Parasite Target}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+            }
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "target1": {
+              "name": "Target Name",
+              "target": "{{Ashveil: Parasite Target}}"
+            },
+            "target2": {
+              "name": "Target Name",
+              "target": "{{Voracity: 1}} + {{Voracity: 2}}"
+            }
+          }
         },
         "Deleted bullshit",
         {

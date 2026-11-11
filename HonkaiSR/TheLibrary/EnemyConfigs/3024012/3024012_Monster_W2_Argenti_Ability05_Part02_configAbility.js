@@ -87,7 +87,7 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"352751855\">Monster_W1_Gepard_RL_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageAddedRatio": {
-              "displayLines": "UnusedUnderThisBase_9045"
+              "displayLines": "UnusedUnderThisBase_9918"
             }
           }
         }

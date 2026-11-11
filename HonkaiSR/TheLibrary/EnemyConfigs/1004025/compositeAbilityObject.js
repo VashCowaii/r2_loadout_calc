@@ -1423,7 +1423,7 @@ const compositeAbilityObject = {
                         "displayLines": "0"
                       },
                       "valuePercent": {
-                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_8552)"
+                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_9425)"
                       },
                       "formula": "HP Scaling (Shield)"
                     }
@@ -3479,7 +3479,7 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Ice",
             "Damage": {
-              "displayLines": "UnusedUnderThisBase_14028"
+              "displayLines": "UnusedUnderThisBase_14901"
             },
             "Toughness": null,
             "Tags": null,
@@ -3548,7 +3548,7 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
           "duration": {
-            "displayLines": "UnusedUnderThisBase_8587"
+            "displayLines": "UnusedUnderThisBase_9460"
           }
         },
         {

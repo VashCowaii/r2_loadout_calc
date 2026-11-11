@@ -2249,10 +2249,10 @@ const compositeAbilityObject = {
                   "eventID": 20008,
                   "variables": {
                     "P3_Lycan01Delay": {
-                      "displayLines": "UnusedUnderThisBase_9681"
+                      "displayLines": "UnusedUnderThisBase_10554"
                     },
                     "P4_Lycan02Delay": {
-                      "displayLines": "UnusedUnderThisBase_9703"
+                      "displayLines": "UnusedUnderThisBase_10576"
                     }
                   }
                 },
@@ -2278,7 +2278,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "P3_Lycan01Delay",
                       "resetValue": {
-                        "displayLines": "UnusedUnderThisBase_9681"
+                        "displayLines": "UnusedUnderThisBase_10554"
                       },
                       "scope": "TargetEntity"
                     }
@@ -2306,7 +2306,7 @@ const compositeAbilityObject = {
                       },
                       "variableName": "P4_Lycan02Delay",
                       "resetValue": {
-                        "displayLines": "UnusedUnderThisBase_9703"
+                        "displayLines": "UnusedUnderThisBase_10576"
                       },
                       "scope": "TargetEntity"
                     }

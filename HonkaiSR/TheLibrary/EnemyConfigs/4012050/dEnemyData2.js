@@ -43,10 +43,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1751,
-        1752,
-        1753,
-        1754
+        1772,
+        1773,
+        1774,
+        1775
       ],
       "itNeverEnds": {
         "AISequence_1": 2,
@@ -79,10 +79,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1751,
-        1752,
-        1753,
-        1754
+        1772,
+        1773,
+        1774,
+        1775
       ],
       "itNeverEnds": {
         "AISequence_1": 3,

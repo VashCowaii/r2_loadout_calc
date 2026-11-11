@@ -514,14 +514,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_13870"
+                "displayLines": "UnusedUnderThisBase_14743"
               },
               "baseChance": {
-                "displayLines": "UnusedUnderThisBase_13863"
+                "displayLines": "UnusedUnderThisBase_14736"
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "displayLines": "UnusedUnderThisBase_13871"
+                  "displayLines": "UnusedUnderThisBase_14744"
                 }
               }
             }
@@ -748,14 +748,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_13870"
+                "displayLines": "UnusedUnderThisBase_14743"
               },
               "baseChance": {
-                "displayLines": "UnusedUnderThisBase_13863"
+                "displayLines": "UnusedUnderThisBase_14736"
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "displayLines": "UnusedUnderThisBase_13871"
+                  "displayLines": "UnusedUnderThisBase_14744"
                 }
               }
             }
@@ -982,14 +982,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_13870"
+                "displayLines": "UnusedUnderThisBase_14743"
               },
               "baseChance": {
-                "displayLines": "UnusedUnderThisBase_13863"
+                "displayLines": "UnusedUnderThisBase_14736"
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "displayLines": "UnusedUnderThisBase_13871"
+                  "displayLines": "UnusedUnderThisBase_14744"
                 }
               }
             }
@@ -1216,14 +1216,14 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "displayLines": "UnusedUnderThisBase_13870"
+                "displayLines": "UnusedUnderThisBase_14743"
               },
               "baseChance": {
-                "displayLines": "UnusedUnderThisBase_13863"
+                "displayLines": "UnusedUnderThisBase_14736"
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "displayLines": "UnusedUnderThisBase_13871"
+                  "displayLines": "UnusedUnderThisBase_14744"
                 }
               }
             }

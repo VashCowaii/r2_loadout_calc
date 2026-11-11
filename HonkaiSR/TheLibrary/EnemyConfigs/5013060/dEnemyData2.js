@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.8
       },
       "abilities": [
-        2731,
-        2732,
-        2733,
-        2734,
-        2735
+        2782,
+        2783,
+        2784,
+        2785,
+        2786
       ],
       "enemyTag": [
         "W5_Ranger"
@@ -79,11 +79,11 @@ let enemyData = {
         "Imaginary": 0.8
       },
       "abilities": [
-        2731,
-        2732,
-        2733,
-        2734,
-        2735
+        2782,
+        2783,
+        2784,
+        2785,
+        2786
       ],
       "enemyTag": [
         "W5_Ranger"
@@ -116,14 +116,51 @@ let enemyData = {
         "Imaginary": 0.8
       },
       "abilities": [
-        2731,
-        2732,
-        2733,
-        2734,
-        2735
+        2782,
+        2783,
+        2784,
+        2785,
+        2786
       ],
       "abilityOrder": [
-        2732
+        2783
+      ],
+      "enemyTag": [
+        "W5_Ranger"
+      ],
+      "itNeverEnds": {
+        "CurrentRanger": 2
+      }
+    },
+    "501306003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.666667,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Quantum"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.8
+      },
+      "abilities": [
+        2782,
+        2783,
+        2784,
+        2785,
+        2786
       ],
       "enemyTag": [
         "W5_Ranger"

@@ -892,8 +892,7 @@ const compositeAbilityObject = {
                       "overrideDamageOwner": {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
-                      },
-                      "attackType": "Additional DMG"
+                      }
                     }
                   ]
                 },

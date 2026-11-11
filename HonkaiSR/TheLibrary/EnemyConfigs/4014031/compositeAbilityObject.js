@@ -2176,10 +2176,10 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "displayLines": "UnusedUnderThisBase_12844"
+                          "displayLines": "UnusedUnderThisBase_13717"
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "displayLines": "UnusedUnderThisBase_12872"
+                          "displayLines": "UnusedUnderThisBase_13745"
                         }
                       }
                     }
@@ -2752,7 +2752,7 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "consumePercent": {
-                "displayLines": "UnusedUnderThisBase_12835"
+                "displayLines": "UnusedUnderThisBase_13708"
               }
             }
           ],
@@ -2800,7 +2800,7 @@ const compositeAbilityObject = {
                 "target": "{{Player Team All}}"
               },
               "healPercent": {
-                "displayLines": "UnusedUnderThisBase_12845"
+                "displayLines": "UnusedUnderThisBase_13718"
               },
               "formula": "Heal from Target MaxHP"
             }

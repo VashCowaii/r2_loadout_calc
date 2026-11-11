@@ -23,7 +23,7 @@ const configAbility = {
               },
               "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "statValue": {
-                "displayLines": "UnusedUnderThisBase_12184"
+                "displayLines": "UnusedUnderThisBase_13057"
               }
             }
           ]
@@ -4052,8 +4052,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ],
                       "failed": [
@@ -4074,8 +4073,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ]
                     }
@@ -4250,8 +4248,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         },
                         {
                           "name": "Deal Toughness DMG",
@@ -4290,8 +4287,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         },
                         {
                           "name": "Deal Toughness DMG",
@@ -4481,8 +4477,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         },
                         {
                           "name": "Deal Toughness DMG",
@@ -4700,8 +4695,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         },
                         {
                           "name": "Deal Toughness DMG",
@@ -4740,8 +4734,7 @@ const configAbility = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         },
                         {
                           "name": "Deal Toughness DMG",
@@ -4935,8 +4928,7 @@ const configAbility = {
                         "Toughness": null,
                         "Tags": null,
                         "attackType": "Additional DMG"
-                      },
-                      "attackType": "Additional DMG"
+                      }
                     }
                   ],
                   "failed": [
@@ -4957,8 +4949,7 @@ const configAbility = {
                         "Toughness": null,
                         "Tags": null,
                         "attackType": "Additional DMG"
-                      },
-                      "attackType": "Additional DMG"
+                      }
                     }
                   ]
                 },
@@ -5090,8 +5081,7 @@ const configAbility = {
                         "Toughness": null,
                         "Tags": null,
                         "attackType": "Additional DMG"
-                      },
-                      "attackType": "Additional DMG"
+                      }
                     }
                   ]
                 },
@@ -5275,8 +5265,7 @@ const configAbility = {
                         "Toughness": null,
                         "Tags": null,
                         "attackType": "Additional DMG"
-                      },
-                      "attackType": "Additional DMG"
+                      }
                     }
                   ],
                   "failed": [
@@ -5297,8 +5286,7 @@ const configAbility = {
                         "Toughness": null,
                         "Tags": null,
                         "attackType": "Additional DMG"
-                      },
-                      "attackType": "Additional DMG"
+                      }
                     }
                   ]
                 },
@@ -5678,21 +5666,21 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
               "stackLimit": {
-                "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
               },
               "valuePerStack": {
                 "MDF_DamageResistance": {
-                  "displayLines": "UnusedUnderThisBase_12666"
+                  "displayLines": "UnusedUnderThisBase_13539"
                 },
                 "MDF_CrackedEffect": {
-                  "displayLines": "UnusedUnderThisBase_12664"
+                  "displayLines": "UnusedUnderThisBase_13537"
                 },
                 "MDF_CrackedDamage": {
-                  "displayLines": "UnusedUnderThisBase_12665"
+                  "displayLines": "UnusedUnderThisBase_13538"
                 }
               },
               "addStacksPerTrigger": {
-                "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
               }
             }
           ]
@@ -6719,7 +6707,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "displayLines": "UnusedUnderThisBase_12645"
+                    "displayLines": "UnusedUnderThisBase_13518"
                   }
                 }
               ]
@@ -6744,17 +6732,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "displayLines": "UnusedUnderThisBase_12645"
+                    "displayLines": "UnusedUnderThisBase_13518"
                   },
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "displayLines": "UnusedUnderThisBase_12651"
+                      "displayLines": "UnusedUnderThisBase_13524"
                     },
                     "MDF_EnergyAddRatio": {
-                      "displayLines": "UnusedUnderThisBase_12667"
+                      "displayLines": "UnusedUnderThisBase_13540"
                     },
                     "MDF_MaxLayer": {
-                      "displayLines": "UnusedUnderThisBase_12645"
+                      "displayLines": "UnusedUnderThisBase_13518"
                     }
                   }
                 }
@@ -6933,7 +6921,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "displayLines": "UnusedUnderThisBase_12645"
+                    "displayLines": "UnusedUnderThisBase_13518"
                   }
                 },
                 {
@@ -6944,7 +6932,7 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "displayLines": "UnusedUnderThisBase_12645"
+                    "displayLines": "UnusedUnderThisBase_13518"
                   }
                 }
               ]
@@ -6994,7 +6982,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
               "stackLimit": {
-                "displayLines": "UnusedUnderThisBase_12645"
+                "displayLines": "UnusedUnderThisBase_13518"
               }
             },
             {
@@ -7005,7 +6993,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
               "stackLimit": {
-                "displayLines": "UnusedUnderThisBase_12645"
+                "displayLines": "UnusedUnderThisBase_13518"
               }
             }
           ]
@@ -7589,7 +7577,7 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                        "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
                       },
                       "addStacksPerTrigger": 0
                     },
@@ -7803,17 +7791,17 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1385014827\">Monster_W4_Nikadory_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "stackLimit": {
-                    "displayLines": "UnusedUnderThisBase_12645"
+                    "displayLines": "UnusedUnderThisBase_13518"
                   },
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "displayLines": "UnusedUnderThisBase_12651"
+                      "displayLines": "UnusedUnderThisBase_13524"
                     },
                     "MDF_EnergyAddRatio": {
-                      "displayLines": "UnusedUnderThisBase_12667"
+                      "displayLines": "UnusedUnderThisBase_13540"
                     },
                     "MDF_MaxLayer": {
-                      "displayLines": "UnusedUnderThisBase_12645"
+                      "displayLines": "UnusedUnderThisBase_13518"
                     }
                   }
                 },
@@ -7935,12 +7923,12 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
                       "duration": 1,
                       "baseChance": {
-                        "displayLines": "UnusedUnderThisBase_12668"
+                        "displayLines": "UnusedUnderThisBase_13541"
                       },
                       "immediateEffect": true,
                       "valuePerStack": {
                         "MDF_ActionDelayRatio": {
-                          "displayLines": "UnusedUnderThisBase_12669"
+                          "displayLines": "UnusedUnderThisBase_13542"
                         }
                       }
                     }
@@ -8214,13 +8202,13 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1389759519\">Monster_W4_Nikadory_Charge_UnselectableFlag</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "displayLines": "UnusedUnderThisBase_12651"
+                  "displayLines": "UnusedUnderThisBase_13524"
                 },
                 "MDF_EnergyAddRatio": {
-                  "displayLines": "UnusedUnderThisBase_12667"
+                  "displayLines": "UnusedUnderThisBase_13540"
                 },
                 "MDF_MaxLayer": {
-                  "displayLines": "UnusedUnderThisBase_12645"
+                  "displayLines": "UnusedUnderThisBase_13518"
                 }
               },
               "casterAssign": "CasterSelf"
@@ -8732,21 +8720,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                        "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
                       },
                       "valuePerStack": {
                         "MDF_DamageResistance": {
-                          "displayLines": "UnusedUnderThisBase_12666"
+                          "displayLines": "UnusedUnderThisBase_13539"
                         },
                         "MDF_CrackedEffect": {
-                          "displayLines": "UnusedUnderThisBase_12664"
+                          "displayLines": "UnusedUnderThisBase_13537"
                         },
                         "MDF_CrackedDamage": {
-                          "displayLines": "UnusedUnderThisBase_12665"
+                          "displayLines": "UnusedUnderThisBase_13538"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                        "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
                       }
                     },
                     {
@@ -8834,21 +8822,21 @@ const configAbility = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                           "stackLimit": {
-                            "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                            "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
                           },
                           "valuePerStack": {
                             "MDF_DamageResistance": {
-                              "displayLines": "UnusedUnderThisBase_12666"
+                              "displayLines": "UnusedUnderThisBase_13539"
                             },
                             "MDF_CrackedEffect": {
-                              "displayLines": "UnusedUnderThisBase_12664"
+                              "displayLines": "UnusedUnderThisBase_13537"
                             },
                             "MDF_CrackedDamage": {
-                              "displayLines": "UnusedUnderThisBase_12665"
+                              "displayLines": "UnusedUnderThisBase_13538"
                             }
                           },
                           "addStacksPerTrigger": {
-                            "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                            "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
                           }
                         },
                         {
@@ -8970,21 +8958,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                        "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
                       },
                       "valuePerStack": {
                         "MDF_DamageResistance": {
-                          "displayLines": "UnusedUnderThisBase_12666"
+                          "displayLines": "UnusedUnderThisBase_13539"
                         },
                         "MDF_CrackedEffect": {
-                          "displayLines": "UnusedUnderThisBase_12664"
+                          "displayLines": "UnusedUnderThisBase_13537"
                         },
                         "MDF_CrackedDamage": {
-                          "displayLines": "UnusedUnderThisBase_12665"
+                          "displayLines": "UnusedUnderThisBase_13538"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                        "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
                       }
                     },
                     {
@@ -9092,21 +9080,21 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-655488173\">Enemy_Heaven_StoneShield</a>[<span class=\"descriptionNumberColor\">War Armor</span>]",
                       "stackLimit": {
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                        "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
                       },
                       "valuePerStack": {
                         "MDF_DamageResistance": {
-                          "displayLines": "UnusedUnderThisBase_12666"
+                          "displayLines": "UnusedUnderThisBase_13539"
                         },
                         "MDF_CrackedEffect": {
-                          "displayLines": "UnusedUnderThisBase_12664"
+                          "displayLines": "UnusedUnderThisBase_13537"
                         },
                         "MDF_CrackedDamage": {
-                          "displayLines": "UnusedUnderThisBase_12665"
+                          "displayLines": "UnusedUnderThisBase_13538"
                         }
                       },
                       "addStacksPerTrigger": {
-                        "displayLines": "(UnusedUnderThisBase_12649 + MDF_BraveLayer)"
+                        "displayLines": "(UnusedUnderThisBase_13522 + MDF_BraveLayer)"
                       }
                     },
                     {

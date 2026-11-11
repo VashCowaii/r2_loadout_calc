@@ -38,10 +38,10 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        1340,
-        1341,
-        1342,
-        1343
+        1350,
+        1351,
+        1352,
+        1353
       ],
       "enemyTag": [
         "MonsterType_W3_TheaterCore"
@@ -88,10 +88,10 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        1340,
-        1341,
-        1342,
-        1343
+        1350,
+        1351,
+        1352,
+        1353
       ],
       "enemyTag": [
         "MonsterType_W3_TheaterCore"
@@ -138,10 +138,10 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        1340,
-        1341,
-        1342,
-        1343
+        1350,
+        1351,
+        1352,
+        1353
       ],
       "enemyTag": [
         "MonsterType_W3_TheaterCore"
@@ -188,10 +188,10 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        1340,
-        1341,
-        1342,
-        1343
+        1350,
+        1351,
+        1352,
+        1353
       ],
       "enemyTag": [
         "MonsterType_W3_TheaterCore"
@@ -238,10 +238,10 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        1340,
-        1341,
-        1342,
-        1343
+        1350,
+        1351,
+        1352,
+        1353
       ],
       "enemyTag": [
         "MonsterType_W3_TheaterCore",
@@ -295,10 +295,10 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        1340,
-        1341,
-        1342,
-        1343
+        1350,
+        1351,
+        1352,
+        1353
       ],
       "enemyTag": [
         "MonsterType_W3_TheaterCore"

@@ -31,13 +31,13 @@ let enemyData = {
         null
       ],
       "abilities": [
-        1135,
-        1136,
-        1137
+        1145,
+        1146,
+        1147
       ],
       "abilityOrder": [
-        1135,
-        1136
+        1145,
+        1146
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
@@ -56,13 +56,13 @@ let enemyData = {
         null
       ],
       "abilities": [
-        1135,
-        1136,
-        1137
+        1145,
+        1146,
+        1147
       ],
       "abilityOrder": [
-        1135,
-        1136
+        1145,
+        1146
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"

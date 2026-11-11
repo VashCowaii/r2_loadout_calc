@@ -4102,7 +4102,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Define Custom Variable",
                           "value": {
-                            "displayLines": "UnusedUnderThisBase_11055"
+                            "displayLines": "UnusedUnderThisBase_11928"
                           },
                           "variableName": "MDF_Negative_Count_Max"
                         }
@@ -4124,7 +4124,7 @@ const compositeAbilityObject = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_11057"
+                                "displayLines": "UnusedUnderThisBase_11930"
                               },
                               "variableName": "MDF_Negative_Count_Max"
                             }
@@ -4146,7 +4146,7 @@ const compositeAbilityObject = {
                                 {
                                   "name": "Define Custom Variable",
                                   "value": {
-                                    "displayLines": "UnusedUnderThisBase_11049"
+                                    "displayLines": "UnusedUnderThisBase_11922"
                                   },
                                   "variableName": "MDF_Negative_Count_Max"
                                 }
@@ -4161,7 +4161,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Define Custom Variable",
                       "value": {
-                        "displayLines": "UnusedUnderThisBase_11055"
+                        "displayLines": "UnusedUnderThisBase_11928"
                       },
                       "variableName": "MDF_Negative_Count_Max"
                     }
@@ -4239,7 +4239,7 @@ const compositeAbilityObject = {
                       "variableName": "MDF_Negative_Count",
                       "context": "ContextModifier",
                       "value": {
-                        "displayLines": "(0 - UnusedUnderThisBase_11056)"
+                        "displayLines": "(0 - UnusedUnderThisBase_11929)"
                       },
                       "max": 100
                     },

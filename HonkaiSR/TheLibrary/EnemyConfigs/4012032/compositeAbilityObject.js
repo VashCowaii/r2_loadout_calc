@@ -93,22 +93,22 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1282910303\">Enemy_Heaven_StoneShieldController</a>",
           "valuePerStack": {
             "MDF_MaxLayer": {
-              "displayLines": "UnusedUnderThisBase_13184"
+              "displayLines": "UnusedUnderThisBase_14057"
             },
             "MDF_CrackedEffect": {
-              "displayLines": "UnusedUnderThisBase_13179"
+              "displayLines": "UnusedUnderThisBase_14052"
             },
             "MDF_CrackedDamage": {
-              "displayLines": "UnusedUnderThisBase_13187"
+              "displayLines": "UnusedUnderThisBase_14060"
             },
             "MDF_DamageResistance": {
-              "displayLines": "UnusedUnderThisBase_13185"
+              "displayLines": "UnusedUnderThisBase_14058"
             },
             "MDF_CrackedDamageAfter": {
-              "displayLines": "UnusedUnderThisBase_13186"
+              "displayLines": "UnusedUnderThisBase_14059"
             },
             "MDF_ModifySP": {
-              "displayLines": "UnusedUnderThisBase_13181"
+              "displayLines": "UnusedUnderThisBase_14054"
             }
           }
         },

@@ -42,14 +42,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1084,
-        1085,
-        1086,
-        1087,
-        1088
+        1094,
+        1095,
+        1096,
+        1097,
+        1098
       ],
       "abilityOrder": [
-        1060
+        1070
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",

@@ -4544,7 +4544,7 @@ const configAbility = {
               },
               "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "statValue": {
-                "displayLines": "UnusedUnderThisBase_10891"
+                "displayLines": "UnusedUnderThisBase_11764"
               }
             },
             {
@@ -5758,7 +5758,7 @@ const configAbility = {
               },
               "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "statValue": {
-                "displayLines": "UnusedUnderThisBase_12007"
+                "displayLines": "UnusedUnderThisBase_12880"
               }
             },
             {

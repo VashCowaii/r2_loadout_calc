@@ -13,16 +13,16 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
       "valuePerStack": {
         "MDF_RallyTransferRatio": {
-          "displayLines": "UnusedUnderThisBase_13197"
+          "displayLines": "UnusedUnderThisBase_14070"
         },
         "MDF_Rally_HealPercentage": {
-          "displayLines": "UnusedUnderThisBase_13195"
+          "displayLines": "UnusedUnderThisBase_14068"
         },
         "MDF_Rally_HealUpRatio": {
-          "displayLines": "UnusedUnderThisBase_13198"
+          "displayLines": "UnusedUnderThisBase_14071"
         },
         "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-          "displayLines": "UnusedUnderThisBase_13199"
+          "displayLines": "UnusedUnderThisBase_14072"
         }
       }
     },
@@ -36,7 +36,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "displayLines": "UnusedUnderThisBase_14438"
+          "displayLines": "UnusedUnderThisBase_15311"
         },
         "Toughness": null,
         "Tags": null,
@@ -53,7 +53,7 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Physical",
         "Damage": {
-          "displayLines": "UnusedUnderThisBase_11476"
+          "displayLines": "UnusedUnderThisBase_12349"
         },
         "Toughness": null,
         "Tags": null,

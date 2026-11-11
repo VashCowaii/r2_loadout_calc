@@ -1029,7 +1029,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-883767978\">Monster_W4_Claymore_01_LocalLegend_DamageAdd</a>",
                       "valuePerStack": {
                         "MDF_DamageAdded": {
-                          "displayLines": "UnusedUnderThisBase_11363"
+                          "displayLines": "UnusedUnderThisBase_12236"
                         }
                       }
                     }

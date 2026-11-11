@@ -2941,7 +2941,7 @@ const compositeAbilityObject = {
                     "displayLines": "{[SkillP02[2]]}"
                   },
                   "baseChance": {
-                    "displayLines": "UnusedUnderThisBase_8459"
+                    "displayLines": "UnusedUnderThisBase_9332"
                   },
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": {
@@ -2971,7 +2971,7 @@ const compositeAbilityObject = {
                     "displayLines": "{[SkillP02[2]]}"
                   },
                   "baseChance": {
-                    "displayLines": "UnusedUnderThisBase_8448"
+                    "displayLines": "UnusedUnderThisBase_9321"
                   },
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": {
@@ -3001,7 +3001,7 @@ const compositeAbilityObject = {
                     "displayLines": "{[SkillP02[2]]}"
                   },
                   "baseChance": {
-                    "displayLines": "UnusedUnderThisBase_8460"
+                    "displayLines": "UnusedUnderThisBase_9333"
                   },
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": {
@@ -3031,7 +3031,7 @@ const compositeAbilityObject = {
                     "displayLines": "{[SkillP02[2]]}"
                   },
                   "baseChance": {
-                    "displayLines": "UnusedUnderThisBase_8461"
+                    "displayLines": "UnusedUnderThisBase_9334"
                   },
                   "valuePerStack": {
                     "Modifier_Frozen_DamagePercentage": {

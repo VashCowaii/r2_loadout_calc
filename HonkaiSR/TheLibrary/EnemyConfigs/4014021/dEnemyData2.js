@@ -43,9 +43,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1981,
-        1982,
-        1983
+        2002,
+        2003,
+        2004
       ],
       "summons": [
         {
@@ -84,9 +84,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1981,
-        1982,
-        1983
+        2002,
+        2003,
+        2004
       ],
       "summons": [
         {
@@ -125,9 +125,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1981,
-        1982,
-        1983
+        2002,
+        2003,
+        2004
       ],
       "summons": [
         {
@@ -166,9 +166,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1981,
-        1982,
-        1983
+        2002,
+        2003,
+        2004
       ],
       "summons": [
         {
@@ -207,9 +207,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1981,
-        1982,
-        1983
+        2002,
+        2003,
+        2004
       ],
       "summons": [
         {

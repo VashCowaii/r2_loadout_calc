@@ -41,11 +41,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1100,
-        1101,
-        1102,
-        1103,
-        1104
+        1110,
+        1111,
+        1112,
+        1113,
+        1114
       ],
       "enemyTag": [
         "MonsterType_W3_Clock_00",
@@ -79,11 +79,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1100,
-        1101,
-        1102,
-        1103,
-        1104
+        1110,
+        1111,
+        1112,
+        1113,
+        1114
       ],
       "enemyTag": [
         "MonsterType_W3_Clock_00",
@@ -117,11 +117,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1100,
-        1101,
-        1102,
-        1103,
-        1104
+        1110,
+        1111,
+        1112,
+        1113,
+        1114
       ],
       "enemyTag": [
         "MonsterType_W3_Clock_00",

@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1478,
-        1479
+        1489,
+        1490
       ],
       "abilityOrder": [
-        1478
+        1489
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -76,11 +76,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1478,
-        1479
+        1489,
+        1490
       ],
       "abilityOrder": [
-        1478
+        1489
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -110,11 +110,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1478,
-        1479
+        1489,
+        1490
       ],
       "abilityOrder": [
-        1478
+        1489
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -144,11 +144,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1478,
-        1479
+        1489,
+        1490
       ],
       "abilityOrder": [
-        1478
+        1489
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -178,11 +178,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1478,
-        1479
+        1489,
+        1490
       ],
       "abilityOrder": [
-        1478
+        1489
       ],
       "enemyTag": [
         "Argenti_Totem",
@@ -213,17 +213,17 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1478,
-        1479
+        1489,
+        1490
       ],
       "abilityOrder": [
-        1478
+        1489
       ],
       "enemyTag": [
         "Argenti_Totem"
       ],
       "overrideParams": {
-        "1478": [
+        "1489": [
           [
             0.5,
             1
@@ -236,7 +236,7 @@ let enemyData = {
           5,
           "-"
         ],
-        "1479": [
+        "1490": [
           [
             0.25,
             "-",
@@ -276,17 +276,17 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1478,
-        1479
+        1489,
+        1490
       ],
       "abilityOrder": [
-        1478
+        1489
       ],
       "enemyTag": [
         "Argenti_Totem"
       ],
       "overrideParams": {
-        "1478": [
+        "1489": [
           [
             0.5,
             1
@@ -299,7 +299,7 @@ let enemyData = {
           5,
           "-"
         ],
-        "1479": [
+        "1490": [
           [
             0.25,
             "-",
@@ -339,11 +339,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1478,
-        1479
+        1489,
+        1490
       ],
       "abilityOrder": [
-        1478
+        1489
       ],
       "enemyTag": [
         "Argenti_Totem"

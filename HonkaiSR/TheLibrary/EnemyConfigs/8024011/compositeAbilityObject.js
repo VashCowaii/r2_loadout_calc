@@ -1407,7 +1407,7 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "displayLines": "UnusedUnderThisBase_14028"
+                  "displayLines": "UnusedUnderThisBase_14901"
                 },
                 "Toughness": null,
                 "Tags": null,

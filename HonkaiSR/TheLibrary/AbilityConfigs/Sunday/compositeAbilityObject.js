@@ -1426,7 +1426,7 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "displayLines": "(0 - UnusedUnderThisBase_4842)"
+                "displayLines": "(0 - UnusedUnderThisBase_5715)"
               }
             }
           }

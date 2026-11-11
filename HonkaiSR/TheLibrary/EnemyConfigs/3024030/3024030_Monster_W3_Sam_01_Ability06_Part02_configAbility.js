@@ -45,7 +45,7 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "displayLines": "UnusedUnderThisBase_10754"
+              "displayLines": "UnusedUnderThisBase_11627"
             }
           }
         }

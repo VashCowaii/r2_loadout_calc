@@ -92,25 +92,25 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        3342,
-        3343,
-        3344,
-        3345,
-        3346,
-        3347,
-        3348,
-        3349,
-        3350,
-        3351,
-        3352,
-        3353,
-        3354,
-        3355
+        3504,
+        3505,
+        3506,
+        3507,
+        3508,
+        3509,
+        3510,
+        3511,
+        3512,
+        3513,
+        3514,
+        3515,
+        3516,
+        3517
       ],
       "abilityOrder": [
-        3342,
-        3343,
-        3344
+        3504,
+        3505,
+        3506
       ],
       "enemyTag": [
         "W5_AsatPramad",
@@ -123,6 +123,111 @@ let enemyData = {
           "base": 8012040
         }
       ],
+      "itNeverEnds": {
+        "CurrentFace": 1
+      }
+    },
+    "801504001": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.375,
+        1,
+        null,
+        1,
+        null
+      ],
+      "phhp": [
+        1,
+        1,
+        2.5
+      ],
+      "phs": [
+        1,
+        1,
+        2
+      ],
+      "weak": [
+        "Fire",
+        "Wind",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 1
+      },
+      "abilities": [
+        3504,
+        3505,
+        3506,
+        3507,
+        3508,
+        3509,
+        3510,
+        3511,
+        3512,
+        3513,
+        3514,
+        3515,
+        3516,
+        3517
+      ],
+      "abilityOrder": [
+        3504,
+        3505,
+        3506
+      ],
+      "enemyTag": [
+        "W5_AsatPramad",
+        "W5_AsatPramad_01",
+        "PeakBattle"
+      ],
+      "summons": [
+        {
+          "name": "Comediologist",
+          "over": 801204002,
+          "base": 8012040
+        }
+      ],
+      "overrideParams": {
+        "3508": [
+          [
+            1.2,
+            1.1,
+            1.65,
+            1.7,
+            "-",
+            0.35
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "3512": [
+          [
+            "-",
+            0.12
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      },
       "itNeverEnds": {
         "CurrentFace": 1
       }

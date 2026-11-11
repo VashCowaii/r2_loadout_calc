@@ -48,7 +48,7 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "displayLines": "UnusedUnderThisBase_14446"
+              "displayLines": "UnusedUnderThisBase_15319"
             },
             "Toughness": null,
             "Tags": null,

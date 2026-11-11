@@ -63,7 +63,7 @@ const configAbility = {
         {
           "name": "Define Custom Variable",
           "value": {
-            "displayLines": "(UnusedUnderThisBase_13928 / Skill06Count)"
+            "displayLines": "(UnusedUnderThisBase_14801 / Skill06Count)"
           },
           "variableName": "Skill06Damage"
         }

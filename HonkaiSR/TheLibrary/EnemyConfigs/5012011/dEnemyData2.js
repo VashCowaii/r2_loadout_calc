@@ -42,12 +42,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2632,
-        2633
+        2673,
+        2674
       ],
       "abilityOrder": [
-        2632,
-        2633
+        2673,
+        2674
       ],
       "enemyTag": [
         "W3_TV_03"

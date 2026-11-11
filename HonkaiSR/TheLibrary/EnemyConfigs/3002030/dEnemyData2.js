@@ -41,12 +41,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203001": {
@@ -73,12 +73,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203002": {
@@ -105,12 +105,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203003": {
@@ -137,12 +137,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203004": {
@@ -169,12 +169,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203005": {
@@ -201,12 +201,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203006": {
@@ -233,12 +233,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203007": {
@@ -265,12 +265,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203008": {
@@ -297,12 +297,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203009": {
@@ -329,12 +329,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203010": {
@@ -361,12 +361,12 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203011": {
@@ -393,12 +393,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203012": {
@@ -423,12 +423,12 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203013": {
@@ -455,12 +455,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203014": {
@@ -487,12 +487,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203015": {
@@ -519,12 +519,12 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ]
     },
     "300203016": {
@@ -551,12 +551,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ],
       "enemyTag": [
         "MGrid_4006"
@@ -586,15 +586,15 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1094,
-        1095,
-        1096
+        1104,
+        1105,
+        1106
       ],
       "abilityOrder": [
-        1094
+        1104
       ],
       "overrideParams": {
-        "1094": [
+        "1104": [
           [
             1,
             0
@@ -607,7 +607,7 @@ let enemyData = {
           5,
           "-"
         ],
-        "1095": [
+        "1105": [
           [
             0,
             0,

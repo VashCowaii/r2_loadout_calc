@@ -39,7 +39,7 @@ const compositeAbilityObject = {
                   },
                   "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "statValue": {
-                    "displayLines": "UnusedUnderThisBase_12184"
+                    "displayLines": "UnusedUnderThisBase_13057"
                   }
                 }
               ]
@@ -3046,7 +3046,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "displayLines": "UnusedUnderThisBase_12499"
+                              "displayLines": "UnusedUnderThisBase_13372"
                             }
                           },
                           "casterAssign": "TargetSelf"
@@ -3100,7 +3100,7 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                               "valuePerStack": {
                                 "MDF_DamageUpRatio_PerLayer": {
-                                  "displayLines": "UnusedUnderThisBase_12499"
+                                  "displayLines": "UnusedUnderThisBase_13372"
                                 }
                               },
                               "addStacksPerTrigger": {
@@ -3149,7 +3149,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "displayLines": "UnusedUnderThisBase_12499"
+                          "displayLines": "UnusedUnderThisBase_13372"
                         }
                       },
                       "casterAssign": "TargetSelf"
@@ -4068,8 +4068,7 @@ const compositeAbilityObject = {
                                 "Toughness": null,
                                 "Tags": null,
                                 "attackType": "Additional DMG"
-                              },
-                              "attackType": "Additional DMG"
+                              }
                             }
                           ],
                           "failed": [
@@ -4090,8 +4089,7 @@ const compositeAbilityObject = {
                                 "Toughness": null,
                                 "Tags": null,
                                 "attackType": "Additional DMG"
-                              },
-                              "attackType": "Additional DMG"
+                              }
                             }
                           ]
                         }
@@ -4266,8 +4264,7 @@ const compositeAbilityObject = {
                                 "Toughness": null,
                                 "Tags": null,
                                 "attackType": "Additional DMG"
-                              },
-                              "attackType": "Additional DMG"
+                              }
                             },
                             {
                               "name": "Deal Toughness DMG",
@@ -4306,8 +4303,7 @@ const compositeAbilityObject = {
                                 "Toughness": null,
                                 "Tags": null,
                                 "attackType": "Additional DMG"
-                              },
-                              "attackType": "Additional DMG"
+                              }
                             },
                             {
                               "name": "Deal Toughness DMG",
@@ -4497,8 +4493,7 @@ const compositeAbilityObject = {
                                 "Toughness": null,
                                 "Tags": null,
                                 "attackType": "Additional DMG"
-                              },
-                              "attackType": "Additional DMG"
+                              }
                             },
                             {
                               "name": "Deal Toughness DMG",
@@ -4716,8 +4711,7 @@ const compositeAbilityObject = {
                                 "Toughness": null,
                                 "Tags": null,
                                 "attackType": "Additional DMG"
-                              },
-                              "attackType": "Additional DMG"
+                              }
                             },
                             {
                               "name": "Deal Toughness DMG",
@@ -4756,8 +4750,7 @@ const compositeAbilityObject = {
                                 "Toughness": null,
                                 "Tags": null,
                                 "attackType": "Additional DMG"
-                              },
-                              "attackType": "Additional DMG"
+                              }
                             },
                             {
                               "name": "Deal Toughness DMG",
@@ -4951,8 +4944,7 @@ const compositeAbilityObject = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ],
                       "failed": [
@@ -4973,8 +4965,7 @@ const compositeAbilityObject = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ]
                     },
@@ -5106,8 +5097,7 @@ const compositeAbilityObject = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ]
                     },
@@ -5291,8 +5281,7 @@ const compositeAbilityObject = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ],
                       "failed": [
@@ -5313,8 +5302,7 @@ const compositeAbilityObject = {
                             "Toughness": null,
                             "Tags": null,
                             "attackType": "Additional DMG"
-                          },
-                          "attackType": "Additional DMG"
+                          }
                         }
                       ]
                     },

@@ -38,10 +38,10 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        1368,
-        1369,
-        1370,
-        1371
+        1378,
+        1379,
+        1380,
+        1381
       ],
       "enemyTag": [
         "MonsterType_W3_TheaterCore",

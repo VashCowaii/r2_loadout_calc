@@ -31,13 +31,13 @@ let enemyData = {
         null
       ],
       "abilities": [
-        1129,
-        1130,
-        1131
+        1139,
+        1140,
+        1141
       ],
       "abilityOrder": [
-        1129,
-        1130
+        1139,
+        1140
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
@@ -56,13 +56,13 @@ let enemyData = {
         -270
       ],
       "abilities": [
-        1129,
-        1130,
-        1131
+        1139,
+        1140,
+        1141
       ],
       "abilityOrder": [
-        1129,
-        1130
+        1139,
+        1140
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
@@ -81,13 +81,13 @@ let enemyData = {
         -270
       ],
       "abilities": [
-        1129,
-        1130,
-        1131
+        1139,
+        1140,
+        1141
       ],
       "abilityOrder": [
-        1129,
-        1130
+        1139,
+        1140
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
@@ -106,13 +106,13 @@ let enemyData = {
         null
       ],
       "abilities": [
-        1129,
-        1130,
-        1131
+        1139,
+        1140,
+        1141
       ],
       "abilityOrder": [
-        1129,
-        1130
+        1139,
+        1140
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
@@ -131,13 +131,13 @@ let enemyData = {
         -210
       ],
       "abilities": [
-        1129,
-        1130,
-        1131
+        1139,
+        1140,
+        1141
       ],
       "abilityOrder": [
-        1129,
-        1130
+        1139,
+        1140
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
@@ -156,13 +156,13 @@ let enemyData = {
         -180
       ],
       "abilities": [
-        1129,
-        1130,
-        1131
+        1139,
+        1140,
+        1141
       ],
       "abilityOrder": [
-        1129,
-        1130
+        1139,
+        1140
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
@@ -181,13 +181,13 @@ let enemyData = {
         null
       ],
       "abilities": [
-        1129,
-        1130,
-        1131
+        1139,
+        1140,
+        1141
       ],
       "abilityOrder": [
-        1129,
-        1130
+        1139,
+        1140
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"

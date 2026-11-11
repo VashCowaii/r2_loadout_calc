@@ -42,13 +42,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1198,
-        1199,
-        1200,
-        1201,
-        1202,
-        1203,
-        1204
+        1208,
+        1209,
+        1210,
+        1211,
+        1212,
+        1213,
+        1214
       ],
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",

@@ -42,14 +42,14 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "abilityOrder": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -79,14 +79,14 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "abilityOrder": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -116,14 +116,14 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "abilityOrder": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -153,14 +153,14 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "abilityOrder": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -190,14 +190,14 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "abilityOrder": [
-        2953,
-        2954,
-        2955
+        3115,
+        3116,
+        3117
       ],
       "enemyTag": [
         "Monster_Minion04"
