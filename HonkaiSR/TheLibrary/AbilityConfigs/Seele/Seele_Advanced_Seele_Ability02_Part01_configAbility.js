@@ -24,7 +24,26 @@ const configAbility = {
       "ability": "Advanced_Seele_Ability02_Part02",
       "isTrigger": true
     },
-    "Deleted bullshit"
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Is Part Of",
+        "target1": {
+          "name": "Target Name",
+          "target": "{{Ability Target List}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "W5_GluttonyParts_00"
+        }
+      },
+      "passed": [
+        "Deleted bullshit"
+      ],
+      "failed": [
+        "Deleted bullshit"
+      ]
+    }
   ],
   "references": [],
   "targetObjectData": {
