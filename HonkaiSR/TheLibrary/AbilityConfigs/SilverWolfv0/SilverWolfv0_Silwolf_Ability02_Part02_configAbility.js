@@ -5,6 +5,20 @@ const configAbility = {
   "toughnessList": null,
   "parse": [
     {
+      "name": "IF",
+      "conditions": {
+        "name": "Is Part Of",
+        "target1": {
+          "name": "Target Name",
+          "target": "{{Ability Target List}}"
+        },
+        "target2": {
+          "name": "Target Name",
+          "target": "W5_GluttonyParts_00"
+        }
+      }
+    },
+    {
       "name": "Define Custom Variable with Status Counter",
       "target": {
         "name": "Target Name",

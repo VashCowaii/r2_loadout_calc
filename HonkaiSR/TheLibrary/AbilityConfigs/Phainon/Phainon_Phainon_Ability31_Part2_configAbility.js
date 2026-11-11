@@ -116,8 +116,7 @@ const configAbility = {
         },
         "Tags": null,
         "attackType": "Ultimate"
-      },
-      "attackType": "Ultimate"
+      }
     },
     "Trigger: Attack End",
     {

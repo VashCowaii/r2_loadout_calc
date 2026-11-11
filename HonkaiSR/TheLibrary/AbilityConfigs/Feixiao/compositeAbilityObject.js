@@ -3289,8 +3289,7 @@ const compositeAbilityObject = {
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
-          },
-          "attackType": "Ultimate"
+          }
         },
         {
           "name": "Use Custom Character Function",
@@ -3905,8 +3904,7 @@ const compositeAbilityObject = {
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
-          },
-          "attackType": "Ultimate"
+          }
         },
         {
           "name": "Use Custom Character Function",
@@ -4565,8 +4563,7 @@ const compositeAbilityObject = {
               "displayLines": "ST Toughness Value"
             },
             "Tags": null
-          },
-          "attackType": "Ultimate"
+          }
         },
         "Trigger: Attack End",
         {
@@ -5854,8 +5851,7 @@ const compositeAbilityObject = {
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
-              },
-              "attackType": "Ultimate"
+              }
             }
           ]
         },
@@ -5890,8 +5886,7 @@ const compositeAbilityObject = {
                     },
                     "Tags": null,
                     "EnergyGainPercent": "100%"
-                  },
-                  "attackType": "Ultimate"
+                  }
                 }
               ]
             },
@@ -5922,8 +5917,7 @@ const compositeAbilityObject = {
                     },
                     "Tags": null,
                     "EnergyGainPercent": "100%"
-                  },
-                  "attackType": "Ultimate"
+                  }
                 }
               ]
             },
@@ -5954,8 +5948,7 @@ const compositeAbilityObject = {
                     },
                     "Tags": null,
                     "EnergyGainPercent": "100%"
-                  },
-                  "attackType": "Ultimate"
+                  }
                 }
               ]
             },
@@ -5986,8 +5979,7 @@ const compositeAbilityObject = {
                     },
                     "Tags": null,
                     "EnergyGainPercent": "100%"
-                  },
-                  "attackType": "Ultimate"
+                  }
                 }
               ]
             }
@@ -6044,8 +6036,7 @@ const compositeAbilityObject = {
                     },
                     "Tags": null,
                     "EnergyGainPercent": "100%"
-                  },
-                  "attackType": "Ultimate"
+                  }
                 }
               ],
               "failed": [
@@ -6075,8 +6066,7 @@ const compositeAbilityObject = {
                     },
                     "Tags": null,
                     "EnergyGainPercent": "100%"
-                  },
-                  "attackType": "Ultimate"
+                  }
                 }
               ]
             }

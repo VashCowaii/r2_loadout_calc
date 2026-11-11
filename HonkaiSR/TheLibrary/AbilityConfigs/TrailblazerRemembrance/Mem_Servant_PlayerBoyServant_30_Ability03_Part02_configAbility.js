@@ -34,8 +34,7 @@ const configAbility = {
         "instanceTag": "PlayerBoy_30_Ultra",
         "Tags": null,
         "attackType": "Ultimate"
-      },
-      "attackType": "Ultimate"
+      }
     },
     "Trigger: Attack End",
     "Trigger: Skip Death Handling"

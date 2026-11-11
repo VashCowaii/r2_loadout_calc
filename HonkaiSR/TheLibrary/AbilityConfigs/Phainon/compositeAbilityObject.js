@@ -6191,8 +6191,7 @@ const compositeAbilityObject = {
             },
             "Tags": null,
             "attackType": "Ultimate"
-          },
-          "attackType": "Ultimate"
+          }
         },
         "Trigger: Attack End",
         {

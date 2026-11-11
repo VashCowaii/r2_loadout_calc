@@ -24,8 +24,7 @@ const configAbility = {
         ],
         "attackType": "Basic ATK",
         "EnergyGainPercent": "100%"
-      },
-      "attackType": "Basic ATK"
+      }
     },
     "Trigger: Attack End"
   ],

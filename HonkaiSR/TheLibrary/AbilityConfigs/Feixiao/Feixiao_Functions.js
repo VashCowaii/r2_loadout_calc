@@ -159,8 +159,7 @@ const configAbility = {
             },
             "Tags": null,
             "EnergyGainPercent": "100%"
-          },
-          "attackType": "Ultimate"
+          }
         }
       ]
     },
@@ -195,8 +194,7 @@ const configAbility = {
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
-              },
-              "attackType": "Ultimate"
+              }
             }
           ]
         },
@@ -227,8 +225,7 @@ const configAbility = {
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
-              },
-              "attackType": "Ultimate"
+              }
             }
           ]
         },
@@ -259,8 +256,7 @@ const configAbility = {
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
-              },
-              "attackType": "Ultimate"
+              }
             }
           ]
         },
@@ -291,8 +287,7 @@ const configAbility = {
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
-              },
-              "attackType": "Ultimate"
+              }
             }
           ]
         }
@@ -349,8 +344,7 @@ const configAbility = {
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
-              },
-              "attackType": "Ultimate"
+              }
             }
           ],
           "failed": [
@@ -380,8 +374,7 @@ const configAbility = {
                 },
                 "Tags": null,
                 "EnergyGainPercent": "100%"
-              },
-              "attackType": "Ultimate"
+              }
             }
           ]
         }

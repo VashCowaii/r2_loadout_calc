@@ -28,8 +28,7 @@ const configAbility = {
           "displayLines": "ST Toughness Value"
         },
         "Tags": null
-      },
-      "attackType": "Ultimate"
+      }
     },
     "Trigger: Attack End",
     {

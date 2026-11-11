@@ -12,10 +12,10 @@ const configAbility = {
           "name": "Random Event",
           "odds": [
             {
-              "displayLines": "UnusedUnderThisBase_3388"
+              "displayLines": "UnusedUnderThisBase_3570"
             },
             {
-              "displayLines": "UnusedUnderThisBase_3383"
+              "displayLines": "UnusedUnderThisBase_3565"
             }
           ],
           "execute": [
@@ -50,7 +50,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_3384"
+                    "displayLines": "UnusedUnderThisBase_3566"
                   },
                   "isFixed": "* ERR"
                 }
@@ -73,7 +73,7 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "DamageElation": {
-                      "displayLines": "UnusedUnderThisBase_3386"
+                      "displayLines": "UnusedUnderThisBase_3568"
                     },
                     "dmgFormula": "Elation Scaling",
                     "Toughness": null,
@@ -121,9 +121,22 @@ const configAbility = {
       ],
       "failed": [
         {
-          "name": "Adjust Team Punchline Value",
-          "value": 0,
-          "adjustment": "Set"
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Level Entity}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-610908174\">MLevel_ElationTime_NoConsume</a>"
+          },
+          "failed": [
+            {
+              "name": "Adjust Team Punchline Value",
+              "value": 0,
+              "adjustment": "Set"
+            }
+          ]
         }
       ]
     },

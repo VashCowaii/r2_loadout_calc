@@ -10,6 +10,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-610908174\">MLevel_ElationTime_NoConsume</a>",
+      "stackType": "ReplaceByCaster"
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__291062653\">MBattleEvent_Elation_InsertActionCheck</a>",
       "stackType": "Multiple",
       "modifierFlags": [
@@ -1060,7 +1065,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable",
                   "value": {
-                    "displayLines": "UnusedUnderThisBase_3389"
+                    "displayLines": "UnusedUnderThisBase_3571"
                   },
                   "variableName": "BattleEvent_Elation_00_BaseSpeed"
                 },
@@ -1133,7 +1138,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_3387"
+                                "displayLines": "UnusedUnderThisBase_3569"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1146,7 +1151,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_3390"
+                                "displayLines": "UnusedUnderThisBase_3572"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1159,7 +1164,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_3385"
+                                "displayLines": "UnusedUnderThisBase_3567"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1172,7 +1177,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_3381"
+                                "displayLines": "UnusedUnderThisBase_3563"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1185,7 +1190,7 @@ const configAbility = {
                             {
                               "name": "Define Custom Variable",
                               "value": {
-                                "displayLines": "UnusedUnderThisBase_3382"
+                                "displayLines": "UnusedUnderThisBase_3564"
                               },
                               "variableName": "MDF_SpeedCalTemp2"
                             }
@@ -1452,10 +1457,7 @@ const configAbility = {
                   },
                   "In Aha-Instant"
                 ]
-              },
-              "passed": [
-                "Unknown EventType2 (Not always an error)[2 true]"
-              ]
+              }
             }
           ]
         },
@@ -1486,6 +1488,17 @@ const configAbility = {
           "priorityLevel": 100,
           "execute": [
             "Unknown EventType1 (Not always an error)",
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Battle Event ID",
+                "ID": 70001,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                }
+              }
+            },
             {
               "name": "Override Priority Tags",
               "dynamicStringsArray": [
@@ -1601,9 +1614,22 @@ const configAbility = {
                   }
                 },
                 {
-                  "name": "Adjust Team Punchline Value",
-                  "value": 0,
-                  "adjustment": "Set"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Level Entity}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-610908174\">MLevel_ElationTime_NoConsume</a>"
+                  },
+                  "failed": [
+                    {
+                      "name": "Adjust Team Punchline Value",
+                      "value": 0,
+                      "adjustment": "Set"
+                    }
+                  ]
                 }
               ]
             }
@@ -1613,19 +1639,32 @@ const configAbility = {
           "eventTrigger": "Aha Instant: End (Pending)",
           "execute": [
             {
-              "name": "Inject Ability Use",
-              "abilityName": "BattleEventAbility_Elation_Ability42_EndElationTime",
-              "abilityTarget": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Level Entity}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"273659582\">GlobalAbility_Nihilux_10_Main</a>"
               },
-              "priorityTag": "STAGE_CharacterInsert",
-              "canHitNonTargets": true,
-              "silentExecute": true,
-              "customFlags": [
-                "ElationTimeEnd"
-              ],
-              "allowAbilityTriggers": true
+              "failed": [
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "BattleEventAbility_Elation_Ability42_EndElationTime",
+                  "abilityTarget": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "priorityTag": "STAGE_CharacterInsert",
+                  "canHitNonTargets": true,
+                  "silentExecute": true,
+                  "customFlags": [
+                    "ElationTimeEnd"
+                  ],
+                  "allowAbilityTriggers": true
+                }
+              ]
             }
           ]
         }
@@ -1867,12 +1906,12 @@ const configAbility = {
                   },
                   "maxTargets": 1,
                   "conditions": {
-                    "name": "Character ID",
+                    "name": "Has Modifier",
                     "target": {
                       "name": "Target Name",
-                      "target": "{{Parameter Target}}"
+                      "target": "{{Level Entity}}"
                     },
-                    "characterID": 1511
+                    "modifier": "<a class=\"gModGreen\" id=\"273659582\">GlobalAbility_Nihilux_10_Main</a>"
                   },
                   "ifTargetFound": [
                     {

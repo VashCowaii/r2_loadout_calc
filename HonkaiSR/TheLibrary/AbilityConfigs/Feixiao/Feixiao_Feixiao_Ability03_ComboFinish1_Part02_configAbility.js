@@ -30,8 +30,7 @@ const configAbility = {
         },
         "Tags": null,
         "EnergyGainPercent": "100%"
-      },
-      "attackType": "Ultimate"
+      }
     },
     {
       "name": "Use Custom Character Function",

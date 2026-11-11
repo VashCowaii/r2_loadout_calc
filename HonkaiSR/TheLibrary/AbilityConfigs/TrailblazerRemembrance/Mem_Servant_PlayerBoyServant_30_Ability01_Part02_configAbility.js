@@ -66,8 +66,7 @@ const configAbility = {
                 "Tags": null,
                 "attackType": "Memosprite",
                 "EnergyGainPercent": "(1 / (4 + 1))* 100%"
-              },
-              "attackType": "Memosprite"
+              }
             }
           ]
         }
@@ -91,8 +90,7 @@ const configAbility = {
         "Tags": null,
         "attackType": "Memosprite",
         "EnergyGainPercent": "(1 / (4 + 1))* 100%"
-      },
-      "attackType": "Memosprite"
+      }
     },
     "Trigger: Attack End",
     "Trigger: Ability End"

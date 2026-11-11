@@ -2789,8 +2789,7 @@ const compositeAbilityObject = {
             ],
             "attackType": "Basic ATK",
             "EnergyGainPercent": "100%"
-          },
-          "attackType": "Basic ATK"
+          }
         },
         "Trigger: Attack End"
       ],
@@ -2835,8 +2834,7 @@ const compositeAbilityObject = {
             "instanceTag": "PlayerBoy_30_Ultra",
             "Tags": null,
             "attackType": "Ultimate"
-          },
-          "attackType": "Ultimate"
+          }
         },
         "Trigger: Attack End",
         "Trigger: Skip Death Handling"
@@ -3685,8 +3683,7 @@ const compositeAbilityObject = {
                     "Tags": null,
                     "attackType": "Memosprite",
                     "EnergyGainPercent": "(1 / (4 + 1))* 100%"
-                  },
-                  "attackType": "Memosprite"
+                  }
                 }
               ]
             }
@@ -3710,8 +3707,7 @@ const compositeAbilityObject = {
             "Tags": null,
             "attackType": "Memosprite",
             "EnergyGainPercent": "(1 / (4 + 1))* 100%"
-          },
-          "attackType": "Memosprite"
+          }
         },
         "Trigger: Attack End",
         "Trigger: Ability End"
