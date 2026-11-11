@@ -1469,6 +1469,153 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Yabuli: Changed Character",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-2137587792\">AvatarChange_W5_Witch_PassiveAbility</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Yabuli: Broken",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1700259037\">Modifier_BattleEventAbility_Broken</a>"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-73937860\">Monster_W5_Fallen_RS_Broken</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Yabuli: Summons",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"746359205\">Modifier_BattleEventAbility_SummonMonster</a>"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1935691483\">Monster_W5_Fallen_RS_SummonBE</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Yabuli: Self",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-901948528\">Monster_W5_Fallen_Passive</a>"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"894351498\">Monster_W5_Fallen_RS_Passive</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Robin S: Delay Whitelist",
           "isTargetOperator": false,
           "execute": [
@@ -1978,6 +2125,26 @@ const compositeAbilityObject = {
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
                   }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Caster with Self-Made Battle-Events",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Join Targets",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Caster's Self-Made Battle-Events}}"
                 }
               ]
             }
@@ -3038,12 +3205,25 @@ const compositeAbilityObject = {
                 {
                   "name": "Target Filter",
                   "conditions": {
-                    "name": "Battle Event ID",
-                    "ID": 70001,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 70001,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 70002,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
                   }
                 }
               ]
@@ -3125,6 +3305,15 @@ const compositeAbilityObject = {
                           {
                             "name": "Battle Event ID",
                             "ID": 70001,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Battle Event ID",
+                            "ID": 70002,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
@@ -3244,6 +3433,15 @@ const compositeAbilityObject = {
                           {
                             "name": "Battle Event ID",
                             "ID": 70001,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Battle Event ID",
+                            "ID": 70002,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
@@ -6867,6 +7065,17 @@ const compositeAbilityObject = {
                         "modifier": "<a class=\"gModGreen\" id=\"-36405970\">MGridFight_Equipment_Emblem_2012_ExtraElationAbility</a>"
                       },
                       {
+                        "name": "Target is Pathstrider",
+                        "path": [
+                          "Elation"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      },
+                      {
                         "name": "Has Modifier",
                         "target": {
                           "name": "Target Name",
@@ -6968,12 +7177,25 @@ const compositeAbilityObject = {
                 {
                   "name": "Target Filter",
                   "conditions": {
-                    "name": "Battle Event ID",
-                    "ID": 70001,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 70001,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 70002,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
                   }
                 }
               ]
