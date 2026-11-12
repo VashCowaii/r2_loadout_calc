@@ -21706,5 +21706,5 @@ const turnLogicRelics = {
             },
         }
     },
-    ...turnLogicRelicsLocal,
+    ...localInsertionRelic,
 }
