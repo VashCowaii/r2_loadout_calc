@@ -523,6 +523,23 @@ const customDisplayValuesLog = {
         // {valueName: "Memo SPD Stacks", refName: "lastSpdStacksMemo", isBattleValue: true},
         // {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
     ],
+    "Robin • Summeretto": [
+        {valueName: "Bird on Field", refName: "birdIsActive", isBattleValue: true, isCharacterState: true,
+            isMemoSpriteDisplay: true,
+        },
+
+        {valueName: "Vibes", refName: "vibe", isBattleValue: true,summaryValue: "robinVibeSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Wind",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/mortenaxBlade/Icon1507Passive.png"
+        },
+        {valueName: "Vibes Max", refName: "vibeMax", isBattleValue: true,hide: true},
+
+        
+        // {valueName: "Healing Tally", refName: "hyacineBattleHealingTally", isBattleValue: false},
+        // {valueName: "After Rain", refName: "hyacineAfterRainActive", isBattleValue: true, isCharacterState: true},
+    ], 
 
     //HARMONY
     "Robin": [
@@ -970,6 +987,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxedSpecial,permaConditionsTextLibrary.noTerritory]
     },
+    "Robin • Summeretto": defaultStandardAbilityDisplayWarnings,
     
     //NIHILITY
     "Silver Wolf": defaultStandardAbilityDisplayWarnings,
@@ -2541,6 +2559,20 @@ const defaultConditions = {
             "type": "AND",
             "array": []
         }
+    },
+    "Robin • Summeretto": {
+        hasEnhancedState: false,
+        "Skill": {
+            type: "AND",
+            array: []
+        },
+        "Ultimate": {
+            type: "AND",
+            array: []
+        },
+        "validTargetChecks": [
+            // "Skill"
+        ],
     },
 
     //NIHILITY

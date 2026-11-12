@@ -1,3 +1,5 @@
+const localCheckSplits = typeof document === "undefined" || document.location.href.includes("cowaii");
+let localInsertionSplits = localCheckSplits ? {} : hitSplittersLocal;
 const hitSplitters = {
   //ABUNDANCE
   "Huohuo": {
@@ -2797,6 +2799,28 @@ const hitSplitters = {
     ],
     "memoSkill3": []
   },
+  "Robin • Summeretto": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "memoSkill": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "all"
+        },
+      }
+    ]
+  },
 
   //PRESERVATION
   "Aventurine": {
@@ -4867,7 +4891,8 @@ const hitSplitters = {
         "isAttackLastHit": true
       }
     ]
-  }
+  },
+  ...localInsertionSplits,
 }
 
 //just what I wrote to convert the old hitsplits into the new ones,

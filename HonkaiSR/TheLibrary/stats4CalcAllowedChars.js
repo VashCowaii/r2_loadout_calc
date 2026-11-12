@@ -222,4 +222,5 @@ for (let charEntry of vashCharProgressList) {
     }
 }
 
-global.calcAllowedSet = new Set(vashCharProgressListPOST);
+// global.calcAllowedSet = new Set(vashCharProgressListPOST);
+let calcAllowedSet = new Set(vashCharProgressListPOST);
